@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Sebastião Pais"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Assistant Professor at Department of Computer Science, University of Beira Interior"
   location         : "Covilhã, Portugal"
-  employer         : "Assistant Professor at Department of Computer Science, University of Beira Interior"
+  employer         : 
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.pt/citations?user=Otp4K5gAAAAJ"
   email            : "sebastiaopais@gmail.com"
