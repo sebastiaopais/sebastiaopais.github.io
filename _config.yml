@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : #&twitter
 facebook:
   username               :
   app_id                 :
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : #"academicpages"
   google_plus      :
   keybase          :
   instagram        :
@@ -114,8 +114,7 @@ author:
   weibo            :
   xing             :
   youtube          :
-  wikipedia        :
-  dblp             : "https://dblp.org/pid/56/7181.html"
+  wikipedia        : "https://dblp.org/pid/56/7181.html"
 
 
 # Reading Files
@@ -256,7 +255,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Lisbon # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
