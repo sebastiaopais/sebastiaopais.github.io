@@ -8,6 +8,12 @@ redirect_from:
   - /about.html
 ---
 
+
+In 2016, Sebastião Pais started his academic career at the [Department of Computer Science](http://www.di.ubi.pt/) of the [University of Beira Interior](https://www.ubi.pt/) (Portugal). Sebastião Pais develops his research activities at the [NOVA LINCS](https://nova-lincs.di.fct.unl.pt/) (Portugal) and the [CNRS GREYC UMR 6072 Laboratory](http://www.greyc.fr/) (France). His research interests include Natural Language Processing, [Statistical Natural Language Processing](https://nlp.stanford.edu/fsnlp/), [Statistical Learning](https://www.statlearning.com/), Artificial Intelligence, Machine Learning, Information Retrieval, Social Network Analysis, Sentiment Analysis, Data Science, and Data Mining. Sebastião Pais received his [Ph.D.](https://goo.gl/mK4LGn) in Computer Science from the [MINES ParisTech](http://www.minesparis.psl.eu/) (France) and the [University of Beira Interior](https://www.ubi.pt/) (Portugal) in 2013. Sebastião Pais received the 2017 qualification of Maître de Conférences (MCF) in Computer Science, by the Ministry of Higher Education and Research and Innovation, of the French Republic.
+
+
+
+
 Thisssssss is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
 A data-driven personal website
