@@ -12,4 +12,4 @@ Computer Science and Engineering
 
 Faustino Muetunda. Started: 2022 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
 
-Luqman Jamil. Started: 2020 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
+Luqman Jamil. Started: 2022 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
