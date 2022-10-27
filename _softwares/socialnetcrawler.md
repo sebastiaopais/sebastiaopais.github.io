@@ -1,7 +1,7 @@
 ---
 title: "SocialNetCrawler"
 collection: softwares
-#permalink: /software/socialnetcrawler
+permalink: /software/socialnetcrawler
 #excerpt: 'This Software was supported by project C4 - Cloud Computing Competences Centre, financed by the P2020.'
 #date: 2009-10-01
 #venue: 'Journal 1'
