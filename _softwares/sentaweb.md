@@ -2,7 +2,7 @@
 title: "SENTAWEB"
 collection: softwares
 permalink: /software/sentaweb
-excerpt: 'This Software was supported by National Founding from the FCT - Fundação para a Ciência e a Tecnologia.'
+#excerpt: 'This Software was supported by National Founding from the FCT - Fundação para a Ciência e a Tecnologia.'
 #date: 2009-10-01
 #venue: 'Journal 1'
 paperurl: 'http://sentaweb.di.ubi.pt/'
