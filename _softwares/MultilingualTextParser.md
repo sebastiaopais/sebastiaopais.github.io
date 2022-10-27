@@ -1,7 +1,7 @@
 ---
 title: "Multilingual Text Parser"
-collection: publications
-permalink: /publication/MultilingualTextParser
+collection: softwares
+permalink: /softwares/MultilingualTextParser
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2009-10-01
 venue: 'Journal 1'
