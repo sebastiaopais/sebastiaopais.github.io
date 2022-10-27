@@ -7,10 +7,11 @@ permalink: /student/msc
 #date: 2015-01-01
 #location: "City, Country"
 ---
+Computer Science and Engineering
 
-Faustino Muetunda. Knowledge Base for MENTAL AI, in Data Science Context. Started: 2021 - Ongoing. M.Sc. in Computer Science and Engineering - University of Beira Interior.
+Faustino Muetunda. Knowledge Base for MENTAL AI, in Data Science Context. Started: 2021 - Concluded: 2022. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
-Luqman Jamil. Event Detection and Tracking. Started: 2020 - Ongoing. M.Sc. in Computer Science and Engineering - University of Beira Interior.
+Luqman Jamil. Event Detection and Tracking. Started: 2020 - Concluded: 2022. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
 Fábio Mota. Recolha de Informação de Eventos Desportivos usando Técnicas de Mineração de Dados: Investigação, Desenho e Implementação de uma Solução Web baseada na Nuvem. Started: 2019 - Concluded: 2020. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
