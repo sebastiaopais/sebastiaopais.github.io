@@ -1,7 +1,7 @@
 ---
-title: "M.Sc."
+title: "M.Sc. Students"
 collection: students
-#type: "Workshop"
+type: "Graduate course"
 permalink: /student/msc
 #venue: "University 1, Department"
 #date: 2015-01-01
