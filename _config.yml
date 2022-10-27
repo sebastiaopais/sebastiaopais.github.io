@@ -184,6 +184,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  research:
+    output: true
+    permalink: /:collection/:path/
   softwares:
     output: true
     permalink: /:collection/:path/
@@ -222,8 +225,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
+      #share: true
+      #comments: true
   # _publications
   - scope:
       path: ""
@@ -242,6 +245,15 @@ defaults:
       author_profile: true
       share: true
       comment: true
+  # _research
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: true
+      #share: true
+      #comments: true
   # _softwares
   - scope:
       path: ""
@@ -249,8 +261,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
+      #share: true
+      #comments: true
   # _students
   - scope:
       path: ""
@@ -258,8 +270,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
+      #share: true
+      #comments: true
   # _talks
   - scope:
       path: ""
