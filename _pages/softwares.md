@@ -12,6 +12,6 @@ Contact information is below, including email and various web services.  This is
 
 {% include base_path %}
 
-{% for post in site.softwares reversed %}
+{% for post in site.publications reversed %}
   {% include archive-single.html %}
 {% endfor %}
