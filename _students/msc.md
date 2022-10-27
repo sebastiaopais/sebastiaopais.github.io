@@ -1,8 +1,8 @@
 ---
 title: "M.Sc."
-collection: teaching
+collection: students
 type: "Workshop"
-permalink: /teaching/msc
+permalink: /student/msc
 venue: "University 1, Department"
 date: 2015-01-01
 location: "City, Country"
