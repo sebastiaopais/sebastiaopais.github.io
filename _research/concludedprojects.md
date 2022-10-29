@@ -8,7 +8,5 @@ permalink: /research/concludedprojects
 #location: "City, Country"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
 More Information:
 [CIÊNCIAVITAE: 0A16-6735-D5E4](https://goo.gl/BMcZKd)
