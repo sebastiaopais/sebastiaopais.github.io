@@ -7,8 +7,7 @@ permalink: /research/publications
 #date: 2014-01-01
 #location: "City, Country"
 ---
-
-This is a description of a teaching experience. You can use markdown like any other post.
+Topics: Natural Language Processing, Statistical Natural Language Processing, Statistical Learning, Machine Learning, Social Network Analysis, Sentiment Analysis, Data Science, and Big Data.
 
 [ORCID: 0000-0003-2337-0779](https://goo.gl/XrP6XJ)
 
