@@ -13,15 +13,11 @@ In 2016, Sebastião Pais started his academic career at the [Department of Compu
 
 ## News
 
-* Basic config options: _config.yml
-* Top navigation bar config: _data/navigation.yml
-* Single pages: _pages/
-* Collections of pages are .md or .html files in:
-  * _publications/
-  * _portfolio/
-  * _posts/
-  * _teaching/
-  * _talks/
-* Footer: _includes/footer.html
-* Static files (like PDFs): /files/
-* Profile image (can set in _config.yml): images/profile.png
+[Call for Papers: Special Issue on Large-scale Statistical Natural Language Processing](https://www.springer.com/journal/41060/updates/19247002)
+International Journal of Data Science and Analytics (JDSA), Springer
+
+[ACL 2023 - The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org/)
+Toronto, Canada. 9-14 July, 2023
+
+[EACL 2023 - The 17th Conference of the European Chapter of the Association for Computational Linguistics](https://2023.eacl.org/)
+Hybrid (Online + Croatia), 2-6 May, 2023
