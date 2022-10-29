@@ -17,7 +17,13 @@ In 2016, Sebastião Pais started his academic career at the [Department of Compu
 International Journal of Data Science and Analytics (JDSA), Springer
 
 [ACL 2023 - The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org/)
-Toronto, Canada. 9-14 July, 2023
+Toronto, Canada, 9-14 July, 2023
 
 [EACL 2023 - The 17th Conference of the European Chapter of the Association for Computational Linguistics](https://2023.eacl.org/)
 Hybrid (Online + Croatia), 2-6 May, 2023
+
+[The Thirty-Seventh Conference on Artificial Intelligence](https://aaai.org/Conferences/AAAI-23/)
+Washington, DC, USA, 7-14 February, 2023
+
+[The 17th International AAAI Conference on WEB and Social Media](https://www.icwsm.org/2023/index.html/index.html)
+Limassol, Cyprus, 5-8 June, 2023
