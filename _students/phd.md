@@ -8,7 +8,7 @@ permalink: /student/phd
 #location: "City, Country"
 ---
 
-Research Areas: Mental Health Multimodal Retrieval, Mental Health Temporal Information Retrieval
+Research Areas: Multimodal Mental Health Retrieval, Temporal Mental Health Retrieval.
 This PhD program allows the students that finish an MSc in Computer Science or similar, to proceed with their studies towards a PhD degree. The program has a PhD course with 60 ECTS credit units in the first year, and the research towards a PhD thesis in the following two years.
 
 Faustino Muetunda. Started: 2022 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
