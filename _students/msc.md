@@ -7,7 +7,7 @@ permalink: /student/msc
 #date: 2015-01-01
 #location: "City, Country"
 ---
-Computer Science and Engineering
+The second cycle of studies leading to the Masters degree in Computer Engineering intends to form future engineers with a solid knowledge and the appropriate skills for the current labor market, as well as providing them with a basis for the frequency of the third cycle of studies (PhD) in Computer Engineering.
 
 Faustino Muetunda. Knowledge Base for MENTAL AI, in Data Science Context. Started: 2021 - Concluded: 2022. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
