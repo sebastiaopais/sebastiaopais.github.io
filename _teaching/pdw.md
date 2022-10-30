@@ -10,15 +10,6 @@ date: 2022-09-01
 
 This course focuses on extracting knowledge from the web by applying Machine Learning techniques to classify and cluster hypertext documents. Basic approaches from Information Retrieval and text analysis are also discussed. The students use recent Machine Learning and Data Mining software to implement practical web document retrieval, classification and clustering applications.
 
-<script type="text/javascript">
-    //senha = 'guFruch42?ew';
-    senhadig = prompt("Access Code!!!", "*************")
-    if ('PDW2223' != senhadig && 'wret$ar2gajU' != senhadig && 'j@prEj5stEPa' != senhadig && 'j3j_5Pahaswu' != senhadig && 'du+ephEzAcH2' != senhadig && 'gez7fRad&e4e' != senhadig && 'Stu_aT6et_An' != senhadig && 'HUw+tAmAs2s$' != senhadig && '!u74AbrucavE' != senhadig && 'tUtre*4zug8s' != senhadig && 'wuSp_46aPr&N' != senhadig && 'HUw+tAmAs2s$' != senhadig && 'tUtre*4zug8s' != senhadig && 'ne2rEqac=uS5' != senhadig && '3ah+Cu3reyad' != senhadig && 'NafEJ#2Ep4uQ' != senhadig && 'guFruch42?ew' != senhadig) {
-        alert('Acesso negado!');
-        top.location.href = 'https://sebastiaopais.github.io/teaching/';
-    }
-</script>
-
 ## News
 [Work Groups](https://ubipt-my.sharepoint.com/:w:/g/personal/sebastiao_ubi_pt/ESd5WbagR0BLuNo7Wv4O_jMBnwzaEBafop6p4n_OgN7OjQ?e=m7wGIU)
 
@@ -69,3 +60,12 @@ Web Data Mining [[PDF](https://www.cs.uic.edu/~liub/WebMiningBook.html)]
 Data Mining [[PDF](https://www.cs.waikato.ac.nz/ml/weka/book.html)]
 
 Mining of Massive Datasets [[PDF](http://www.mmds.org/)]
+
+<script type="text/javascript">
+    //senha = 'guFruch42?ew';
+    senhadig = prompt("Access Code!!!", "*************")
+    if ('PDW2223' != senhadig && 'wret$ar2gajU' != senhadig && 'j@prEj5stEPa' != senhadig && 'j3j_5Pahaswu' != senhadig && 'du+ephEzAcH2' != senhadig && 'gez7fRad&e4e' != senhadig && 'Stu_aT6et_An' != senhadig && 'HUw+tAmAs2s$' != senhadig && '!u74AbrucavE' != senhadig && 'tUtre*4zug8s' != senhadig && 'wuSp_46aPr&N' != senhadig && 'HUw+tAmAs2s$' != senhadig && 'tUtre*4zug8s' != senhadig && 'ne2rEqac=uS5' != senhadig && '3ah+Cu3reyad' != senhadig && 'NafEJ#2Ep4uQ' != senhadig && 'guFruch42?ew' != senhadig) {
+        alert('Acesso negado!');
+        top.location.href = 'https://sebastiaopais.github.io/teaching/';
+    }
+</script>
