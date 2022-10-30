@@ -4,7 +4,7 @@ collection: teaching
 type: "Web Informatics"
 permalink: /teaching/pdw
 venue: "University of Beira Interior, Computer Science Department"
-#date: Fall 2022
+date: 2022-09-01
 #location: "City, Country"
 ---
 
