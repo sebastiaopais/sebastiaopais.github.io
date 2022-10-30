@@ -33,19 +33,19 @@ This course focuses on extracting knowledge from the web by applying Machine Lea
 **Assessment Lab #01 (30% - 6V): [Web Crawler](https://en.wikipedia.org/wiki/Web_crawler)**
 * Extract and Load (20% - 4V) + Web Interface (10% - 2V)
 * Resources
-    * [[Scrapy](https://scrapy.org/)]
-    * [[HultigCrawler](http://hultigcrawler.di.ubi.pt/)]
-    * [[SocialNetCrawler](http://sncrawler.di.ubi.pt/)]
-    * [[OpenWebSpider](http://www.openwebspider.org/)]
-    * [[Full-Text Search - MySQL](https://dev.mysql.com/doc/refman/8.0/en/fulltext-search.html)]
-    * [[Full-Text Search - MS SQL](https://learn.microsoft.com/en-us/sql/relational-databases/search/full-text-search?view=sql-server-ver16)]
-*Deadline: (12/10/2022)
+    * [Scrapy](https://scrapy.org/)
+    * [HultigCrawler](http://hultigcrawler.di.ubi.pt/)
+    * [SocialNetCrawler](http://sncrawler.di.ubi.pt/)
+    * [OpenWebSpider](http://www.openwebspider.org/)
+    * [Full-Text Search - MySQL](https://dev.mysql.com/doc/refman/8.0/en/fulltext-search.html)
+    * [Full-Text Search - MS SQL](https://learn.microsoft.com/en-us/sql/relational-databases/search/full-text-search?view=sql-server-ver16)
+* Deadline: (12/10/2022)
 
 **Assessment Lab #02 (30% - 6V): [Web Document Classification]**
 * Classifier (20% - 4V) + Web Interface (10% - 2V)
 * Resources
     * [Paper 1](https://cs.ccsu.edu/~markov/ccsu_courses/DocClassification.pdf)
-    * [Weka](https://www.cs.waikato.ac.nz/ml/weka/) [Tutorial](https://cs.ccsu.edu/~markov/weka-tutorial.pdf)
+    * [Weka](https://www.cs.waikato.ac.nz/ml/weka/)] [Tutorial](https://cs.ccsu.edu/~markov/weka-tutorial.pdf)
     * [PyTorch](https://pytorch.org/)
     * [TensorFlow](https://www.tensorflow.org/)
     * [scikit-learn](https://scikit-learn.org/stable/)
@@ -55,8 +55,8 @@ This course focuses on extracting knowledge from the web by applying Machine Lea
 * Deadline: (04/01/2023)
 
 ## Resources
-Web Data Mining [PDF](https://www.cs.uic.edu/~liub/WebMiningBook.html)
+Web Data Mining [[PDF](https://www.cs.uic.edu/~liub/WebMiningBook.html)]
 
-Data Mining [PDF](https://www.cs.waikato.ac.nz/ml/weka/book.html)
+Data Mining [[PDF](https://www.cs.waikato.ac.nz/ml/weka/book.html)]
 
-Mining of Massive Datasets [PDF](http://www.mmds.org/)
+Mining of Massive Datasets [[PDF](http://www.mmds.org/)]
