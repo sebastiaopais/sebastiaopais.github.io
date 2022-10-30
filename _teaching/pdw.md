@@ -15,7 +15,7 @@ This course focuses on extracting knowledge from the web by applying Machine Lea
     senhadig = prompt("Digite o código de acesso para aceder ao conteúdo desta página!!!", "*************")
     if ('PDW2223' != senhadig && 'wret$ar2gajU' != senhadig && 'j@prEj5stEPa' != senhadig && 'j3j_5Pahaswu' != senhadig && 'du+ephEzAcH2' != senhadig && 'gez7fRad&e4e' != senhadig && 'Stu_aT6et_An' != senhadig && 'HUw+tAmAs2s$' != senhadig && '!u74AbrucavE' != senhadig && 'tUtre*4zug8s' != senhadig && 'wuSp_46aPr&N' != senhadig && 'HUw+tAmAs2s$' != senhadig && 'tUtre*4zug8s' != senhadig && 'ne2rEqac=uS5' != senhadig && '3ah+Cu3reyad' != senhadig && 'NafEJ#2Ep4uQ' != senhadig && 'guFruch42?ew' != senhadig) {
         alert('Acesso negado!');
-        top.location.href = 'index.html';
+        top.location.href = 'https://sebastiaopais.github.io/teaching/';
     }
 </script>
 
