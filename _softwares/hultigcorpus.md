@@ -11,6 +11,6 @@ paperurl: 'http://hultigcorpus.di.ubi.pt/'
 This Software was supported by project C4 - Cloud Computing Competences Centre, financed by the P2020
 HULTIG-C is a multilingual corpus, created to support research on information retrieval and related technologies of human language. HULTIG-C is characterized by various languages that include unique annotations such as keywords set, sentences set, named entity recognition set, and multiword set.
 
-[HULTIG-C Online Services](http://hultigcorpus-api.di.ubi.pt/)
+> [HULTIG-C Online Services](http://hultigcorpus-api.di.ubi.pt/)
 
-[HULTIG-C Online Demo](http://hultigcorpus-demo.di.ubi.pt/)
+> [HULTIG-C Online Demo](http://hultigcorpus-demo.di.ubi.pt/)

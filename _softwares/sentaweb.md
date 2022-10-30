@@ -11,7 +11,7 @@ paperurl: 'http://sentaweb.di.ubi.pt/'
 This Software was supported by National Founding from the FCT - Fundação para a Ciência e a Tecnologia.
 Senta Web aims to provide an online way of automatically extracting expressions formed by sequences of lexicographic units lexicographical units (e.g. characters, words, punctuation marks), contiguous or non-contiguous, that are as syntactic-semantic units, with their own meaning.
 
-[Access here](http://sentaweb.di.ubi.pt/)
+> [Access here](http://sentaweb.di.ubi.pt/)
 
 
 

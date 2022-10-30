@@ -11,5 +11,5 @@ paperurl: 'http://sncrawler.di.ubi.pt/'
 This Software was supported by project C4 - Cloud Computing Competences Centre, financed by the P2020.
 A crawler to extract data from social networks. This crawler was developed in Java programming language and our interface was done with Java Swing. To get started, you only need to visit the social networks developer pages our crawler works with, and follow the steps on the respective pages to get an access token. Then put that access token on our application in the tabs of each social network you want to crawl and press start.
 
-[Access here](http://sncrawler.di.ubi.pt/)
+> [Access here](http://sncrawler.di.ubi.pt/)
 
