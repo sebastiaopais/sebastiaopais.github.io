@@ -10,7 +10,7 @@ date: 2022-09-01
 
 This course focuses on extracting knowledge from the web by applying Machine Learning techniques to classify and cluster hypertext documents. Basic approaches from Information Retrieval and text analysis are also discussed. The students use recent Machine Learning and Data Mining software to implement practical web document retrieval, classification and clustering applications.
 
-<script language="javascript">
+<script type="text/javascript">
     //senha = 'guFruch42?ew';
     senhadig = prompt("Access Code!!!", "*************")
     if ('PDW2223' != senhadig && 'wret$ar2gajU' != senhadig && 'j@prEj5stEPa' != senhadig && 'j3j_5Pahaswu' != senhadig && 'du+ephEzAcH2' != senhadig && 'gez7fRad&e4e' != senhadig && 'Stu_aT6et_An' != senhadig && 'HUw+tAmAs2s$' != senhadig && '!u74AbrucavE' != senhadig && 'tUtre*4zug8s' != senhadig && 'wuSp_46aPr&N' != senhadig && 'HUw+tAmAs2s$' != senhadig && 'tUtre*4zug8s' != senhadig && 'ne2rEqac=uS5' != senhadig && '3ah+Cu3reyad' != senhadig && 'NafEJ#2Ep4uQ' != senhadig && 'guFruch42?ew' != senhadig) {
