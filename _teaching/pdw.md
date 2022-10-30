@@ -14,45 +14,49 @@ This course focuses on extracting knowledge from the web by applying Machine Lea
 [Work Groups](https://ubipt-my.sharepoint.com/:w:/g/personal/sebastiao_ubi_pt/ESd5WbagR0BLuNo7Wv4O_jMBnwzaEBafop6p4n_OgN7OjQ?e=m7wGIU)
 
 ## Assessment methods and criteria
-[PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/PDW-CA.pdf)
+[[PDF]](https://sebastiaopais.github.io/files/teaching/2223/PDW/PDW-CA.pdf)
 
 ## Lectures
 **Lecture #00**: Web Mining [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/Lectures/00-WebMining.pdf)
 
-**Lecture #01**: Information Retrieval and Web Search [PDF]
+**Lecture #01**: Information Retrieval and Web Search [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/Lectures/01-dmw1.pdf)
 
-**Lecture #02**: Hyperlink Based Ranking [PDF]
+**Lecture #02**: Hyperlink Based Ranking [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/Lectures/02-dmw2.pdf)
 
-**Lecture #03**: Clustering [PDF]
+**Lecture #03**: Clustering [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/Lectures/03-dmw3.pdf)
 
-**Lecture #04**: Evaluating Clustering [PDF]
+**Lecture #04**: Evaluating Clustering [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/Lectures/04-dmw4.pdf)
 
-**Lecture #05**: Classification [PDF]
+**Lecture #05**: Classification [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/Lectures/05-dmw5.pdf)
 
 ## Assessment Labs (100% - 20 Values)
-Assessment Lab #01 (30% - 6V): [Web Crawler]
-Extract and Load (20% - 4V) + Web Interface (10% - 2V)
-Resources
-[Scrapy]
-[HultigCrawler]
-[SocialNetCrawler]
-[OpenWebSpider]
-[Full-Text Search - MySQL]
-[Full-Text Search - MS SQL]
-Deadline: (12/10/2022)
-Assessment Lab #02 (30% - 6V): [Web Document Classification]
-Classifier (20% - 4V) + Web Interface (10% - 2V)
-Resources
-[Paper 1]
-[Weka] [Tutorial]
-[PyTorch]
-[TensorFlow]
-[scikit-learn]
-Deadline: (09/11/2022)
-Assessment Lab #03 (40% - 8V): [Intelligent Search Engine]
-Deadline: (04/01/2023)
+**Assessment Lab #01 (30% - 6V): [Web Crawler](https://en.wikipedia.org/wiki/Web_crawler)**
+* Extract and Load (20% - 4V) + Web Interface (10% - 2V)
+* Resources
+    * [Scrapy]
+    * [HultigCrawler]
+    * [SocialNetCrawler]
+    * [OpenWebSpider]
+    * [Full-Text Search - MySQL]
+    * [Full-Text Search - MS SQL]
+*Deadline: (12/10/2022)
+
+**Assessment Lab #02 (30% - 6V): [Web Document Classification]**
+* Classifier (20% - 4V) + Web Interface (10% - 2V)
+* Resources
+    * [Paper 1]
+    * [Weka] [Tutorial]
+    * [PyTorch]
+    * [TensorFlow]
+    * [scikit-learn]
+* Deadline: (09/11/2022)
+
+**Assessment Lab #03 (40% - 8V): [Intelligent Search Engine]**
+* Deadline: (04/01/2023)
 
 ## Resources
 Web Data Mining [PDF]
+
 Data Mining [PDF]
+
 Mining of Massive Datasets [PDF]
