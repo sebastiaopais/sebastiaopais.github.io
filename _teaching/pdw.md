@@ -17,12 +17,17 @@ This course focuses on extracting knowledge from the web by applying Machine Lea
 [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/PDW-CA.pdf)
 
 ## Lectures
-Lecture #00: Web Mining [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/Lectures/00-WebMining.pdf)
-Lecture #01: Information Retrieval and Web Search [PDF]
-Lecture #02: Hyperlink Based Ranking [PDF]
-Lecture #03: Clustering [PDF]
-Lecture #04: Evaluating Clustering [PDF]
-Lecture #05: Classification [PDF]
+**Lecture #00**: Web Mining [PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/Lectures/00-WebMining.pdf)
+
+**Lecture #01**: Information Retrieval and Web Search [PDF]
+
+**Lecture #02**: Hyperlink Based Ranking [PDF]
+
+**Lecture #03**: Clustering [PDF]
+
+**Lecture #04**: Evaluating Clustering [PDF]
+
+**Lecture #05**: Classification [PDF]
 
 ## Assessment Labs (100% - 20 Values)
 Assessment Lab #01 (30% - 6V): [Web Crawler]
