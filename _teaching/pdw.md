@@ -60,13 +60,3 @@ Web Data Mining [[PDF](https://www.cs.uic.edu/~liub/WebMiningBook.html)]
 Data Mining [[PDF](https://www.cs.waikato.ac.nz/ml/weka/book.html)]
 
 Mining of Massive Datasets [[PDF](http://www.mmds.org/)]
-
- <script src="https://sebastiaopais.github.io/files/main.min.js" type="text/javascript"></script>
-<script language="javascript">
-//senha = 'guFruch42?ew';
-senhadig = prompt("Access Code!!!", "*************")
-if ('PDW2223' != senhadig) {
-    alert('Acesso negado!');
-    top.location.href = 'https://sebastiaopais.github.io/teaching/';
-    }
-</script>
