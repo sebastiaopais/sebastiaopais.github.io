@@ -59,7 +59,7 @@ Web Data Mining [[PDF](https://www.cs.uic.edu/~liub/WebMiningBook.html)]
 
 Data Mining [[PDF](https://www.cs.waikato.ac.nz/ml/weka/book.html)]
 
-Mining of Massive Datasets [[PDF](http://www.mmds.org/)]
+Mining ofMassive Datasets [[PDF](http://www.mmds.org/)]
 
 <div>
                     <p>
