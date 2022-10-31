@@ -16,7 +16,7 @@ date: 2022-09-01
 This course focuses on extracting knowledge from the web by applying Machine Learning techniques to classify and cluster hypertext documents. Basic approaches from Information Retrieval and text analysis are also discussed. The students use recent Machine Learning and Data Mining software to implement practical web document retrieval, classification and clustering applications.
 
 ## News
-[WorkGroups](https://ubipt-my.sharepoint.com/:w:/g/personal/sebastiao_ubi_pt/ESd5WbagR0BLuNo7Wv4O_jMBnwzaEBafop6p4n_OgN7OjQ?e=m7wGIU)
+[Work Groups](https://ubipt-my.sharepoint.com/:w:/g/personal/sebastiao_ubi_pt/ESd5WbagR0BLuNo7Wv4O_jMBnwzaEBafop6p4n_OgN7OjQ?e=m7wGIU)
 
 ## Assessment methods and criteria
 [[PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/PDW-CA.pdf)]
