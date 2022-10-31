@@ -59,18 +59,9 @@ Web Data Mining [[PDF](https://www.cs.uic.edu/~liub/WebMiningBook.html)]
 
 Data Mining [[PDF](https://www.cs.waikato.ac.nz/ml/weka/book.html)]
 
-Mining ofMassive Datasets [[PDF](http://www.mmds.org/)]
+Mining of Massive Datasets [[PDF](http://www.mmds.org/)]
 
 <div>
-                    <p>
-                        <a target="_blank" href='https://clustrmaps.com/site/19voh' title='Visit tracker'
-                            target="_blank">
-                            <img
-                                src='https://clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=n8jR3SWjfwWgFysfA408XfOIp9Hzwu0b0ISvw7fWRkw' />
-                        </a>
-                    </p>
-                </div>
-
 <script type="text/javascript">
     //senha = 'guFruch42?ew';
     senhadig = prompt("Access Code!!!", "*************")
@@ -79,3 +70,4 @@ Mining ofMassive Datasets [[PDF](http://www.mmds.org/)]
         top.location.href = 'https://sebastiaopais.github.io/teaching/';
     }
 </script>
+</div>
