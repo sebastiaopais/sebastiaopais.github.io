@@ -5,27 +5,18 @@ type: "Web Informatics"
 permalink: /teaching/pdw
 venue: "University of Beira Interior, Computer Science Department"
 date: 2022-09-01
-customjs:
-    - https://sebastiaopais.github.io/files/main.min.js
-    - https://sebastiaopais.github.io/files/tagcanvas.min.js
+#customjs:
+#    - https://sebastiaopais.github.io/files/main.min.js
+#    - https://sebastiaopais.github.io/files/tagcanvas.min.js
 #location: "City, Country"
 ---
 
-{% for js in pdw.customjs %}
-<script async type="text/javascript" src="{{ js }}">
-senha = '123456';
-senhadig = prompt("Digite a senha","")
-if (senha != senhadig){
-alert('Acesso negado!');
-top.location.href='erro.htm';
-}
-</script>
-{% endfor %}
+{% include access.html %}
 
 This course focuses on extracting knowledge from the web by applying Machine Learning techniques to classify and cluster hypertext documents. Basic approaches from Information Retrieval and text analysis are also discussed. The students use recent Machine Learning and Data Mining software to implement practical web document retrieval, classification and clustering applications.
 
 ## News
-[Work Groups](https://ubipt-my.sharepoint.com/:w:/g/personal/sebastiao_ubi_pt/ESd5WbagR0BLuNo7Wv4O_jMBnwzaEBafop6p4n_OgN7OjQ?e=m7wGIU)
+[WorkGroups](https://ubipt-my.sharepoint.com/:w:/g/personal/sebastiao_ubi_pt/ESd5WbagR0BLuNo7Wv4O_jMBnwzaEBafop6p4n_OgN7OjQ?e=m7wGIU)
 
 ## Assessment methods and criteria
 [[PDF](https://sebastiaopais.github.io/files/teaching/2223/PDW/PDW-CA.pdf)]
