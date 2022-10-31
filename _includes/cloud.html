@@ -1,0 +1,19 @@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://sebastiaopais.github.io/files/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            try {
+                TagCanvas.Start('myCanvas', 'tags', {
+                    textColour: '#63676a',
+                    outlineColour: '#676f75',
+                    reverse: true,
+                    depth: 0.8,
+                    maxSpeed: 0.05,
+                    noSelect: 'true'
+                });
+            } catch (e) {
+                // something went wrong, hide the canvas container
+                document.getElementById('myCanvasContainer').style.display = 'none';
+            }
+        };
+    </script>
