@@ -8,7 +8,7 @@ date: 2022-09-01
 #location: "City, Country"
 ---
 
-<script language=javascript>
+<script type="text/javascript">
 senha = '123456';
 senhadig = prompt("Digite a senha","")
 if (senha != senhadig){
@@ -17,7 +17,7 @@ top.location.href='erro.htm';
 }
 </script>
 
-Tis course focuses on extracting knowledge from the web by applying Machine Learning techniques to classify and cluster hypertext documents. Basic approaches from Information Retrieval and text analysis are also discussed. The students use recent Machine Learning and Data Mining software to implement practical web document retrieval, classification and clustering applications.
+Thiscourse focuses on extracting knowledge from the web by applying Machine Learning techniques to classify and cluster hypertext documents. Basic approaches from Information Retrieval and text analysis are also discussed. The students use recent Machine Learning and Data Mining software to implement practical web document retrieval, classification and clustering applications.
 
 ## News
 [Work Groups](https://ubipt-my.sharepoint.com/:w:/g/personal/sebastiao_ubi_pt/ESd5WbagR0BLuNo7Wv4O_jMBnwzaEBafop6p4n_OgN7OjQ?e=m7wGIU)
