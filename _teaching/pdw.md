@@ -5,10 +5,6 @@ type: "Web Informatics"
 permalink: /teaching/pdw
 venue: "University of Beira Interior, Computer Science Department"
 date: 2022-09-01
-#customjs:
-#    - https://sebastiaopais.github.io/files/main.min.js
-#    - https://sebastiaopais.github.io/files/tagcanvas.min.js
-#location: "City, Country"
 ---
 
 {% include access.html %}
