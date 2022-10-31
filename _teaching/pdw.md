@@ -11,7 +11,7 @@ customjs:
 #location: "City, Country"
 ---
 
-{% for js in page.customjs %}
+{% for js in pdw.customjs %}
 <script async type="text/javascript" src="{{ js }}">
 senha = '123456';
 senhadig = prompt("Digite a senha","")
