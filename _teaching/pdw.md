@@ -7,8 +7,6 @@ venue: "University of Beira Interior, Computer Science Department"
 date: 2022-09-01
 ---
 
-{% include access.html %}
-
 This course focuses on extracting knowledge from the web by applying Machine Learning techniques to classify and cluster hypertext documents. Basic approaches from Information Retrieval and text analysis are also discussed. The students use recent Machine Learning and Data Mining software to implement practical web document retrieval, classification and clustering applications.
 
 ## News
