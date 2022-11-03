@@ -13,6 +13,8 @@ Topics: Natural Language Processing, Statistical Natural Language Processing, St
 
 [Google Scholar: Otp4K5gAAAAJ](https://goo.gl/Dht3k2)
 
+[ResearcherID Web of Science: J-4766-2017](https://www.webofscience.com/wos/author/record/J-4766-2017)
+
 [SCOPUS: 35103248500](https://www.scopus.com/authid/detail.uri?authorId=35103248500)
 
 [Semantic Scholar: 34443965](https://www.semanticscholar.org/author/34443965)

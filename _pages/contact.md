@@ -18,6 +18,7 @@ Contact information is below, including email and various web services.  This is
 * LinkedIn: [sebastião-pais](https://www.linkedin.com/in/sebasti%C3%A3o-pais-41538035)
 * ORCID: [0000-0003-2337-0779](https://goo.gl/XrP6XJ)
 * Publons: [sebastiao-pais](https://publons.com/researcher/2096243/sebastiao-pais/)
+* ResearcherID Web of Science: [J-4766-2017](https://www.webofscience.com/wos/author/record/J-4766-2017)
 * ResearchGate: [Sebastiao_Pais](https://goo.gl/mkio6G)
 * SCOPUS: [35103248500](https://www.scopus.com/authid/detail.uri?authorId=35103248500)
 * Semantic Scholar: [34443965](https://www.semanticscholar.org/author/34443965)
