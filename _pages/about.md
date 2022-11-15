@@ -17,8 +17,7 @@ In 2016, Sebastião Pais started his academic career at the [Department of Compu
 International Journal of Data Science and Analytics (JDSA), Springer
 
 [The 21st IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent Agent Technology](https://www.wi-iat.com/wi-iat2022/index.html)
-Niagara Falls, Canada, 17-20 November, 2022
-A Hybrid Conference with both Online and Offline Modes
+Niagara Falls, Canada, 17-20 November, 2022. A Hybrid Conference with both Online and Offline Modes
 
 
 [ACL 2023 - The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org/)
