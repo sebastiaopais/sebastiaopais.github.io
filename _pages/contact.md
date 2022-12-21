@@ -11,7 +11,7 @@ redirect_from:
 
 Contact information is below, including email and various web services.  This is to make it easy for people to find me when they search for things like “sebastião pais email” and get wrong pages on my site.  Here are some other places on the Internet where I reside.
 
-* E-mail: sebastiao [at] di.ubi.pt; sebastiaopais [at] gmail.com
+* E-mail: sebastiao [at] di.ubi.pt; sebastiaopais [at] acm.org; sebastiaopais [at] gmail.com
 * CIÊNCIAVITAE: [0A16-6735-D5E4](https://goo.gl/BMcZKd)
 * DBLP: [Sebastião_Pais](https://dblp.org/pid/56/7181)
 * Google Scholar: [Otp4K5gAAAAJ](https://goo.gl/Dht3k2)
