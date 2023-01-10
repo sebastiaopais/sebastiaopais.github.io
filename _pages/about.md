@@ -17,8 +17,8 @@ Sebastião Pais is [ACM Professional Member](http://member.acm.org/~sebastiaopai
 [Call for Papers: Special Issue on Large-scale Statistical Natural Language Processing](https://www.springer.com/journal/41060/updates/19247002)
 International Journal of Data Science and Analytics (JDSA), Springer
 
-[The 21st IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent Agent Technology](https://www.wi-iat.com/wi-iat2022/index.html)
-Niagara Falls, Canada, 17-20 November, 2022. A Hybrid Conference with both Online and Offline Modes
+[Applied Natural Language Processing in Healthcare](https://www.nlpsummit.org/)
+Free Online Event | April 4-5, 2023
 
 
 [ACL 2023 - The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org/)
