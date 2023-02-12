@@ -4,7 +4,7 @@ collection: teaching
 type: "Web Informatics"
 permalink: /teaching/pdw
 venue: "University of Beira Interior, Computer Science Department"
-paperurl: 'https://sebastiaopais.github.io/classes/pdw.html'
+paperurl: 'https://sebastiaopais.github.io/teaching/'
 date: 2022-09-01
 ---
 
