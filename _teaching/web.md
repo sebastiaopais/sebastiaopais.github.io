@@ -4,6 +4,7 @@ collection: teaching
 type: "Computer Science and Engineering & Web Informatics"
 permalink: /teaching/web
 venue: "University of Beira Interior, Computer Science Department"
+paperurl: 'https://sebastiaopais.github.io/classes/web.html'
 date: 2023-03-01
 ---
 
