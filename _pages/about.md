@@ -23,15 +23,13 @@ International Journal of Data Science and Analytics (JDSA), Springer
 [Applied Natural Language Processing in Healthcare](https://www.nlpsummit.org/)
 Free Online Event | April 4-5, 2023
 
-
 [ACL 2023 - The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org/)
 Toronto, Canada, 9-14 July, 2023
 
-[EACL 2023 - The 17th Conference of the European Chapter of the Association for Computational Linguistics](https://2023.eacl.org/)
-Hybrid (Online + Croatia), 2-6 May, 2023
+[CHI 2024 - ACM (Association of Computing Machinery) CHI conference on Human Factors in Computing Systems](https://chi2024.acm.org/)
+Honolulu, at the Hawaiʻi Convention Center on the island of Oʻahu, Hawaiʻi, USA from 11-16 May, 2024
 
-[The Thirty-Seventh Conference on Artificial Intelligence](https://aaai.org/Conferences/AAAI-23/)
-Washington, DC, USA, 7-14 February, 2023
+[23rd IEEE International Conference on Data Mining](http://www.cloud-conf.net/icdm2023/index.html)
+Shanghai, China, December 1-4, 2023
 
-[The 17th International AAAI Conference on WEB and Social Media](https://www.icwsm.org/2023/index.html/index.html)
-Limassol, Cyprus, 5-8 June, 2023
+
