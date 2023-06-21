@@ -13,6 +13,6 @@ A list of all the posts and pages found on the site. For you robots out there is
 
 {% include base_path %}
 
-{% for post in site.softwares reversed %}
+{% for post in site.software reversed %}
   {% include archive-single.html %}
 {% endfor %}
