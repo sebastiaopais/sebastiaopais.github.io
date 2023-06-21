@@ -187,7 +187,7 @@ collections:
   research:
     output: true
     permalink: /:collection/:path/
-  softwares:
+  software:
     output: true
     permalink: /:collection/:path/
   students:
@@ -257,7 +257,7 @@ defaults:
   # _softwares
   - scope:
       path: ""
-      type: softwares
+      type: software
     values:
       layout: single
       author_profile: true
