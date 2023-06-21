@@ -1,6 +1,6 @@
 ---
 title: "ExtremeSentiLex"
-collection: softwares
+collection: software
 permalink: /software/extremesentilex
 #excerpt: 'This Software was supported by National Founding from the FCT - Fundação para a Ciência e a Tecnologia.'
 #date: 2009-10-01

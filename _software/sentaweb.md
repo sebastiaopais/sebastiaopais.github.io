@@ -1,6 +1,6 @@
 ---
 title: "SENTAWEB"
-collection: softwares
+collection: software
 permalink: /software/sentaweb
 #excerpt: 'This Software was supported by National Founding from the FCT - Fundação para a Ciência e a Tecnologia.'
 #date: 2009-10-01
