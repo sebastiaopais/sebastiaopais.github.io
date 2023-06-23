@@ -5,7 +5,7 @@ permalink: /software/socialnetcrawler
 #excerpt: 'This Software was supported by project C4 - Cloud Computing Competences Centre, financed by the P2020.'
 #date: 2009-10-01
 #venue: 'Journal 1'
-paperurl: 'https://sncrawler.di.ubi.pt/'
+paperurl: 'https://sebastiaopais.github.io/web/sncrawler/'
 #citation: 'Yur Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 This Software was supported by project C4 - Cloud Computing Competences Centre, financed by the P2020.
