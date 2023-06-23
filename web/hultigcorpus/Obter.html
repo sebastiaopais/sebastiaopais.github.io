@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Centro de Tecnologia da Linguagem Humana e Bioinformática - Corpus">
+	<meta name="author" content="">
+
+	<title>Hultig-Corpus</title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		html {
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+			height: 100%;
+		}
+
+		body {
+			color: #0C2340;
+			font-size: 1em;
+			font-family: arial, helvetica, sans-serif;
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+		}
+
+
+
+		#particle-canvas {
+			width: 100%;
+			height: 100%;
+		}
+
+
+		img {
+			border: none;
+		}
+
+		/*** GENERAL ***/
+		h1 {
+			font-family: arial, helvetica, sans-serif;
+			margin: 0px;
+			padding: 0px;
+			font-weight: normal;
+			font-style: normal;
+			font-smooth: always;
+			font-size: 2.8em;
+		}
+
+		h2 {
+			font-family: arial, helvetica, sans-serif;
+			margin: 0px;
+			padding: 0px;
+			font-weight: normal;
+			font-style: normal;
+			font-smooth: always;
+			font-size: 1.5em;
+		}
+
+		h3 {
+			font-family: arial, helvetica, sans-serif;
+			margin: 0px;
+			padding: 0px;
+			font-weight: normal;
+			font-style: normal;
+			font-smooth: always;
+			font-size: 0.8em;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		p {
+			line-height: 1.7em;
+		}
+
+		.quote {
+			font-family: arial, helvetica, sans-serif;
+		}
+
+		.post-script {
+			font-family: arial, helvetica, sans-serif;
+		}
+
+		.details {
+			font-family: arial, helvetica, sans-serif;
+		}
+
+		#wrap {
+			color: #0C2340;
+			float: right;
+			width: 80%;
+			min-height: 95%;
+			position: relative;
+		}
+
+		#slide-body {
+			height: 0px;
+			overflow: hidden;
+			padding-top: 10px;
+			border-top: double;
+			transition: height 500ms ease;
+			-moz-transition: height 500ms ease;
+			-ms-transition: height 500ms ease;
+			-o-transition: height 500ms ease;
+			-webkit-transition: height 500ms ease;
+		}
+
+		.expanded {
+			height: 100% !important;
+		}
+
+		#more {
+			text-align: center;
+			display: inline-block;
+			color: #444;
+			border: 1px solid #CCC;
+			background: #DDD;
+			box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+			cursor: pointer;
+			vertical-align: middle;
+			max-width: 100px;
+			padding: 5px;
+			text-align: center;
+		}
+
+		#more:active {
+			color: blue;
+			box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
+		}
+
+		/*** INDEX ***/
+		#highlight-content {
+			color: #0C2340;
+			text-align: center;
+			top: 50%;
+			position: absolute;
+			width: 100%;
+		}
+
+		#highlight-content h1 {
+			max-width: 80%;
+			margin: 0px auto;
+			text-transform: uppercase;
+			padding: 0px;
+			line-height: 1.2em;
+			letter-spacing: 0.2em;
+		}
+
+		#highlight-content h3 {
+			max-width: 80%;
+			margin: 0px auto;
+			text-transform: uppercase;
+			padding: 0px;
+			letter-spacing: 0.25em;
+		}
+
+		#highlight-content h3.play-link {
+			margin-top: 20px;
+		}
+
+		#highlight-content h3.play-link a {
+			color: #0C2340;
+		}
+
+		#mobile-nav {
+			display: none;
+		}
+
+		#mobile-expand {
+			display: none;
+		}
+
+
+
+		/***********************************/
+
+		#sidebar {
+			padding: 2em 2em 0.5em 2em;
+			background: #0C2340;
+			cursor: default;
+			height: 100vh;
+			left: 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+			position: fixed;
+			text-align: right;
+			top: 0;
+			width: 40.8vh;
+			min-width: 5vh;
+			z-index: 10000;
+
+		}
+
+		#sidebar>.inner {
+			margin-top: -40%;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+			-moz-transition: opacity 1s ease;
+			-webkit-transition: opacity 1s ease;
+			-ms-transition: opacity 1s ease;
+			transition: opacity 1s ease;
+			min-height: 100%;
+			opacity: 1;
+			width: 100%;
+		}
+
+		#sidebar nav>ul>li {
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+			-moz-transition: opacity 0.15s ease, -moz-transform 0.75s ease;
+			-webkit-transition: opacity 0.15s ease, -webkit-transform 0.75s ease;
+			-ms-transition: opacity 0.15s ease, -ms-transform 0.75s ease;
+			transition: opacity 0.15s ease, transform 0.75s ease;
+			margin: 0.7em 0 0 0;
+			opacity: 1;
+			padding: 0;
+			position: relative;
+		}
+
+		#sidebar nav a {
+			-moz-transition: color 0.2s ease;
+			-webkit-transition: color 0.2s ease;
+			-ms-transition: color 0.2s ease;
+			transition: color 0.2s ease;
+			border: 0;
+			color: rgba(255, 255, 255, 0.90);
+			display: block;
+			font-size: 1.05em;
+			font-size: 1.48vh;
+			font-weight: bold;
+			letter-spacing: 0.45em;
+			line-height: 1.75;
+			outline: 0;
+			padding: 1.35em 0;
+			position: relative;
+			text-decoration: none;
+			text-transform: uppercase;
+
+		}
+
+		#sidebar nav a:before,
+		#sidebar nav a:after {
+			border-radius: 0.2em;
+			bottom: 0;
+			content: '';
+			height: 0.2em;
+			position: absolute;
+			right: 0;
+			width: 130%;
+		}
+
+		#sidebar nav a:before {
+			background: #A1B3BA;
+		}
+
+		#sidebar nav a:after {
+			background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: linear-gradient(to right, #5e42a6, #b74e91);
+			-moz-transition: max-width 0.2s ease;
+			-webkit-transition: max-width 0.2s ease;
+			-ms-transition: max-width 0.2s ease;
+			transition: max-width 0.2s ease;
+			max-width: 0;
+		}
+
+		#sidebar nav a:hover {
+			color: rgba(255, 255, 255, 0.55);
+
+		}
+
+		#sidebar nav a.active {
+			color: #ffffff;
+		}
+
+		#sidebar nav a.active:after {
+			max-width: 100%;
+		}
+
+
+		#aberto {
+			text-align: center;
+			border-radius: 0.01em;
+			bottom: 0;
+			content: '';
+			margin-left: -50%;
+			width: 150%;
+		}
+
+		div.contentores {
+			margin-top: 5vh;
+			margin-left: 2vh;
+			width: 90%;
+			height: 30%;
+			border-radius: 2px;
+			border-size: 0px;
+			padding-left: 25px;
+			padding-top: 25px;
+			padding-right: 25px;
+			padding-bottom: 20px;
+			background-color: #F0F0F0;
+
+
+			font-size: 1.3em;
+			text-align: center;
+			letter-spacing: 0.05em;
+			line-height: 1.75;
+			outline: 0;
+			position: relative;
+			text-decoration: none;
+		}
+
+
+		#flex-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		.flex-item {
+			width: 100%;
+			height: auto;
+			padding: 10px;
+			background-color: #F0F0F0;
+
+			font-size: 1.3em;
+			text-align: center;
+			letter-spacing: 0.05em;
+			line-height: 1.75;
+			outline: 0;
+			position: relative;
+			text-decoration: none;
+
+			display: inline-block;
+			vertical-align: middle;
+			-webkit-transform: perspective(1px) translateZ(0);
+			transform: perspective(1px) translateZ(0);
+			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+			-webkit-transition-duration: 0.3s;
+			transition-duration: 0.3s;
+			-webkit-transition-property: transform;
+			transition-property: transform;
+		}
+
+		.flex-item p {
+			font-size: 1em;
+			text-align: left;
+			letter-spacing: 0.04em;
+			line-height: 1.4;
+			outline: 0;
+			position: relative;
+			text-decoration: none;
+			padding-left: 10%;
+		}
+
+		.flex-item h1 {
+			font-size: 1.3em;
+			text-align: center;
+			outline: 0;
+			position: relative;
+			text-decoration: none;
+
+		}
+
+		/* Skew */
+
+		.flex-item:before {
+			position: absolute;
+			z-index: -1;
+			content: '';
+			left: calc(50% - 10px);
+			bottom: 0;
+			border-style: solid;
+			border-width: 10px 10px 0 10px;
+			border-color: #F0F0F0 transparent transparent transparent;
+			-webkit-transition-duration: 0.3s;
+			transition-duration: 0.3s;
+			-webkit-transition-property: transform;
+			transition-property: transform;
+		}
+
+		.flex-item:hover,
+		.flex-item:focus,
+		.flex-item:active {
+			-webkit-transform: skew(-10deg);
+			transform: skew(-10deg);
+		}
+
+		/**fade load**/
+		@-webkit-keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.fadeIn {
+			-webkit-animation-duration: 2s;
+			animation-duration: 2s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			-webkit-animation-name: fadeIn;
+			animation-name: fadeIn;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$('body').show();
+		});
+	</script>
+	<script type="text/javascript">
+ < !--
+  if (screen.width <= 700) {
+			window.location = "index_port_mobile.html";
+		}
+ //-->
+
+	</script>
+</head>
+
+<body id="">
+
+	<!-- MENU -->
+	<section id="sidebar">
+		<img class="logo" src="img/logo_FINAL3.png" width="220px" height="90px">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="index_pt.html">HOME</a></li>
+					<li><a href="Sobre.html">QUEM SOMOS</a></li>
+					<li><a href="Equipa.html">EQUIPA</a></li>
+					<li><a href="Detalhes.html">DETALHES</a></li>
+					<li><a href="Obter.html" id="aberto">COMO OBTER</a></li>
+					<li><a href="Servicos.html">SERVIÇOS</a></li>
+					<li><a href="Indexacao.html">INDEXAÇAO</a></li>
+					<li><a href="FAQ.html">PERGUNTAS FREQUENTES</a></li>
+					<li><a href="Contactos.html">CONTACTOS</a></li>
+				</ul>
+			</nav>
+		</div>
+		<p style="margin-top:-15%;margin-left:-2%; color:white; font-size:0.9em;">&copy;Copyright 2017 DI, Universidade
+			da Beira Interior </br> Rua Marquês d'Ávila e Bolama, 6200-001 Covilhã, Portugal</p>
+
+	</section>
+
+	<!-- conteudo da pagina-->
+
+	<div id="wrap" style="z-index:800;" class="fadeIn">
+		<div id="highlight-content" style="margin-top: -230px; z-index:900;">
+
+			<hr width="23%" style="border-top:2px solid #0C2340;">
+			<h1 style="z-index:950;"><b>COMO OBTER</b></h1>
+			<hr width="23%" style="border-top:2px solid #0C2340;">
+
+			<div id="flex-container" style="margin-top:11%;">
+
+				<div class="flex-item">
+					<h2>Os conjuntos de dados Hultig-C são distribuídos
+						pelo Centro de Tecnologia da Linguagem Humana e Bioinformática (HULTIG), apenas para fins
+						académicos e de pesquisa.</h2></br>
+					<h2>O Hultig-c é Open Source, facilitando assim o processo de obtenção do conjunto de dados
+						Hultig-c.</h2>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+
+	<!-- Não apagar -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<!--<div class="col-md-6">
+                    <ul class="footer-menu">
+                        <li><a href="#">Home</a></li>
+
+                    </ul>
+                </div>-->
+
+				<div class="col-md-6">
+					<p>&copy;Copyright 2017</p>
+					<!--
+                        All links in the footer should remain intact.
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Bocor
+                    -->
+				</div>
+				<div class="col-md-6 text-right">
+				</div>
+			</div>
+
+		</div>
+
+	</footer>
+
+
+
+
+
+	<!-- Core JavaScript Files -->
+
+	<!-- <script src="js/slide.js"></script>  -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/nivo-lightbox.min.js"></script>
+
+	<script src="js/custom.js"></script>
+	<script src="js/css3-animate-it.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script src="js/particle.min.js"></script>
+
+
+</body>
+
+</html>

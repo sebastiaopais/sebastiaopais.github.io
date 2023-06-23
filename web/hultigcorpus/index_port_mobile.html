@@ -1,0 +1,897 @@
+﻿<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro de Tecnologia da Linguagem Humana e Bioinform?tica - Corpus">
+    <meta name="author" content="">
+
+    <title>Hultig-Corpus</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/nivo-lightbox.css" rel="stylesheet" />
+    <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/animations.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="color/default.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .columns {
+            float: left;
+            width: 33.3%;
+            padding: 8px;
+        }
+
+        .price {
+            list-style-type: none;
+            border: 1px solid #eee;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+            .price:hover {
+                box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+            }
+
+            .price .header {
+                background-color: #39758C;
+                color: white;
+                font-size: 20px;
+            }
+
+            .price li {
+                border-bottom: 1px solid #eee;
+                padding: 25px;
+                text-align: center;
+            }
+
+            .price .grey {
+                background-color: #0000;
+                font-size: 20px;
+            }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+
+
+
+        a.classe1:link, a.classe1:visited {
+            text-decoration: none background-color: transparent;
+        }
+
+        a.classe1:link {
+            color: blue;
+        }
+
+        a.classe1:visited {
+            color: steelblue;
+        }
+
+        a.classe1:hover {
+            text-decoration: underline;
+            color: red;
+            background-color: transparent;
+        }
+
+
+
+
+
+
+        #menu ul li a:link {
+            text-decoration: none background-color: transparent;
+            color: #4682B4;
+        }
+
+        #menu ul li a:visited {
+            text-decoration: underline;
+            background-color: transparent;
+            color: #4682B4;
+        }
+
+        #menu ul li a:hover {
+            background-color: #D6D6D6;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        #menu ul li a:active {
+            text-decoration: none background-color: transparent;
+            color: red;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media only screen and (max-width: 100px) {
+            .columns {
+                width: 10%;
+            }
+        }
+    </style>
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom" data-offset="20">
+
+    <section class="hero" id="intro">
+        <div class="container">
+
+            <div class="col-md-8 col-md-offset-2 text-center inner">
+                <div class="animatedParent">
+                    <h1 class="animated fadeInDown"></h1>
+                    <p class="animated fadeInUp"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3 text-center">
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- Navigation -->
+    <div id="navigation">
+
+
+
+        <div class="collapse navbar-collapse" id="Language">
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="index_port.html" class="language-flag-link"> <img alt="PT" src="img\pt.png" title="PT" align="right" width="30" height="20" /></a>
+
+                <li><a href="index.html" class="language-flag-link"> <img alt="EN" src="img\en.png" title="EN" align="right" width="30" height="20" /> </a>
+        </div>
+
+
+        <nav class="navbar navbar-custom" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="site-logo">
+                            
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-md-10">
+
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+
+
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="menu">
+
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li><a href="index_mobile.html">English Version</a></li>
+                                <li><a href="#about">Quem Somos</a></li>
+                                <li><a href="#details">Detalhes</a></li>
+                                <li><a href="#HowToGetIt">Como Obt&ecirc;&ndash;lo</a></li>
+                                <li><a href="#OnlineServices">Servi&ccedil;os Online</a></li>
+
+                                <li><a href="#IndexingWithOpenWebSpider">Indexa&ccedil;&atilde;o com OpenWebSpider</a></li>
+
+                                <li><a href="#FAQS">Perguntas Frequentes</a></li>
+                                <li><a href="#contact">Contato</a></li>
+
+                            </ul>
+                        </div>
+                        <!-- /.Navbar-collapse -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+    <!-- /Navigation -->
+    <!-- Section: Home -->
+    <section id="home" class="home-section color-dark bg-white">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="animatedParent">
+                        <div class="section-heading text-center animated bounceInDown">
+                            <h2 class="h-bold">Bem-vindo ao Hultig-C</h2>
+
+
+                        </div>
+
+                        </br>
+                        <h5 align="left"><name ="corpus">O que &eacute; um Corpus?</h5>
+
+
+                        <p>A palavra "corpus", derivada do latim, que significa corpo, pode ser usada para se referir (vagamente) a qualquer corpo de texto escrito ou falado. Na Lingu&iacute;stica moderna, o termo &eacute; comumente usado para se referir a grandes cole&ccedil;&otilde;es de textos que representam uma amostra de uma determinada variedade ou uso de linguagem(s) que armazenados em texto bruto, s&atilde;o apresentados em forma leg&iacute;vel por m&aacute;quina.</p>
+
+
+                        <!--<p>The word "corpus", derived from Latin, which means body, can be used to refer (vaguely) to any body of written or spoken text. In modern linguistics, the term is commonly used to refer to large collections of texts representing a sample of a particular variety or use of language (s) that are stored in raw text, are presented in a machine-readable form. </p>-->
+
+                        <br />
+
+
+
+
+
+                        <table>
+                            <tr>
+                                <td><img class="img" src="img\bigdata.jpg" align="left" width="380" height="300"/ > </td>
+
+                                <td>&nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp;</td>
+                                <td>
+                                    <!-- <p   align="justify"> Hultig-C, is a <a href="https://pt.wikipedia.org/wiki/Multilinguismo" target="_blank" class="classe1">multilingual</a> corpus, created to support research on information retrieval and related technologies of human language. Project that is part of the center of Human Language Technology and Bioinformatics <a href="http://hultig.di.ubi.pt/" target="_blank" class="classe1">(HULTIG)</a>  founded in 2003 by Gael Harry Dias, at the time Professor of the <a href="http://www.ubi.pt/entidade/Departamento_de_Informatica" target="_blank" class="classe1">Department of Informatics</a>  of the <a href="http://www.ubi.pt/" target="_blank" class="classe1">University of Beira Interior</a> (UBI), Covilh&atilde;, Portugal. And currently directed by Dr. Jo&atilde;o Paulo Cordeiro, also Teacher of the <a href="http://www.di.ubi.pt/" target="_blank" class="classe1">informatics Department</a>  of <a href="http://www.ubi.pt/" target="_blank" class="classe1">UBI</a>.</p> -->
+
+
+                                    <p align="justify">
+                                        Hultig-C, &eacute; um corpus <a href="https://pt.wikipedia.org/wiki/Multilinguismo" target="_blank" class="classe1"> multilingue</a>, criado para apoiar a pesquisa sobre a recupera&ccedil;&atilde;o de informa&ccedil;&otilde;es e tecnologias relacionadas da linguagem humana. Projeto que faz parte do centro de tecnologia da linguagem humana e bioinform&aacute;tica <a href="http://hultig.di.ubi.pt/" target="_blank" class="classe1">(HULTIG)</a> fundada em 2003 por Gael Harry Dias, na &eacute;poca professor do <a href="http://www.ubi.pt/entidade/Departamento_de_Informatica" target="_blank" class="classe1">Departmento de Inform&aacute;tica</a> da <a href="http://www.ubi.pt/" target="_blank" class="classe1">Universidade da Beira Interior</a> (UBI), Covilh&atilde;, Portugal. E atualmente dirigido pelo Dr. Jo&atilde;o Paulo Cordeiro, igualmente Docente do <a href="http://www.di.ubi.pt/" target="_blank" class="classe1"> Departmento de Inform&aacute;tica</a>  da <a href="http://www.ubi.pt/" target="_blank" class="classe1">UBI</a>.
+
+
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+
+
+
+
+                        <br />
+                        <br />
+                        <br />
+                        <div align="center">
+
+
+                            <p>
+                                &#8226 &#8226 &#8226
+                            </p>
+                            <a href="#about" class="btn btn-skin btn-scroll">Saiba Mais </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
+    <!-- /Section: Home -->
+    <!-- Section: about -->
+    <section id="about" class="home-section color-dark bg-white">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="animatedParent">
+                        <div class="section-heading text-center animated bounceInDown">
+                            <h2 class="h-bold">Sobre Hultig-C</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-8 col-lg-offset-2 animatedParent">
+                    <div class="text-center">
+
+
+                        <div class="areaImagem">
+                            <img class="img" src="img\about.png" align="justify" width="750" height="150" />
+                        </div>
+                        </br>
+
+                        <!--
+                        <p align="justify">
+                        The Technology center of Human Language and bioinformatics <a href="http://hultig.di.ubi.pt/" target="_blank" class="classe1">(HULTIG)</a> is a research group of the Department of Informatics, the University of Beira Interior. Over time, we have worked on a variety of topics related to the automatic processing of human language, with particular focus on the strand application of them. Among the various sub domains, we have devoted special attention to the following:</p>
+
+                        <p align="justify" ><font color="#086A87">
+                        &#10004;Information research;
+                        </br>
+                        &#10004;Mining and text extraction;
+                        </br>
+                        &#10004;Automatic summarization;
+                        </br>
+                        &#10004;Automatic detection of plagiarism;
+                        </br>
+                        &#10004;Feelings analysis in text;
+                        </br>
+                        &#10004;Lexical semantics;
+                        </br>
+                        &#10004;Textual Alignment Similarity;
+                        </br>
+                        &#10004;Aesthetic characterization of the text;
+                        </br>
+                        </font>
+                        </p>    -->
+
+
+                        <p align="justify"> O Centro de Tecnologia da Linguagem Humana e Bioinform&aacute;tica <a href="http://hultig.di.ubi.pt/" target="_blank" class="classe1">(HULTIG)</a> &eacute; um grupo de pesquisa do departamento de inform&aacute;tica, da Universidade da Beira interior. Ao longo do tempo, temos trabalhado em uma variedade de t&oacute;picos relacionados com o processamento autom&aacute;tico da linguagem humana, com foco particular na aplica&ccedil;&atilde;o das mesmas. Entre os v&aacute;rios subdom&iacute;nios, temos dedicado especial aten&ccedil;&atilde;o ao seguinte: </p>
+
+                        <p align="justify">
+                            <font color="#086A87">
+                                &#10004; Pesquisa de Informa&ccedil;&atilde;o;
+                                </br>
+                                &#10004; Minera&ccedil;&atilde;o e Extra&ccedil;&atilde;o de Texto;
+                                </br>
+                                &#10004; Sumariza&ccedil;&atilde;o Autom&aacute;tica;
+                                </br>
+                                &#10004; Dete&ccedil;&atilde;o Autom&aacute;tica de Pl&aacute;gio;
+                                </br>
+                                &#10004; An&aacute;lise de Sentimentos em Texto;
+                                </br>
+                                &#10004; Sem&acirc;ntica Lexical;
+                                </br>
+                                &#10004;Similaridade Alinhamento Textual;
+                                </br>
+                                &#10004; Caracteriza&ccedil;&atilde;o Est&eacute;tica do Texto;
+                                </br>
+                            </font>
+                        </p>
+
+
+                        <p align="justify">
+                            O Hultig-C &eacute; um corpus que come&ccedil;ou a ser desenvolvido em Janeiro de 2017, e consiste em de cerca de milhares de palavras em diferentes idiomas, colectadas com base nos textos brutos (de diferentes naturezas, de diferentes n&iacute;veis lingu&iacute;sticos e de sofistica&ccedil;&atilde;o) obtidos atrav&eacute;s de sites da web e indexados com <a href="http://www.openwebspider.org/" target="_blank" class="classe1">OpenWebSpider</a>.  O Hultig-C est&aacute; a ser desenvolvido e mantido na <a href="http://www.ubi.pt/" class="classe1" target="_blank">UBI</a>, pelo Hultig (Centro de Tecnologia da Linguagem Humana e Bioinform&aacute;tica) do <a href="http://www.ubi.pt/entidade/Departamento_de_Informatica" target="_blank" class="classe1">Departamento de Inform&aacute;tica</a>. Este Corpus surge como resultado de um trabalho em curso que tem como objetivo dar suporte ao processamento autom&aacute;tico da linguagem humana, alargando e melhorando gradualmente o Corpus, em todas as suas dimens&otilde;es, de forma a providenciar um recurso de alto n&iacute;vel para a investiga&ccedil;&atilde;o em Lingu&iacute;stica computacional e para o desenvolvimento de aplica&ccedil;&otilde;es e tecnologias da linguagem.
+                        </p>
+
+                        <!-- <p align="justify"> The Hultig-C is a corpus that began to be developed in January 2017, and consists of about thousands of words in different languages, collected based on the raw texts (of different natures, different linguistic and sophistication levels) obtained through the  and indexed with  <a href="http://www.openwebspider.org/" target="_blank" class="classe1">OpenWebSpider</a>. Hultig-C is being developed and maintained at <a href="http://www.ubi.pt/" class="classe1" target="_blank">UBI</a>, by Center of Technology of Human Language and Bioinformatics (HULTIG) of the <a href="http://www.ubi.pt/entidade/Departamento_de_Informatica" target="_blank" class="classe1">Department of Informatics</a>.
+                        This corpus arises as a result of ongoing work that aims to support the automatic processing of human language, extending and gradually improving the corpus, in all its dimensions, in order to provide a high-level resource for research In computational linguistics and for the development of applications and language technologies. -->
+                        </br>
+
+                        <!--
+                        <p align="justify">
+                        In addition to a majority concern with the application and technology, we also consider the most theoretical and conceptual aspects of the study of human language, in particular computational linguistics.
+                         Additional information about the Hultig Dataset is available in <a href="http://hultig.di.ubi.pt/" target="_blank" class="classe1">Hultig web site</a> conference.</p> -->
+
+                        <p align="justify"> Al&eacute;m, de uma preocupa&ccedil;&atilde;o maiorit&aacute;ria com a aplica&ccedil;&atilde;o e tecnologia, tamb&eacute;m consideramos os aspectos mais te&oacute;ricos e conceituais do estudo da linguagem humana, em particular a lingu&iacute;stica computacional.	</p>	</br>
+
+                        <p align="justify">
+                            Informa&ccedil;&otilde;es adicionais sobre o Conjunto de Dados Hultig,  est&aacute; dispon&iacute;vel na confer&ecirc;ncia do <a href="http://hultig.di.ubi.pt/" target="_blank" class="classe1">Hultig web site</a> .
+                        </p>
+
+
+
+                        <p>
+                            &#8226 &#8226 &#8226
+                        </p>
+                        <a href="#details" class="btn btn-skin btn-scroll">Hultig-C Detalhes</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+    <!-- /Section: about -->
+    <!-- Section: Details -->
+    <section id="details" class="home-section color-dark bg-gray">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div>
+                        <div class="section-heading text-center">
+                            <h2 class="h-bold">Hultig-C Detalhes</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center">
+            <div class="container">
+
+                <div class="row animatedParent">
+                    <div class="col-xs-6 col-sm-4 col-md-4">
+                        <div class="animated rotateInDownLeft">
+                            <div class="service-box">
+                                <div class="service-desc">
+                                    <h5>P&aacute;ginas Web:</h5>
+                                    <div class="divider-header"></div>
+                                    <p>
+                                        &#8226  4, 943, 857 P&aacute;ginas Web.
+
+                                    </p>
+
+                                    <p>
+                                        &#8226  100 GB n&atilde;o comprimido.
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row animatedParent">
+                        <div class="col-xs-6 col-sm-6 col-md-4">
+                            <div class="animated rotateInDownLeft">
+                                <div class="service-box">
+                                    <div class="service-desc">
+                                        <h5>Identificadores de Linguagem:</h5>
+                                        <!--Language identifiers  -->
+                                        <div class="divider-header"></div>
+                                        <p>
+                                            &#8226  Todos os identificadores de linguagem de 2 letras para o conjunto de dados est&atilde;o de acordo com a lista de ID de idioma ISO 639.
+
+                                            <!--All 2-letter language identifers for the dataset conform to the ISO 639 language ID list. -->
+                                        </p>
+                                        <p>
+
+                                            &#8226  No conjunto de dados Hultig-C, foram usados todos os idiomas Europeus, bem como alguns idiomas predominantes no continente Asi&aacute;tico.
+
+                                            <!--In the Hultig-C data set, all European languages were used, as well as some predominant languages in the Asian continent.  -->
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row animatedParent">
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="animated rotateInDownLeft">
+                                    <div class="service-box">
+                                        <div class="service-desc">
+                                            <h5>Gr&aacute;fico da Web-conjunto de dados inteiro :</h5>
+                                            <!--Web Graph - Entire Data Set -->						<div class="divider-header"></div>
+                                            <p>
+                                                &#8226  URLs &Uacute;nicos: 3, 914, 526
+                                            </p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <p align="center">
+                            &#8226 &#8226 &#8226
+                        </p>
+                        <a href="#HowToGetIt" class="btn btn-skin btn-scroll">Como Obt&ecirc;&ndash;lo</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- /Section: details -->
+    <!-- Section: HowToGetIt -->
+    <section id="HowToGetIt" class="home-section color-dark bg-white">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="animatedParent">
+                        <div class="section-heading text-center animated bounceInDown">
+                            <h2 class="h-bold">Como Obt&ecirc;-lo</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-8 col-lg-offset-2 animatedParent">
+                    <div class="text-center">
+                        <p align="justify">Os conjuntos de dados Hultig-C s&atilde;o distribu&iacute;dos pelo Centro de Tecnologia da Linguagem Humana e Bioinform&aacute;tica (HULTIG), apenas para fins acad&eacute;micos e de pesquisa.</p>
+                        <!--<p align="justify">
+                        The Hultig-C data sets are distributed by the center of Human Language Technology and Bioinformatics (Hultig), only for academic and research purposes.</p>-->
+                        <!--<p align="justify">
+                        The Hultig-C is Open Source, thereby facilitating the process of obtaining a Hultig-C DataSet.-->
+                        </p>
+
+                        <p align="justify">
+                            O Hultig-c &eacute; Open Source, facilitando assim o processo de obten&ccedil;&atilde;o do conjunto de dados Hultig-c.
+                        </p>
+
+                        </br>
+
+                        <p>
+                            &#8226 &#8226 &#8226
+                        </p>
+
+
+                        <a href="#OnlineServices" class="btn btn-skin btn-scroll">Verifique Servi&ccedil;os Online</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section><!-- /Section: HowToGetIt -->
+    <!-- Section: OnlineServices -->
+    <section id="OnlineServices" class="home-section color-dark bg-white">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="animatedParent">
+                        <div class="section-heading text-center animated bounceInDown">
+                            <h2 class="h-bold">Servi&ccedil;os Online</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-8 col-lg-offset-2 animatedParent">
+                    <div class="text-center">
+                        <p align="justify">
+                            Hultig-C fornece um conjunto de servi&ccedil;os para o processamento autom&aacute;tico da linguagem humana, identificando padr&otilde;es nas cole&ccedil;&otilde;es de informa&ccedil;&otilde;es armazenadas de forma desorganizada. Possibilitando assim um conjunto de opera&ccedil;&otilde;es normalmente requeridas em <a href=" https//hpi.de/fileadmin/user_upload/fachgebiete/plattner/teaching/NaturalLanguageProcessing/NLP2016/NLP01_IntroNLP.pdf" target="_blank" class="classe1"> PLN</a>.
+                        </p>
+                        <!--Hultig-C provides a set of services for automatic processing of human language, identifying patterns in the collections of information stored in a disorganized manner. Thus enabling a set of operations normally required in <a href=" https://hpi.de/fileadmin/user_upload/fachgebiete/plattner/teaching/NaturalLanguageProcessing/NLP2016/NLP01_IntroNLP.pdf" target="_blank" class="classe1"> NLP</a>.     -->
+
+
+
+                        <img width=626 height=265
+                             src="img\logo.png" v:shapes="Imagem_x0020_1"><![endif]></span></p>
+
+                        <p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+                        <p class=MsoNormal align=center style='text-align:center'>
+                            <span class=SpellE>
+                                <b style='mso-bidi-font-weight:normal'>
+                                    <span style='font-size:22.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%;color:#1F4E79;mso-themecolor:accent5;mso-themeshade:
+128;mso-style-textfill-fill-color:#1F4E79;mso-style-textfill-fill-themecolor:
+accent5;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+lumm=50000'>Esta</span>
+                                </b>
+                            </span><b style='mso-bidi-font-weight:normal'>
+                                <span style='font-size:22.0pt;mso-bidi-font-size:11.0pt;line-height:106%;color:#1F4E79;
+mso-themecolor:accent5;mso-themeshade:128;mso-style-textfill-fill-color:#1F4E79;
+mso-style-textfill-fill-themecolor:accent5;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:lumm=50000'>
+                                    <span class=SpellE>plataforma</span>
+                                    <span class=SpellE>est&aacute;</span> <span class=SpellE> em</span> <span class=SpellE>constru&ccedil;&atilde;o</span>.<o:p></o:p>
+                                </span>
+                            </b>
+                        </p>
+
+                        <p class=MsoNormal align=center style='text-align:center'>
+                            <span class=SpellE>
+                                <b style='mso-bidi-font-weight:normal'>
+                                    <span style='font-size:22.0pt;mso-bidi-font-size:
+11.0pt;line-height:106%;color:#1F4E79;mso-themecolor:accent5;mso-themeshade:
+128;mso-style-textfill-fill-color:#1F4E79;mso-style-textfill-fill-themecolor:
+accent5;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+lumm=50000'>Por favor,</span>
+                                </b>
+                            </span><b style='mso-bidi-font-weight:normal'>
+                                <span style='font-size:22.0pt;mso-bidi-font-size:11.0pt;line-height:106%;color:#1F4E79;
+mso-themecolor:accent5;mso-themeshade:128;mso-style-textfill-fill-color:#1F4E79;
+mso-style-textfill-fill-themecolor:accent5;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:lumm=50000'>volte em<span class=SpellE>breve!</span>
+                            </b>
+                        </p>
+                        </br>
+
+                        <p>
+                            &#8226 &#8226 &#8226
+                        </p>
+
+
+                        <a href="#IndexingWithOpenWebSpider" class="btn btn-skin btn-scroll">verifique Indexa&ccedil;&atildeo com OpenWebSpider</a>
+
+    </section><!-- /Section: OnlineServices -->
+    <!-- Section: IndexingWithOpenWebSpider -->
+    <section id="IndexingWithOpenWebSpider" class="home-section color-dark bg-white">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="animatedParent">
+                        <div class="section-heading text-center animated bounceInDown">
+                            <h2 class="h-bold">
+                                Indexa&ccedil;&atilde;o com OpenWebSpider
+                            </h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-8 col-lg-offset-2 animatedParent">
+                    <div class="text-center">
+
+                        <p align="justify">
+
+                            A forma mais eficiente de organizar e encontrar um arquivo em um banco de dados &eacute; atrav&eacute;s da indexa&ccedil;&atilde;o. Cujo objetivo &eacute; descentralizar a produ&ccedil;&atilde;o de informa&ccedil;&atilde;o e distribu&iacute;&ndash;la de forma extensiva e r&aacute;pida.
+                            <!--The most efficient way to organize and find a file in a database is through indexing. The purpose of which is to decentralise the production of information and distribute it extensively and quickly..-->
+                        </p>
+
+                        <p align="justify">
+                            A indexa&ccedil;&atilde;o de Hultig-C come&ccedil;ou em janeiro de 2017, com suporte &agrave;s funcionalidades do OpenWebSpider.
+                        </p>
+
+                        <p align="justify">
+                            OpenWebSpider &eacute; uma web Spider (tamb&eacute;m conhecido como Tracker ou Web Robot) e um motor de busca, &eacute; um programa que navega de forma aut&oacute;noma em sites da Web, lendo suas p&aacute;ginas e outras informa&ccedil;&otilde;es para criar entradas para um &iacute;ndice de motor de busca.
+                            <!--OpenWebSpider is a web Spider (also known as tracker or Web robot) and a search engine, is a program that navigates autonomously on Web sites, reading your pages and other information to create entries for a search engine index.-->
+                        </p>
+
+                        <p align="justify">
+                            Esses programas s&atilde;o chamados de aranhas, porque eles visitam muitos sites em paralelo e ao mesmo tempo, abrangendo uma grande &aacute;rea Web, a partir de uma URL e expandindo a leitura atrav&eacute;s das subp&aacute;ginas e hiperlinks presentes na URL, criando um banco de dados que permite uma subsequente busca por express&otilde;es existentes nos sites visitados; Ou seja, eles visitam websites, seguem links em p&aacute;ginas e registram os dados desses links de cada p&aacute;gina visitada, para facilitar a indexa&ccedil;&atilde;o em um banco de dados e a associa&ccedil;&atilde;o de mecanismos de pesquisa.
+
+                            <!--These programs are called spiders, because they visit many sites in parallel and at the same time, spanning a large web area, from a URL and expanding the reading through the sub pages and hyperlinks present in the URL, creating a database that Enables a subsequent search for existing expressions on the sites visited; That is, they visit websites, follow links on pages, and record the data of these links from each visited page, to facilitate indexing in a database and the search engine membership.-->
+                        </p>
+                        <p align="justify">
+                            Possibilitando assim a recupera&ccedil;&atilde;o autom&aacute;tica de dados da Web e atualizando o banco de dados, facilitando a indexa&ccedil;&atilde;o do conte&uacute;do baixado, promovendo assim pesquisas mais r&aacute;pidas.
+
+                            <!--Thus enabling automatic retrieval of web data and updating the database, facilitating the indexing of downloaded content, thereby promoting faster searches.-->
+                        </p>
+
+                        <p align="justify">
+                            Atrav&eacute;s do OpenWebSpider, &eacute; poss&iacute;vel, por exemplo, indexar um site e saber quantas vezes e em que lugar um determinado termo aparece. Uma op&ccedil;&atilde;o rudimentar para este mecanismo seria buscar manualmente, p&aacute;gina a p&aacute;gina, o termo pesquisado, o que poderia levar a exaust&atilde;o e aquisi&ccedil;&atilde;o de resultados poucos eficientes.
+
+                            <!--Through the OpenWebSpider, it is possible, for example, to index a site and know how many times and in which places a given term appears. A rudimentary option to this mechanism would be to fetch manually, page the page, the term searched, which could lead to exhaustion and acquisition of efficient few results.-->
+                        </p>
+
+                        <p align="justify">
+                            OpenWebSpider usa GNU General Public license (GPL) e todos os softwares livres (gcc, MySQL, Apache, and PHP).
+                            <!--OpenWebSpider uses the GNU General Public license (GPL) and all Free software (gcc, MySQL, Apache, and PHP).
+
+                            The platforms where the OpenWebSpider is tested are: Windows and Linux. It is often possible to compile it on other platforms, but is not officially supported.-->
+                            As plataformas onde o OpenWebSpider &eacute; testado s&atilde;o: Windows e Linux. Muitas vezes &eacute; poss&iacute;vel compil&aacute;&ndash;lo em outras plataformas, mas n&atilde;o &eacute; oficialmente suportado.
+                        </p>
+                        <p align="center">
+                            </br>
+                            </br>
+
+                            Para obter mais informa&ccedil;&otilde;es, visite a P&aacute;gina Web <a href="http://www.openwebspider.org/" target="_blank" class="classe1">www.openwebspider.org</a>.
+
+                        </p>
+
+
+
+                        </br>
+
+                        <p>
+                            &#8226 &#8226 &#8226
+                        </p>
+
+
+                        <a href="#FAQS" class="btn btn-skin btn-scroll">Verifique FAQS</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+    <!-- /Section: IndexingWithOpenWebSpider
+    -->
+    <!-- Section: FAQS -->
+    <section id="FAQS" class="home-section color-dark bg-white">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="animatedParent">
+                        <div class="section-heading text-center animated bounceInDown">
+                            <h2 class="h-bold">Perguntas Frequentes</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-8 col-lg-offset-2 animatedParent">
+                    <div class="text-center">
+                        <p align="justify">
+                            <b>Quem pode usar o Hultig-C?</b>O Hultig-C apoia a educa&ccedil;&atilde;o, pesquisa e desenvolvimento de tecnologia relacionados da lingu&iacute;stica computacional, compartilhando recursos, tais como dados, ferramentas e padr&otilde;es. Destinando-se assim  a todos quantos tenham interesses por &aacute;reas afins, e desenvolvem ou pretendam desenvolver programas multilingues, e que consequentemente precisam de mat&eacute;ria prima para dar suporte ao trabalho que tencionem desenvolver.
+
+                            <!--Hultig-C supports the education, research and development of technology related to computational linguistics, sharing resources, such as data, tools, and patterns. Thus aiming at all those who have interests for related areas, and develop or intend to develop multilingual programs, and that consequently need raw material to support the work that intend develop.-->
+
+                        <p align="justify">
+                            <b>Como obter o Hultig-C?</b>  Os conjuntos de dados Hultig-C s&atilde;o distribu&iacute;dos pelo Centro de Tecnologia da Linguagem Humana e Bioinform&aacute;tica (Hultig), <a href="#contact"> contate-nos</a>.
+
+                            <!-- The Hultig-C data sets are distributed by the Human Language Technology Center and Bioinformatics (HULTIG), contact us<a href= "#contact" > contact us</a>  -->
+
+
+
+                        <p align="justify">
+                            <b>O que &eacute; OpenWebSpider?</b>
+                            OpenWebSpider &eacute; um programa que pode ser usado para criar um servi&ccedil;o de pesquisa, cuja finalidade &eacute; visitar sites, ler suas p&aacute;ginas e criar um &iacute;ndice de entradas para uma engine de busca.
+
+
+                            <!--OpenWebSpider is a program that can be used to create a search service, whose purpose is to visit websites, read your pages and create an index of entries for a search engine.-->
+                        </p>
+
+                        <p align="justify">
+                            <b>Qual licen&ccedil;a o OpenWebSpider usa? </b> O OpenWebSpider usa a licen&ccedil;a GNU General Public License (GPL) e todos os softwares livres (gcc, MySQL, Apache, and PHP).
+
+                            <!--OpenWebSpider uses the GNU General Public license (GPL) and all Free software (gcc, MySQL, Apache, and PHP).   -->
+                        </p>
+
+
+                        <p align="justify">
+                            <b>Onde posso obter mais informa&ccedil;&otilde;es sobre o Hultig-C? </b>    Voc&ecirc; pode <a href="#contact"> enviar mensagem</a> para a Equipe do Hultig.
+                            <!--You can	<a href= "#contact" > send a message</a> to the Hultig team.-->
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+    </section>
+    <!-- /Section: FAQS -->
+    <!-- Section: contact -->
+    <section id="contact" class="home-section nopadd-bot color-dark bg-white text-center">
+        <div class="container marginbot-50">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="animatedParent">
+                        <div class="section-heading text-center">
+                            <h2 class="h-bold animated bounceInDown">Contate&ndash;nos</h2>
+
+                            <div class="contact" align="center">
+                                <table>
+                                    <tr>
+                                        <td>
+
+                                            <p align="center">
+                                                <a href="http://www.ubi.pt/" target="_blank" class="classe1">Universidade da Interior</a></br>
+                                                <a href="http://www.ubi.pt/entidade/Departamento_de_Informatica" target="_blank" class="classe1">Departamento de Inform&aacute;tica</a></br>
+                                                Rua Marqu&ecirc;s d'&Aacute;vila e Bolama.</br>
+                                                6201-001 Covilh&atilde;-Portugal.</br>
+                                        </td></p> </td>
+
+                                        <td>&nbsp;&nbsp;</td>
+                                        <td>&nbsp;&nbsp;</td>
+                                        <td>&nbsp;&nbsp;</td>
+
+
+                                        <td>
+                                            <p align="center">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9742; Telefone: +351 275 242 081 (ext.: 1601)</br>
+
+                                                &#128224; Fax: +351 275 319 899 &nbsp;&nbsp; &nbsp;&nbsp;</br>
+
+
+                                                &#9993; Hultig: hultig@di.ubi.pt</br>
+
+
+                                                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &#9993; Hultig-C: hultig-corpus@di.ubi.pt</br>
+
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+    </section>
+    <!-- /Section: contact -->
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!--<div class="col-md-6">
+                    <ul class="footer-menu">
+                        <li><a href="#">Home</a></li>
+
+                    </ul>
+                </div>-->
+                <div class="col-md-6">
+                    <p>&copy;Copyright 2017</p>
+                    <!--
+                        All links in the footer should remain intact.
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Bocor
+                    -->
+                </div>
+				 <div class="col-md-6 text-right">
+                    <a href='https://clustrmaps.com/site/19vo9'  title='Visit tracker'><img src='http://clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=9ucdBsLq6YsPrfwllLotzcqCkowpKHl1iI0nu1Cx1lE'/></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/css3-animate-it.js"></script>
+
+</body>
+</body>
+</html>
