@@ -22,4 +22,5 @@ Contact information is below, including email and various web services.  This is
 * ResearchGate: [Sebastiao_Pais](https://goo.gl/mkio6G)
 * SCOPUS: [35103248500](https://www.scopus.com/authid/detail.uri?authorId=35103248500)
 * Semantic Scholar: [34443965](https://www.semanticscholar.org/author/34443965)
+* AuthID: [R-00H-DG4](https://www.authenticus.pt/R-00H-DG4)
 * UBI @ DI: [University of Beira Interior](https://www.ubi.pt/) @ [Departament of Computer Science](http://www.di.ubi.pt/)
