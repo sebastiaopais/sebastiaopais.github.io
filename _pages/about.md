@@ -14,14 +14,8 @@ Sebastião Pais is [ACM Professional Member](http://member.acm.org/~sebastiaopai
 
 ## News
 
-[INForum2023](https://www.inforum2023.org/)
-Faculty of Engineering of the University of Porto, Portugal, 7 - 8 September, 2023
-
 [Call for Papers: Special Issue on Large-scale Statistical Natural Language Processing](https://www.springer.com/journal/41060/updates/19247002)
 International Journal of Data Science and Analytics (JDSA), Springer
-
-[Applied Natural Language Processing in Healthcare](https://www.nlpsummit.org/)
-Free Online Event | April 4-5, 2023
 
 [ACL 2023 - The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org/)
 Toronto, Canada, 9-14 July, 2023
