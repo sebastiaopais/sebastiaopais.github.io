@@ -17,8 +17,8 @@ Sebastião Pais is [ACM Professional Member](http://member.acm.org/~sebastiaopai
 [Call for Papers: Special Issue on Large-scale Statistical Natural Language Processing](https://www.springer.com/journal/41060/updates/19247002)
 International Journal of Data Science and Analytics (JDSA), Springer
 
-[ACL 2023 - The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org/)
-Toronto, Canada, 9-14 July, 2023
+[LREC-COLING 2024 Lingotto Conference Centre](https://lrec-coling-2024.org/)
+Torino, Italy, 20-25 May, 2024
 
 [CHI 2024 - ACM (Association of Computing Machinery) CHI conference on Human Factors in Computing Systems](https://chi2024.acm.org/)
 Honolulu, at the Hawaiʻi Convention Center on the island of Oʻahu, Hawaiʻi, USA from 11-16 May, 2024
@@ -26,4 +26,6 @@ Honolulu, at the Hawaiʻi Convention Center on the island of Oʻahu, Hawaiʻi, U
 [23rd IEEE International Conference on Data Mining](http://www.cloud-conf.net/icdm2023/index.html)
 Shanghai, China, December 1-4, 2023
 
+[SIGIR 2024 - The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval](https://sigir-2024.github.io/index.html)
+Washington D.C., USA, July 14-18, 2024
 
