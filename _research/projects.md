@@ -8,7 +8,17 @@ permalink: /research/projects
 #location: "City, Country"
 ---
 
-Topics: Statistical Natural Language Processing, Social Network Analysis, Sentiment Analysis, Big Data, and Web Mining.
+Topics: Statistical Natural Language Processing, Social Network Analysis, Data Science, Sentiment Analysis, Big Data, and Web Mining.
+
+## [Attract](https://attract.inesctec.pt/)
+> Co-financed by the Digital Europe Programme and Plano de Recuperação e Resiliência (PRR) | Reference: 101083770 | Ongoing (36 months) - Started: 2023 Ends: 2025
+
+Aligned and contributing for European and National policies, ATTRACT DIH defines an ambitious plan to support SMEs and public entities in their digital transformation and consolidation through the full exploitation of the synergetic potential between Artificial Intelligence and High-Performance Computing. ATTRACH DIH acts on both the supply and use of technology.
+
+## [PHArA-ON](https://www.pharaon.eu/)
+> Co-financed by the European Union through the Horizon 2020 framework | Reference: 857188 | Ongoing (36 months) - Started: 2021 Ends: 2024
+
+The overall objective of the PHArA-ON project is to provide support for Europe’s ageing population by integrating digital services, devices, and tools into open platforms that can be readily deployed while maintaining the dignity of older adults and enhancing their independence, safety, and capabilities. The project will utilise a range of digital tools including connected devices (e.g., the Internet of Things, IoT), artificial intelligence, robotics, cloud and edge computing, smart wearables, big data, and intelligent analytics that will be integrated to provide personalised and optimised health care delivery.
 
 ## [PAM4WELLNESS](https://pam4wellness.ubi.pt/)
 > This work was supported by Portugal 2020 – Centro 2020 – European Regional Development Fund | Reference: POCI-01-0246-FEDER-181319 | Ongoing (28 months) - Started: 2021 Ends: 2023

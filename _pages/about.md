@@ -23,9 +23,6 @@ Torino, Italy, 20-25 May, 2024
 [CHI 2024 - ACM (Association of Computing Machinery) CHI conference on Human Factors in Computing Systems](https://chi2024.acm.org/)
 Honolulu, at the Hawaiʻi Convention Center on the island of Oʻahu, Hawaiʻi, USA from 11-16 May, 2024
 
-[23rd IEEE International Conference on Data Mining](http://www.cloud-conf.net/icdm2023/index.html)
-Shanghai, China, December 1-4, 2023
-
 [SIGIR 2024 - The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval](https://sigir-2024.github.io/index.html)
 Washington D.C., USA, July 14-18, 2024
 
