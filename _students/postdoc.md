@@ -9,6 +9,8 @@ permalink: /student/postdoc
 ---
 Research Areas: Natural Language Processing, Social Network Analysis, Sentiment Analysis, Big Data, Web Mining.
 
+* Mehran Pourvahab. Research in the PHArA-ON project. Started: 2022 - Concluded: 2024. University of Beira Interior.
+
 * Irfan Tanoli. Research in the MOVES project. Started: 2019 - Concluded: 2021. University of Beira Interior.
 
 * Abdullatif A. Abolohom. Research in the HULTIG-C project. Started: 2019 - Concluded: 2021. University of Beira Interior.
