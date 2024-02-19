@@ -10,4 +10,4 @@ date: 2024-03-01
 
 This course presents the main concepts of Logic, in its computational aspect, i.e. through algorithms and computational techniques that allows its use in the field of Computer Engineering.
 
-> [Access here](https://sebastiaopais.github.io/classes/cl.html)
+> [Access here](https://moodle.ubi.pt/course/view.php?id=20035)

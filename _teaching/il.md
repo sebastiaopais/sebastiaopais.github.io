@@ -9,5 +9,3 @@ date: 2023-09-01
 ---
 
 Introduce the student to base concepts of Artificial Intelligence and Data Science, aiming to level up the base knowledge of the new students.
-
-> [Access here](https://sebastiaopais.github.io/classes/il.html)
