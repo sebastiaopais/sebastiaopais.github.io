@@ -14,15 +14,21 @@ Sebastião Pais is [ACM Professional Member](http://member.acm.org/~sebastiaopai
 
 ## News
 
-[Call for Papers: Special Issue on Large-scale Statistical Natural Language Processing](https://www.springer.com/journal/41060/updates/19247002)
-International Journal of Data Science and Analytics (JDSA), Springer
+[ACMMM 2025 - ACM Multimedia](https://acmmm2025.org/)
+Dublin, Ireland, October 27-31 2025
 
-[LREC-COLING 2024 Lingotto Conference Centre](https://lrec-coling-2024.org/)
-Torino, Italy, 20-25 May, 2024
+[COLING - The 31st International Conference on Computational Linguistics](https://coling2025.org/)
+Abu Dhabi, UAE, January 19-24, 2025
 
-[CHI 2024 - ACM (Association of Computing Machinery) CHI conference on Human Factors in Computing Systems](https://chi2024.acm.org/)
-Honolulu, at the Hawaiʻi Convention Center on the island of Oʻahu, Hawaiʻi, USA from 11-16 May, 2024
+[CHI 2025 - ACM (Association of Computing Machinery) CHI conference on Human Factors in Computing Systems](https://chi2025.acm.org/)
+Yokohama, Japan, April 26 - May 01, 2025
 
-[SIGIR 2024 - The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval](https://sigir-2024.github.io/index.html)
-Washington D.C., USA, July 14-18, 2024
+[EMNLP 2024 - The 2024 Conference on Empirical Methods in Natural Language Processing](https://2024.emnlp.org/)
+Miami, Florida, November 12-16, 2024
+
+[SIGIR 2025 - The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval](https://sigir2025.dei.unipd.it/)
+Padua, Italy, July 13-18, 2025
+
+[ICDM 2024 - The world’s premier research conference in Data Mining](https://icdm2024.org/)
+Abu Dhabi, UAE, December 9-12 2024
 
