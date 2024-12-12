@@ -10,11 +10,13 @@ permalink: /student/msc
 Research Areas: Statistical Natural Language Processing, Statistical Learning, Machine Learning, Social Network Analysis, Sentiment Analysis, Data Science and Data Mining.
 The second cycle of studies leading to the Masters degree in Computer Engineering intends to form future engineers with a solid knowledge and the appropriate skills for the current labor market, as well as providing them with a basis for the frequency of the third cycle of studies (PhD) in Computer Engineering.
 
-* Giovana Voltoline. Big Textual Data Visualization. Started: 2022 - Ongoing. M.Sc. in Computer Science and Engineering - University of Beira Interior.
+* Anilson Monteiro. Dynamic Multimodal Fusion Learning in Mental Health Context. Started: 2024 - Ongoing. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
-* Inês Lopes. Sports News Generation. Started: 2022 - Ongoing. M.Sc. in Computer Science and Engineering - University of Beira Interior.
+* Luís Silva. Conversational Agent for Mental Health Support. Started: 2024 - Ongoing. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
-* Francisco Jerónimo. Personality Retrieval. Started: 2022 - Ongoing. M.Sc. in Computer Science and Engineering - University of Beira Interior.
+* António Caldeira. Digital Phenotyping for Mental Health: Behavioral Indicators. Started: 2024 - Ongoing. M.Sc. in Computer Science and Engineering - University of Beira Interior.
+
+* Giovana Voltoline. Big Textual Data Visualization. Started: 2022 - Concluded. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
 * Faustino Muetunda. Knowledge Base for MENTAL AI, in Data Science Context. Started: 2021 - Concluded: 2022. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
