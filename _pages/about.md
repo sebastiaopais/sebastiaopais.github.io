@@ -14,21 +14,18 @@ Sebastião Pais is [ACM Professional Member](http://member.acm.org/~sebastiaopai
 
 ## News
 
+[ECAI 2025 - The European Conference on Artificial Intelligence](https://ecai2025.org/)
+Bologna, Italy, October 25-30, 2025
+
 [ACMMM 2025 - ACM Multimedia](https://acmmm2025.org/)
 Dublin, Ireland, October 27-31 2025
 
-[COLING - The 31st International Conference on Computational Linguistics](https://coling2025.org/)
-Abu Dhabi, UAE, January 19-24, 2025
-
-[CHI 2025 - ACM (Association of Computing Machinery) CHI conference on Human Factors in Computing Systems](https://chi2025.acm.org/)
-Yokohama, Japan, April 26 - May 01, 2025
-
-[EMNLP 2024 - The 2024 Conference on Empirical Methods in Natural Language Processing](https://2024.emnlp.org/)
-Miami, Florida, November 12-16, 2024
+[EMNLP 2025 - The 2025 Conference on Empirical Methods in Natural Language Processing](https://2025.emnlp.org/)
+Suzhou, China, November 05-09, 2025
 
 [SIGIR 2025 - The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval](https://sigir2025.dei.unipd.it/)
 Padua, Italy, July 13-18, 2025
 
-[ICDM 2024 - The world’s premier research conference in Data Mining](https://icdm2024.org/)
-Abu Dhabi, UAE, December 9-12 2024
+[IEEE ICDM 2025 - IEEE ICDM 2025 25th IEEE International Conference on Data Mining](https://www3.cs.stonybrook.edu/~icdm2025/)
+Washington DC, USA, November 12-15, 2025
 
