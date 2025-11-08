@@ -11,12 +11,12 @@ permalink: /research/projects
 Topics: Statistical Natural Language Processing, LLM, Social Network Analysis, Data Science, Sentiment Analysis and Big Data.
 
 ## [Horus 360 IOMS NextGen](https://prisonsystems.eu/wp-content/uploads/2025/08/Anexo-VIII-COMPETE2030_Ficha_de_Operacao.pdf)
->This work was supported by Portugal 2030 – Compete 2030 | Reference: COMPETE2030-FEDER-01316200 | Concluded (36 months) - Started: 2025 Ends: 2028
+>This work was supported by Portugal 2030 – Compete 2030 | Reference: COMPETE2030-FEDER-01316200 | Ongoing (36 months) - Started: 2025 Ends: 2028
 
 Continuing the development of the previous HORUS 360iOMS project which investigated and developed an "intelligent offender management system," HORUS 360iOMS NextGen aims at the R&D of: (i) Large Language Models (LLMs); (ii) vehicle/OMS application interfaces for vehicular mobility; (iii) a system for acquiring and providing data in an offline mobility context; (iv) AI and cybersecurity in a penitentiary context.
 
 ## [Hidropon.IA - Sistemas de agricultura de precisão assistidos por IA para culturas](https://www.ubi.pt/Ficheiros/Entidades_Separadores/176/Hidropon.IA.pdf)
->This work was supported by Portugal 2030 – Compete 2030 | Reference: COMPETE2030-FEDER-01488700 | Concluded (36 months) - Started: 2025 Ends: 2028
+>This work was supported by Portugal 2030 – Compete 2030 | Reference: COMPETE2030-FEDER-01488700 | Ongoing (36 months) - Started: 2025 Ends: 2028
 
 The Hidropon.IA project aims to increase the productivity and food safety of hydroponic crops. A platform will be developed with a digital twin of the system, which will use AI modules and algorithms to optimize resource management and traceability. The analysis of historical and real-time data collected by sensors at various levels will improve efficiency and profitability.
 
