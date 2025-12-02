@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro: Exploradores da Criação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #000; font-family: 'Space Grotesk', sans-serif; }
+        canvas { display: block; position: absolute; top: 0; left: 0; z-index: 1; }
+        
+        /* Ecrã de Início (Para permitir o Áudio) */
+        #start-screen {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 100;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 1s;
+        }
+        .start-btn {
+            border: 2px solid #06b6d4; /* Cyan/Teal para Sci-Fi vibe */
+            color: #06b6d4;
+            padding: 20px 50px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: transparent;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: pointer;
+        }
+        .start-btn:hover {
+            background: #06b6d4;
+            color: #000;
+            box-shadow: 0 0 50px rgba(6, 182, 212, 0.8);
+            transform: scale(1.1);
+        }
+
+        /* Estilo do Botão Final (Link) */
+        .final-link-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            border: 2px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5vw;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0; /* Começa invisível */
+            animation: fadeInBtn 2s ease-out 18s forwards; /* Aparece aos 18s */
+            transition: all 0.3s;
+            pointer-events: auto; /* Garante que é clicável */
+            position: relative;
+            z-index: 10;
+        }
+        .final-link-btn:hover {
+            background: #fff;
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fadeInBtn { to { opacity: 1; } }
+
+        #overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 2;
+            display: none; /* Escondido até iniciar */
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+        }
+
+        .text-slide {
+            position: absolute;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+            width: 90%;
+        }
+
+        .text-slide h1 {
+            color: #fff;
+            font-size: 5vw;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin: 0;
+            text-shadow: 0 0 30px rgba(6, 182, 212, 0.6); /* Cyan glow */
+        }
+
+        .text-slide p {
+            color: #67e8f9; /* Light Cyan */
+            font-family: 'Outfit', sans-serif;
+            font-size: 2vw;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        .highlight { color: #f472b6; text-shadow: 0 0 30px rgba(244, 114, 182, 0.6); } /* Pink highlight */
+
+        .final-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logos-container {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 10px;
+        }
+        /* Placeholder para os logos */
+        .logo-box img {
+            height: 100px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .loader {
+            position: absolute;
+            bottom: 50px;
+            width: 300px;
+            height: 2px;
+            background: rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+        .loader-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #06b6d4, transparent);
+            animation: load 20s ease-out forwards;
+        }
+
+        @keyframes load { 0% { width: 0%; transform: translateX(-100%); } 50% { width: 50%; transform: translateX(0); } 100% { width: 100%; transform: translateX(0); } }
+        
+        .visible { opacity: 1; transform: translateY(0) scale(1); }
+        .hidden { opacity: 0; transform: translateY(-30px) scale(1.1); filter: blur(10px); }
+
+    </style>
+</head>
+<body>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Ecrã de Início -->
+    <div id="start-screen">
+        <button class="start-btn">INICIAR SISTEMA</button>
+    </div>
+
+    <div id="overlay">
+        
+        <!-- Slide 1: 0s - 5s -->
+        <div class="text-slide" id="s1">
+            <h1>Sabias que tens um<br><span class="highlight">Superpoder?</span></h1>
+        </div>
+
+        <!-- Slide 2: 5s - 9s -->
+        <div class="text-slide" id="s2">
+            <h1>Não é Força.<br>Não é Voar.</h1>
+        </div>
+
+        <!-- Slide 3: 9s - 14s -->
+        <div class="text-slide" id="s3">
+            <h1>É a tua Mente<br>+<br>Inteligência Artificial</h1>
+        </div>
+
+        <!-- Slide 4: 14s - 18s -->
+        <div class="text-slide" id="s4">
+            <p>A ferramenta que transforma</p>
+            <h1>Ideias em Realidade</h1>
+        </div>
+
+        <!-- Slide 5: Final -->
+        <div class="text-slide final-slide" id="s5">
+            <div class="logos-container">
+                <!-- Substitui estes src pelos links reais dos teus logos -->
+                <div class="logo-box">
+                    <img src="https://scontent.flis7-1.fna.fbcdn.net/v/t39.30808-6/448563895_122112643898333398_2485055751082659379_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=TiPCCUiPqFYQ7kNvwGhAFmb&_nc_oc=Adn-cIum2TGL5rl9aQPBfP8I-6_Q5WedYTbtsf4LDwlKMaEivw_iF0P524FC3fv_UT4&_nc_zt=23&_nc_ht=scontent.flis7-1.fna&_nc_gid=IRwdlYMw-W_JJDBp42-prQ&oh=00_AfigbKMYx-qwmla0KW-P5L7isuUK0Tys06MM7gPWbuJoFg&oe=6933ADAA" alt="Logo Associação Pais">
+                </div>
+            </div>
+            <div>
+                <p style="font-size: 1.5vw; margin-bottom: 10px; color: #fff; letter-spacing: 8px;">BEM-VINDOS AO WORKSHOP</p>
+                <h1 style="font-size: 7vw; color: #06b6d4; line-height: 0.9;">EXPLORADORES<br>DA CRIAÇÃO</h1>
+            </div>
+            
+            <!-- LINK PARA A APRESENTAÇÃO PRINCIPAL -->
+            <a href="workshop.html" class="final-link-btn">
+                INICIAR APRESENTAÇÃO <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="loader"><div class="loader-bar"></div></div>
+    </div>
+
+    <script>
+        let audioContext;
+        let particles, material, camera, renderer, scene;
+        let animationId;
+
+        // --- 1. FUNÇÃO DE ÁUDIO "SCI-FI SUSPENSE" ---
+        function playSciFiSuspense() {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const now = audioContext.currentTime;
+
+            // 1. DRONE PROFUNDO
+            function createDrone(freq, detune) {
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+                const filter = audioContext.createBiquadFilter();
+                const lfo = audioContext.createOscillator();
+                const lfoGain = audioContext.createGain();
+
+                osc.type = 'sawtooth';
+                osc.frequency.value = freq;
+                osc.detune.value = detune;
+
+                filter.type = 'lowpass';
+                filter.frequency.value = 200; 
+
+                lfo.type = 'sine';
+                lfo.frequency.value = 0.2;
+                lfoGain.gain.value = 150; 
+
+                gain.gain.setValueAtTime(0, now);
+                gain.gain.linearRampToValueAtTime(0.25, now + 8); 
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 35);
+
+                lfo.connect(lfoGain);
+                lfoGain.connect(filter.frequency);
+                osc.connect(filter);
+                filter.connect(gain);
+                gain.connect(audioContext.destination);
+
+                osc.start(now);
+                lfo.start(now);
+                osc.stop(now + 35);
+                lfo.stop(now + 35);
+            }
+
+            createDrone(55, -5); 
+            createDrone(110, 5); 
+
+            // 2. ARPEGGIO
+            const scale = [220, 261.63, 293.66, 329.63, 392.00, 440, 523.25];
+            
+            for (let i = 0; i < 50; i++) { 
+                const time = now + 2 + (i * 0.4); 
+                const freq = scale[Math.floor(Math.random() * scale.length)];
+                
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+                const pan = audioContext.createStereoPanner();
+                
+                osc.type = 'square';
+                osc.frequency.value = freq * 2; 
+                
+                gain.gain.setValueAtTime(0, time);
+                gain.gain.linearRampToValueAtTime(0.03, time + 0.02);
+                gain.gain.exponentialRampToValueAtTime(0.001, time + 0.15);
+                
+                pan.pan.value = (Math.random() * 2) - 1;
+
+                osc.connect(gain);
+                gain.connect(pan);
+                pan.connect(audioContext.destination);
+                
+                osc.start(time);
+                osc.stop(time + 0.2);
+            }
+
+            // 3. TENSÃO CRESCENTE
+            const highOsc = audioContext.createOscillator();
+            const highGain = audioContext.createGain();
+            
+            highOsc.type = 'sine';
+            highOsc.frequency.setValueAtTime(800, now);
+            highOsc.frequency.exponentialRampToValueAtTime(2000, now + 16); 
+            
+            highGain.gain.setValueAtTime(0, now);
+            highGain.gain.linearRampToValueAtTime(0.05, now + 5); 
+            highGain.gain.linearRampToValueAtTime(0, now + 18); 
+
+            highOsc.connect(highGain);
+            highGain.connect(audioContext.destination);
+            highOsc.start(now);
+            highOsc.stop(now + 18);
+
+            // 4. IMPACTO FINAL
+            setTimeout(() => {
+                const boomOsc = audioContext.createOscillator();
+                const boomGain = audioContext.createGain();
+                const boomFilter = audioContext.createBiquadFilter();
+                
+                boomOsc.type = 'sawtooth';
+                boomOsc.frequency.setValueAtTime(100, audioContext.currentTime);
+                boomOsc.frequency.exponentialRampToValueAtTime(10, audioContext.currentTime + 1.5); 
+                
+                boomFilter.type = 'lowpass';
+                boomFilter.frequency.value = 150; 
+
+                boomGain.gain.setValueAtTime(0.8, audioContext.currentTime);
+                boomGain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 3);
+
+                boomOsc.connect(boomFilter);
+                boomFilter.connect(boomGain);
+                boomGain.connect(audioContext.destination);
+                
+                boomOsc.start();
+                boomOsc.stop(audioContext.currentTime + 4);
+            }, 16000); 
+        }
+
+        // --- 2. CONFIGURAÇÃO VISUAL (THREE.JS) ---
+        function initVisuals() {
+            scene = new THREE.Scene();
+            scene.fog = new THREE.FogExp2(0x000000, 0.0008);
+
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+            camera.position.z = 1000; 
+
+            renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            const geometry = new THREE.BufferGeometry();
+            const vertices = [];
+            
+            for (let i = 0; i < 8000; i++) {
+                const x = 2000 * Math.random() - 1000;
+                const y = 2000 * Math.random() - 1000;
+                const z = 2000 * Math.random() - 1000;
+                vertices.push(x, y, z);
+            }
+
+            geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+            material = new THREE.PointsMaterial({ color: 0x155e75, size: 2, transparent: true, opacity: 0.8 });
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+        }
+
+        function animateVisuals() {
+            animationId = requestAnimationFrame(animateVisuals);
+            camera.position.z -= 3; 
+            particles.rotation.z += 0.001;
+            if(camera.position.z < -500) { camera.position.z = 1000; }
+            renderer.render(scene, camera);
+        }
+
+        // --- 3. LÓGICA DE SEQUÊNCIA ---
+        function startSequence() {
+            document.getElementById('start-screen').style.opacity = 0;
+            setTimeout(() => document.getElementById('start-screen').style.display = 'none', 1000);
+            document.getElementById('overlay').style.display = 'flex';
+
+            playSciFiSuspense();
+            setTimeout(() => material.color.setHex(0x06b6d4), 500);
+
+            const slides = [
+                { id: 's1', start: 1000, end: 5000 },
+                { id: 's2', start: 5500, end: 9000 },
+                { id: 's3', start: 9500, end: 13500 },
+                { id: 's4', start: 14000, end: 17500 },
+                { id: 's5', start: 18000, end: 999999 }
+            ];
+
+            slides.forEach(slide => {
+                const el = document.getElementById(slide.id);
+                setTimeout(() => {
+                    document.querySelectorAll('.text-slide').forEach(d => {
+                        if (d.id !== slide.id && d.id !== 's5') {
+                            d.classList.remove('visible');
+                            d.classList.add('hidden');
+                        }
+                    });
+                    el.classList.remove('hidden');
+                    el.classList.add('visible');
+                    if(slide.id === 's3' || slide.id === 's5') { camera.position.z += 200; }
+                }, slide.start);
+            });
+        }
+
+        initVisuals();
+        animateVisuals();
+        document.querySelector('.start-btn').addEventListener('click', startSequence);
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+    </script>
+</body>
+</html>
