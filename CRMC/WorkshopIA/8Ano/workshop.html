@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploradores da Criação: Masterclass IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+/* --- 1. CONFIGURAÇÃO GERAL --- */
+* { box-sizing: border-box; }
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Janela da Apresentação */
+#presentation-viewport {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    background-color: #0f172a; /* Slate 900 */
+    border-radius: 20px;
+    box-shadow: 0 0 80px rgba(124, 58, 237, 0.15);
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    /* A escala será gerida via JS */
+    transform-origin: center center;
+}
+
+/* Container do Slide */
+.slide {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    padding: 60px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+    background-color: #0f172a;
+}
+.slide.active { opacity: 1; visibility: visible; z-index: 10; }
+
+/* Efeitos de Fundo */
+.bg-glow-1 { position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(0,0,0,0) 70%); pointer-events: none; z-index: 0; }
+.bg-glow-2 { position: absolute; bottom: -200px; left: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(0,0,0,0) 70%); pointer-events: none; z-index: 0; }
+
+/* --- TIPOGRAFIA --- */
+h1 { font-family: 'Space Grotesk', sans-serif; font-size: 80px; line-height: 1; font-weight: 700; margin: 0 0 20px 0; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; }
+h2.slide-title { font-family: 'Space Grotesk', sans-serif; font-size: 48px; width: 100%; margin-bottom: 40px; border-bottom: 2px solid #334155; padding-bottom: 15px; color: #f1f5f9; }
+h3 { font-size: 32px; color: #38bdf8; margin: 0 0 15px 0; font-weight: 700; }
+p, li { font-size: 24px; line-height: 1.5; color: #cbd5e1; margin-bottom: 15px; }
+.highlight { color: #a78bfa; -webkit-text-fill-color: #a78bfa; }
+.highlight-green { color: #34d399; -webkit-text-fill-color: #34d399; }
+.highlight-red { color: #f87171; -webkit-text-fill-color: #f87171; }
+
+/* --- COMPONENTES --- */
+.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; width: 100%; height: 100%; }
+.image-wrapper { border-radius: 16px; overflow: hidden; height: 450px; width: 100%; border: 1px solid #334155; background-color: #020617; position: relative; }
+.image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.tiled-content { display: flex; gap: 25px; justify-content: center; width: 100%; flex-wrap: wrap; }
+.tile { background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 20px; flex: 1 1 30%; text-align: center; }
+.tile-icon { font-size: 40px; margin-bottom: 15px; color: #a78bfa; }
+.prompt-box { background: #020617; border: 2px dashed #6366f1; padding: 30px; border-radius: 12px; font-family: 'Space Mono', monospace; color: #a5b4fc; margin-top: 15px; font-size: 22px; line-height: 1.6; }
+
+/* Labels para a Fórmula Pro */
+.prompt-label { display: inline-block; font-size: 14px; font-weight: bold; padding: 2px 8px; border-radius: 4px; margin-right: 5px; text-transform: uppercase; vertical-align: middle; margin-bottom: 3px; }
+.label-persona { background-color: rgba(167, 139, 250, 0.2); color: #a78bfa; border: 1px solid #a78bfa; }
+.label-task { background-color: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid #34d399; }
+.label-context { background-color: rgba(248, 113, 113, 0.2); color: #f87171; border: 1px solid #f87171; }
+.label-format { background-color: rgba(96, 165, 250, 0.2); color: #60a5fa; border: 1px solid #60a5fa; }
+
+/* Header do Logo */
+.logo-header { position: absolute; top: 40px; width: 100%; display: flex; justify-content: flex-end; padding-right: 60px; z-index: 20; }
+.logo-img { height: 120px; background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 12px; object-fit: contain; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+/* Tabela de Comparação */
+.comparison-table { display: flex; width: 100%; gap: 20px; margin-top: 20px; }
+.comparison-col { flex: 1; background: #1e293b; border-radius: 16px; padding: 30px; border: 1px solid #334155; transition: transform 0.2s; }
+.comparison-col h3 { text-align: center; margin-top: 0; font-size: 32px; }
+.comparison-list li { font-size: 22px; margin-bottom: 15px; list-style: none; display: flex; align-items: center; }
+.comparison-list li i { margin-right: 15px; width: 30px; text-align: center; }
+
+/* Barras de Probabilidade */
+.prob-container { width: 100%; max-width: 800px; margin-top: 20px; }
+.prob-row { display: flex; align-items: center; margin-bottom: 15px; }
+.prob-word { width: 150px; text-align: right; margin-right: 20px; font-size: 24px; font-weight: bold; color: #cbd5e1; }
+.prob-bar-bg { flex-grow: 1; background: #1e293b; height: 30px; border-radius: 15px; overflow: hidden; }
+.prob-bar-fill { height: 100%; border-radius: 15px; width: 0; transition: width 1s ease-out; }
+.prob-percent { width: 60px; margin-left: 15px; font-size: 20px; color: #94a3b8; }
+
+/* Visualização de Tokens */
+.token-container { display: flex; gap: 10px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+.token { padding: 15px 25px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 24px; color: #000; animation: popIn 0.5s forwards; opacity: 0; }
+@keyframes popIn { to { opacity: 1; transform: scale(1); } }
+
+/* Cards de Fórmula */
+.formula-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; }
+.formula-card { background: rgba(30, 41, 59, 0.5); border: 1px solid #475569; border-radius: 12px; padding: 20px; text-align: left; }
+.formula-card h4 { margin: 0 0 10px 0; color: #a78bfa; font-size: 24px; }
+.formula-card p { font-size: 20px; margin: 0; color: #cbd5e1; }
+
+.golden-rule-card { background: rgba(30, 41, 59, 0.8); border-left: 6px solid #fbbf24; padding: 20px 25px; margin-bottom: 20px; border-radius: 0 12px 12px 0; }
+
+/* Temporizador */
+.timer-container { position: absolute; top: 30px; right: 30px; background: #0f172a; border: 2px solid #f59e0b; color: #f59e0b; padding: 10px 20px; border-radius: 50px; font-family: monospace; font-size: 24px; font-weight: bold; display: none; align-items: center; gap: 10px; z-index: 1000; }
+.timer-container.active { display: flex; animation: pulse 1s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); } 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); } }
+
+/* Controlos */
+.controls { position: absolute; bottom: 30px; right: 40px; z-index: 100; display: flex; gap: 15px; }
+.btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 20px; transition: 0.2s; }
+.btn:hover { background: rgba(255,255,255,0.3); }
+.slide-counter { position: absolute; bottom: 40px; left: 40px; color: #64748b; font-family: monospace; font-size: 18px; }
+
+    </style>
+</head>
+<body>
+
+<div id="presentation-viewport">
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+    <div class="slide-counter" id="counter">1 / 38</div>
+
+    <!-- TIMER OVERLAY -->
+    <div id="timer" class="timer-container">
+        <i class="fa-solid fa-stopwatch"></i> <span id="time-left">60</span>s
+    </div>
+
+    <div class="controls">
+        <button class="btn" onclick="toggleTimer()" title="Iniciar Temporizador (60s)"><i class="fa-solid fa-clock"></i></button>
+        <button class="btn" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="btn" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- SLIDE 1: Title -->
+    <div class="slide active">
+        <div class="logo-header">
+            <!-- Logo Associação de Pais -->
+            <img src="https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/448563895_122112643898333398_2485055751082659379_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=TT-BrsDa-GUQ7kNvwGzLZUw&_nc_oc=AdnflG4wQtvT2Bl0W7oCKobYxE002d8LmkhlAVEBDyFzpnSloWtyIEOlOWRZaubrvGU9OY2yA3jhp-S0yWgf3MOh&_nc_zt=23&_nc_ht=scontent.fopo5-2.fna&_nc_gid=55424NuGtNOoNP_l0MfoEA&oh=00_AflrRmtfvCsCt7HIISBZ6XIZhUbLRP9GWRNqMyyPf08N2w&oe=693FC36A" alt="Associação de Pais" class="logo-img" onerror="this.onerror=null; this.src='https://placehold.co/200x100?text=LOGO+ASSOC+PAIS';">
+        </div>
+        <div style="text-align: center; margin-top: 80px;">
+            <h1 style="font-size: 80px;">EXPLORADORES DA<br><span class="highlight">CRIAÇÃO</span></h1>
+            <p class="subtitle" style="text-transform: uppercase; border-top: 1px solid #475569; padding-top: 20px; margin-top: 20px; display: inline-block;">Os Segredos e os Poderes da IA</p>
+            <p style="margin-top: 30px; color: #94a3b8;">Apresentado por: <span style="color:white">Sebastião Pais</span></p>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: What is AI? -->
+    <div class="slide">
+        <div class="two-column">
+            <div>
+                <h2 class="slide-title">O que é a IA?</h2>
+                <h3>O Cérebro Digital</h3>
+                <p>A Inteligência Artificial (IA) é uma área da informática que cria máquinas capazes de **aprender**.</p>
+                <p>Ao contrário de um computador normal que segue regras fixas, a IA aprende com exemplos, como uma criança.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800" alt="Cérebro Digital">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: Programar vs Ensinar -->
+    <div class="slide">
+        <h2 class="slide-title">Programar vs Ensinar</h2>
+        <div class="tiled-content" style="align-items: stretch;">
+            <div class="tile" style="border-top: 5px solid #cbd5e1;">
+                <h3><i class="fa-solid fa-code"></i> Computador Normal</h3>
+                <p>Nós damos as <strong>REGRAS</strong>.</p>
+                <div class="prompt-box" style="border-color: #cbd5e1; color: #cbd5e1; font-size: 16px;">"Se tiver bigodes e fizer 'miau' = Gato"</div>
+            </div>
+            <div class="tile" style="border-top: 5px solid #a78bfa; background: rgba(139, 92, 246, 0.1);">
+                <h3><i class="fa-solid fa-brain" style="color: #a78bfa;"></i> Inteligência Artificial</h3>
+                <p>Nós damos <strong>EXEMPLOS</strong>.</p>
+                <div class="prompt-box" style="border-color: #a78bfa; color: #d8b4fe; font-size: 16px;">"Toma 10.000 fotos. Aprende o que é um gato!"</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: AI Everyday -->
+    <div class="slide">
+        <h2 class="slide-title">A IA já vive contigo!</h2>
+        <div class="tiled-content">
+            <div class="tile"><i class="fa-solid fa-keyboard tile-icon"></i><br>Corretor Automático</div>
+            <div class="tile"><i class="fa-brands fa-tiktok tile-icon"></i><br>TikTok Feed</div>
+            <div class="tile"><i class="fa-solid fa-map-location-dot tile-icon"></i><br>Mapas & Trânsito</div>
+            <div class="tile"><i class="fa-brands fa-spotify tile-icon"></i><br>Spotify Mix</div>
+            <div class="tile"><i class="fa-solid fa-gamepad tile-icon"></i><br>Gráficos 4K (DLSS)</div>
+            <div class="tile"><i class="fa-solid fa-envelope tile-icon"></i><br>Filtro de Spam</div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: Vantagens -->
+    <div class="slide">
+        <h2 class="slide-title">O Teu Boost: Vantagens 🚀</h2>
+        <div class="tiled-content">
+            <div class="tile" style="border-top: 5px solid #34d399;">
+                <i class="fa-solid fa-bolt tile-icon" style="color: #34d399;"></i>
+                <h3>Produtividade</h3>
+                <p>Faz mais em menos tempo.</p>
+            </div>
+            <div class="tile" style="border-top: 5px solid #a78bfa;">
+                <i class="fa-solid fa-gem tile-icon" style="color: #a78bfa;"></i>
+                <h3>Qualidade</h3>
+                <p>O teu assistente de luxo.</p>
+            </div>
+            <div class="tile" style="border-top: 5px solid #f87171;">
+                <i class="fa-solid fa-bullseye tile-icon" style="color: #f87171;"></i>
+                <h3>Precisão</h3>
+                <p>Mira laser nos dados.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: IA para o Bem -->
+    <div class="slide">
+        <h2 class="slide-title">IA para o Bem 🌍</h2>
+        <div class="tiled-content">
+            <div class="tile">
+                <i class="fa-solid fa-fire tile-icon" style="color: #f97316;"></i>
+                <h3>Detetar Incêndios</h3>
+                <p>Câmaras com IA veem o fumo antes de nós.</p>
+            </div>
+            <div class="tile">
+                <i class="fa-solid fa-water tile-icon" style="color: #0ea5e9;"></i>
+                <h3>Limpar Oceanos</h3>
+                <p>Robôs inteligentes recolhem plástico do mar.</p>
+            </div>
+            <div class="tile">
+                <i class="fa-solid fa-comments tile-icon" style="color: #0ea5e9;"></i>
+                <h3>Tradução Real</h3>
+                <p>Falar com qualquer pessoa no mundo.</p>
+            </div>
+            <div class="tile">
+                <i class="fa-solid fa-user-doctor tile-icon" style="color: #db2777;"></i>
+                <h3>Medicina</h3>
+                <p>Detetar doenças mais cedo.</p>
+            </div>
+             <div class="tile">
+                <i class="fa-solid fa-eye tile-icon" style="color: #f59e0b;"></i>
+                <h3>Acessibilidade</h3>
+                <p>Ajudar cegos a "ler" o mundo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 7: Gen AI Concept -->
+    <div class="slide">
+        <h2 class="slide-title">A Revolução Generativa</h2>
+        <div class="two-column">
+            <div class="tile" style="text-align: left; border-left: 5px solid #94a3b8;">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> O Detetive</h3>
+                <p><strong>IA Tradicional:</strong> Analisa o passado.</p>
+                <p style="color: #94a3b8;">Input: Foto ➡ "É um gato"</p>
+            </div>
+            <div class="tile" style="text-align: left; border-left: 5px solid #d946ef; background: rgba(217, 70, 239, 0.1);">
+                <h3><i class="fa-solid fa-palette" style="color: #d946ef;"></i> O Artista</h3>
+                <p><strong>IA Generativa:</strong> Cria o futuro.</p>
+                <p style="color: #f0abfc;">Input: "Gato Espacial" ➡ [Imagem Nova]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 8: How it Works (Probabilities) -->
+    <div class="slide">
+        <h2 class="slide-title">Como funciona a Magia? 🎲</h2>
+        <h3 style="margin-bottom: 20px;">A Máquina de Probabilidades</h3>
+        
+        <div style="font-size: 40px; margin-bottom: 20px;">
+            "O céu está <span style="color: #a78bfa; border-bottom: 3px dashed #a78bfa;">_________</span>"
+        </div>
+
+        <div class="prob-container">
+            <!-- Opção 1: Alta Probabilidade -->
+            <div class="prob-row">
+                <div class="prob-word">Azul</div>
+                <div class="prob-bar-bg">
+                    <div id="prob-bar-1" class="prob-bar-fill" style="width: 0; background-color: #34d399;"></div>
+                </div>
+                <div class="prob-percent" style="color: #34d399;">75%</div>
+            </div>
+            <!-- Opção 2 -->
+            <div class="prob-row">
+                <div class="prob-word">Nublado</div>
+                <div class="prob-bar-bg">
+                    <div id="prob-bar-2" class="prob-bar-fill" style="width: 0; background-color: #60a5fa;"></div>
+                </div>
+                <div class="prob-percent" style="color: #60a5fa;">20%</div>
+            </div>
+            <!-- Opção 3 -->
+            <div class="prob-row">
+                <div class="prob-word">Escuro</div>
+                <div class="prob-bar-bg">
+                    <div id="prob-bar-3" class="prob-bar-fill" style="width: 0; background-color: #f59e0b;"></div>
+                </div>
+                <div class="prob-percent" style="color: #f59e0b;">4%</div>
+            </div>
+             <!-- Opção 4 -->
+             <div class="prob-row">
+                <div class="prob-word">Batata</div>
+                <div class="prob-bar-bg">
+                    <div id="prob-bar-4" class="prob-bar-fill" style="width: 0; background-color: #ef4444;"></div>
+                </div>
+                <div class="prob-percent" style="color: #ef4444;">1%</div>
+            </div>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 18px; color: #94a3b8;">A IA lança um dado e escolhe a próxima palavra!</p>
+    </div>
+
+    <!-- SLIDE 9: Tokens -->
+    <div class="slide">
+        <h2 class="slide-title">A Língua da IA: Tokens</h2>
+        <div style="text-align: center; max-width: 900px;">
+            <h3>A IA não lê palavras, lê pedaços!</h3>
+            <p>Para o ChatGPT, a palavra "Amigo" é um código numérico.</p>
+            <div class="token-container">
+                <div class="token" style="background: #a7f3d0; animation-delay: 0.2s;">O</div>
+                <div class="token" style="background: #fde047; animation-delay: 0.4s;">lá,</div>
+                <div class="token" style="background: #93c5fd; animation-delay: 0.6s;">mun</div>
+                <div class="token" style="background: #fca5a5; animation-delay: 0.8s;">do!</div>
+            </div>
+            <p style="margin-top: 30px;">Cada cor é um "Token". A IA adivinha o próximo como um puzzle.</p>
+        </div>
+    </div>
+
+    <!-- SLIDE 10: Toolbox -->
+    <div class="slide">
+        <h2 class="slide-title">Kit de Ferramentas</h2>
+        <div class="tiled-content">
+            <div class="tile"><h3 style="color:#10a37f">ChatGPT</h3><p>Conversa</p></div>
+            <div class="tile"><h3 style="color:#2563eb">Gemini</h3><p>Google</p></div>
+            <div class="tile"><h3 style="color:#00a4ef">Copilot</h3><p>Microsoft</p></div>
+            <div class="tile"><h3 style="color:#d97706">Claude</h3><p>Leitura</p></div>
+            <div class="tile"><h3 style="color:#7c3aed">Midjourney</h3><p>Imagens</p></div>
+            <div class="tile"><h3 style="color:#db2777">Suno</h3><p>Música</p></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 11: Prompt Engineering -->
+    <div class="slide">
+        <div class="two-column">
+            <div>
+                <h2 class="slide-title">Engenharia de Prompts</h2>
+                <h3>O "Pedido de Pizza"</h3>
+                <ul>
+                    <li><i class="fa-solid fa-xmark highlight-red"></i> "Quero comida." (Mau)</li>
+                    <li><i class="fa-solid fa-check highlight-green"></i> "Quero pizza média, pepperoni, queijo extra." (Bom)</li>
+                </ul>
+                <p>Sê específico!</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&q=80&w=800" alt="Pizza">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 12: The Formula -->
+    <div class="slide">
+        <h2 class="slide-title">A Fórmula Mágica ✨</h2>
+        <div class="formula-grid">
+             <div class="formula-card" style="border-left-color: #a78bfa;"><h4 style="color: #a78bfa;">1. Persona</h4><p>Quem? (ex: Comediante)</p></div>
+             <div class="formula-card" style="border-left-color: #34d399;"><h4 style="color: #34d399;">2. Tarefa</h4><p>O Quê? (ex: Explicar)</p></div>
+             <div class="formula-card" style="border-left-color: #f87171;"><h4 style="color: #f87171;">3. Contexto</h4><p>Para quem? (ex: Crianças)</p></div>
+             <div class="formula-card" style="border-left-color: #60a5fa;"><h4 style="color: #60a5fa;">4. Formato</h4><p>Como? (ex: Poema)</p></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 13: Formula Example 1 -->
+    <div class="slide">
+        <h2 class="slide-title">Exemplo: Estudo</h2>
+        <div class="prompt-box">
+            "<span class="prompt-label label-persona">Persona</span>Age como um <strong>Coach de Videojogos</strong>.<br> 
+             <span class="prompt-label label-task">Tarefa</span>Dá-me estratégias de estudo<br> 
+             <span class="prompt-label label-context">Contexto</span>usando termos de gaming,<br> 
+             <span class="prompt-label label-format">Formato</span>numa lista Top 5."
+        </div>
+    </div>
+
+    <!-- SLIDE 14: Formula Example 2 -->
+    <div class="slide">
+        <h2 class="slide-title">Exemplo: Criatividade</h2>
+        <div class="prompt-box">
+            "<span class="prompt-label label-persona">Persona</span>Age como um <strong>Contador da Disney</strong>.<br> 
+             <span class="prompt-label label-task">Tarefa</span>Escreve um conto emocionante sobre um cão que quer ser gato,<br> 
+             <span class="prompt-label label-context">Contexto</span>para inspirar crianças,<br> 
+             <span class="prompt-label label-format">Formato</span>com 3 parágrafos e final feliz."
+        </div>
+    </div>
+
+    <!-- SLIDE 15: Challenge 1 (Chef) -->
+    <div class="slide">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&q=80&w=800" alt="Cozinha Real">
+            </div>
+            <div>
+                <h2 class="slide-title">Desafio 1: Chef em Casa 🍳</h2>
+                <p class="highlight-green" style="font-weight: bold;">Tempo: 60 Segundos!</p>
+                <div class="prompt-box">
+                    "Age como um <strong>Chef de Cozinha</strong>.<br>
+                    Tenho no frigorífico: Ovos, Batatas e Atum.<br>
+                    Dá-me uma receita rápida e saudável.<br>
+                    <strong>Formato:</strong> Lista de passos simples."
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 16: Challenge 2 (Tourism) -->
+    <div class="slide">
+        <div class="two-column">
+            <div>
+                <h2 class="slide-title">Desafio 2: Guia da Covilhã 🏔️</h2>
+                <p class="highlight-green" style="font-weight: bold;">Tempo: 60 Segundos!</p>
+                <div class="prompt-box">
+                    "Age como um <strong>Guia Turístico da Covilhã</strong>.<br>
+                    Dois amigos vêm visitar-me no fim de semana.<br>
+                    Cria um roteiro de 1 dia com história e boa comida.<br>
+                    <strong>Formato:</strong> Tabela com horários."
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1522885147691-06d859633fb8?auto=format&fit=crop&q=80&w=800" alt="Serra da Estrela">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 17: Challenge 3 (Email) -->
+    <div class="slide">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800" alt="Email">
+            </div>
+            <div>
+                <h2 class="slide-title">Desafio 3: O Email Perfeito 📧</h2>
+                <p class="highlight-green" style="font-weight: bold;">Tempo: 60 Segundos!</p>
+                <div class="prompt-box">
+                    "Age como o <strong>Delegado de Turma</strong>.<br>
+                    Escreve um email ao Diretor a pedir autorização para um torneio de futebol solidário.<br>
+                    <strong>Tom:</strong> Formal, educado e persuasivo."
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 18: Challenge 4 (Debate) -->
+    <div class="slide">
+        <div class="two-column">
+            <div>
+                <h2 class="slide-title">Desafio 4: Debate Master 🗣️</h2>
+                <p class="highlight-green" style="font-weight: bold;">Tempo: 60 Segundos!</p>
+                <div class="prompt-box">
+                    "Dá-me 3 argumentos fortes <strong>A FAVOR</strong> e 3 <strong>CONTRA</strong>:<br>
+                    'Proibir o uso de telemóveis dentro da escola'."
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3" alt="Debate">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 19: AI & Music -->
+    <div class="slide">
+        <h2 class="slide-title">IA + Música: O Super-Instrumento</h2>
+        <div class="two-column">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="tile" style="text-align: left; border-left: 5px solid #db2777;">
+                    <h3>Geradores (Suno/Udio)</h3>
+                    <p>Criam músicas inteiras do zero com um prompt.</p>
+                </div>
+                <div class="tile" style="text-align: left; border-left: 5px solid #3b82f6;">
+                    <h3>Assistentes (Moises.ai)</h3>
+                    <p>Separam a voz dos instrumentos para tu praticares por cima!</p>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=800" alt="Música IA">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 20: School Hacks Good -->
+    <div class="slide">
+        <h2 class="slide-title">School Hacks: Super-Poderes</h2>
+        <div class="tiled-content">
+            <div class="tile"><h3>Explica-me</h3><p>"Explica a Fotossíntese a uma criança de 10 anos."</p></div>
+            <div class="tile"><h3>Brainstorm</h3><p>"5 ideias para História."</p></div>
+            <div class="tile"><h3>Revisão</h3><p>"Corrige o meu texto."</p></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 21: School Hacks Bad -->
+    <div class="slide">
+        <div class="two-column">
+            <div style="background: rgba(239, 68, 68, 0.1); padding: 30px; border-radius: 16px; border: 1px solid #ef4444;">
+                <h2 class="slide-title" style="border: none; color: #ef4444;">Kryptonite ☢️</h2>
+                <p>A Armadilha do Copy-Paste:</p>
+                <ul>
+                    <li>Se a IA faz tudo, TU não aprendes.</li>
+                    <li>É PLÁGIO (Batota).</li>
+                </ul>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="Perigo">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 22: Environment -->
+    <div class="slide">
+        <h2 class="slide-title">O Custo Invisível 🌱</h2>
+        <div class="two-column">
+            <div class="image-wrapper">
+                <!-- Imagem Corrigida: Data Center -->
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800" alt="Servidores">
+            </div>
+            <div>
+                <h3>A "Nuvem" é Física</h3>
+                <p>A IA corre em milhares de computadores que gastam muita <strong>energia</strong> e <strong>água</strong>.</p>
+                <p style="color: #fca5a5;">Gerar uma imagem = Carregar o telemóvel a 100%.</p>
+                <p class="highlight-green">Usa com responsabilidade!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 23: Hallucinations -->
+    <div class="slide">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800" alt="Erro">
+            </div>
+            <div>
+                <h2 class="slide-title">Alucinações</h2>
+                <h3>O Mentiroso Confiante</h3>
+                <p>A IA não sabe a "verdade". Ela apenas prevê palavras que soam bem juntas.</p>
+                <p>Às vezes inventa factos com 100% de certeza.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 24: Detective -->
+    <div class="slide">
+        <h2 class="slide-title">Sê um Detetive</h2>
+        <div style="text-align: center;">
+            <div class="prompt-box" style="border-color: #ef4444;">
+                IA: "O primeiro Rei de Portugal foi à Lua em 1143..."
+            </div>
+            <h3 class="highlight-red" style="margin-top: 20px; font-size: 40px;">FALSO!</h3>
+            <p>Verifica sempre as fontes.</p>
+        </div>
+    </div>
+
+    <!-- SLIDE 25: How to Spot Fakes -->
+    <div class="slide">
+        <h2 class="slide-title">Como Detetar Fakes 🕵️</h2>
+        <div class="tiled-content">
+            <div class="tile" style="border-top: 5px solid #f59e0b;">
+                <h3><i class="fa-solid fa-hand"></i> Mãos</h3>
+                <p>A IA falha muito nos dedos (demasiados ou tortos).</p>
+            </div>
+            <div class="tile" style="border-top: 5px solid #f59e0b;">
+                <h3><i class="fa-solid fa-font"></i> Texto</h3>
+                <p>Letras em sinais ou t-shirts costumam ser rabiscos.</p>
+            </div>
+            <div class="tile" style="border-top: 5px solid #f59e0b;">
+                <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Pele</h3>
+                <p>Pele demasiado perfeita e "brilhante", sem poros.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 26: Deepfakes -->
+    <div class="slide">
+        <div class="two-column">
+            <div>
+                <h2 class="slide-title">Deepfakes</h2>
+                <p>Vídeos falsos de pessoas a dizerem coisas que nunca disseram.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=800" alt="Máscara">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 27: Viral Examples -->
+    <div class="slide">
+        <h2 class="slide-title">Exemplos Virais</h2>
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800" alt="Fake News">
+            </div>
+            <div>
+                <h3>O Papa "Fashion"</h3>
+                <p>Viste o Papa com casaco branco gigante?</p>
+                <div class="prompt-box" style="border-color: #ef4444; background: #fef2f2;">ERA FALSO. Feito com Midjourney.</div>
+                <p>Antes de partilhar, pergunta: "Será real?"</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 28: Copyright -->
+    <div class="slide">
+        <h2 class="slide-title">Quem é o Dono? 🎨</h2>
+        <div class="two-column">
+            <div>
+                <h3>A Grande Pergunta</h3>
+                <p>As IAs aprenderam a ver quadros de artistas humanos sem pedir.</p>
+                <p>Se pedires para desenhar "no estilo de Van Gogh", é justo para o Van Gogh?</p>
+                <p class="highlight">Usa para inspiração, mas sê transparente!</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3" alt="Arte">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 29: Bias -->
+    <div class="slide">
+        <div class="two-column">
+            <div>
+                <h2 class="slide-title">O Espelho da Internet</h2>
+                <h3>Viés e Preconceito</h3>
+                <p>A IA aprendeu com a internet inteira. Infelizmente, a internet tem muitos preconceitos.</p>
+                <p>Se a IA for injusta, o defeito não é da máquina, é um reflexo dos dados humanos.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?auto=format&fit=crop&q=80&w=800" alt="Reflexo">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 30: Anthropomorphism -->
+    <div class="slide">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800" alt="Robot Face">
+            </div>
+            <div>
+                <h2 class="slide-title">Amigo ou Máquina?</h2>
+                <h3>Falsa Empatia</h3>
+                <p>O Chatbot diz "Eu entendo-te", mas <strong>não sente nada</strong>.</p>
+                <p>É matemática, não um coração. Não uses a IA como psicólogo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 31: The Turing Test -->
+    <div class="slide">
+        <div class="two-column">
+            <div>
+                <h2 class="slide-title">O Teste de Turing</h2>
+                <h3>Consegues ser enganado?</h3>
+                <p>Se falares com uma máquina e não a distinguistes de um humano, ela "passou" no teste.</p>
+                <p class="highlight">O desafio hoje é sabermos sempre se estamos a falar com uma máquina.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?auto=format&fit=crop&q=80&w=800" alt="Teste de Turing">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 32: Privacy -->
+    <div class="slide">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800" alt="Cadeado">
+            </div>
+            <div>
+                <h2 class="slide-title">Os teus Dados</h2>
+                <h3>Segurança</h3>
+                <p>Muitas IAs usam as tuas conversas para treinar.</p>
+                <div class="prompt-box" style="border-color: #ef4444;">Se contares um segredo ao ChatGPT, ele deixa de ser segredo.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 33: PII List -->
+    <div class="slide">
+        <h2 class="slide-title">NÃO PARTILHAR 🚫</h2>
+        <div class="tiled-content">
+            <div class="tile" style="border-color: #f87171; background: #fef2f2;">
+                <i class="fa-solid fa-house tile-icon" style="color: #ef4444;"></i>
+                <h3>Morada</h3>
+            </div>
+            <div class="tile" style="border-color: #f87171; background: #fef2f2;">
+                <i class="fa-solid fa-phone tile-icon" style="color: #ef4444;"></i>
+                <h3>Telefone</h3>
+            </div>
+            <div class="tile" style="border-color: #f87171; background: #fef2f2;">
+                <i class="fa-solid fa-image tile-icon" style="color: #ef4444;"></i>
+                <h3>Fotos Pessoais</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 34: Future Jobs -->
+    <div class="slide">
+        <h2 class="slide-title">O Teu Futuro? 🚀</h2>
+        <div class="tiled-content">
+            <div class="tile" style="border-top: 5px solid #a78bfa;">
+                <h3>Engenheiro de Prompts</h3>
+                <p>Saber "falar" com a IA.</p>
+            </div>
+            <div class="tile" style="border-top: 5px solid #34d399;">
+                <h3>Ético de IA</h3>
+                <p>Garantir que é justa.</p>
+            </div>
+            <div class="tile" style="border-top: 5px solid #f87171;">
+                <h3>Detetive de Dados</h3>
+                <p>Distinguir o real do fake.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 35: Humano vs Máquina -->
+    <div class="slide">
+        <h2 class="slide-title">Humano vs Máquina</h2>
+        <div class="comparison-table">
+            <div class="comparison-col machine">
+                <h3>MÁQUINA 🤖</h3>
+                <ul class="comparison-list">
+                    <li><i class="fa-solid fa-bolt" style="color: #60a5fa;"></i> Super Rápida</li>
+                    <li><i class="fa-solid fa-database" style="color: #60a5fa;"></i> Memória Infinita</li>
+                    <li><i class="fa-solid fa-battery-full" style="color: #60a5fa;"></i> Nunca se Cansa</li>
+                    <li><i class="fa-solid fa-robot" style="color: #60a5fa;"></i> Segue Padrões (Literal)</li>
+                </ul>
+            </div>
+            <div class="comparison-col human">
+                <h3>TU (HUMANO) ❤️</h3>
+                <ul class="comparison-list">
+                    <li><i class="fa-solid fa-heart" style="color: #34d399;"></i> Empatia Real</li>
+                    <li><i class="fa-solid fa-scale-balanced" style="color: #22c55e;"></i> Julgamento Moral</li>
+                    <li><i class="fa-solid fa-lightbulb" style="color: #22c55e;"></i> Criatividade Original</li>
+                    <li><i class="fa-solid fa-brain" style="color: #34d399;"></i> Intuição e Contexto</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 36: Golden Rules -->
+    <div class="slide">
+        <h2 class="slide-title">Regras de Ouro 🌟</h2>
+        <div class="two-column">
+            <div>
+                <div class="golden-rule-card">
+                    <h3>Sê Crítico</h3><p>Não acredites em tudo. Verifica!</p>
+                </div>
+                <div class="golden-rule-card">
+                    <h3>Cria, Não Copies</h3><p>Usa para inspiração, não plágio.</p>
+                </div>
+            </div>
+            <div>
+                <div class="golden-rule-card">
+                    <h3>Protege-te</h3><p>Não partilhes dados pessoais.</p>
+                </div>
+                <div class="golden-rule-card">
+                    <h3>Supervisão</h3><p>Usa com ajuda de um adulto.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 37: Conclusion -->
+    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1280&ixlib=rb-4.0.3'); background-size: cover;">
+        <div style="text-align: center; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+            <i class="fa-solid fa-user-astronaut" style="font-size: 60px; color: #34d399; margin-bottom: 20px;"></i>
+            <h1 style="font-size: 70px; line-height: 1.1;">TU ÉS O <span class="highlight-green">PILOTO</span></h1>
+            <h3 style="font-size: 40px; color: #cbd5e1; margin-top: 10px;">A IA é apenas o teu Co-piloto.</h3>
+            <div style="margin-top: 40px; height: 4px; width: 100px; background: #34d399; margin-left: auto; margin-right: auto;"></div>
+            <p style="font-size: 24px; margin-top: 30px; color: #fff;">O destino quem escolhe és tu.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('counter');
+    let timerInterval;
+
+    function updateSlide() {
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            if (index === currentSlide) slide.classList.add('active');
+        });
+        counter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        
+        // Reset timer
+        clearInterval(timerInterval);
+        document.getElementById('timer').classList.remove('active');
+        document.getElementById('time-left').textContent = '60';
+
+        // Animação das Barras de Probabilidade (Slide 8)
+        document.getElementById('prob-bar-1').style.width = '0';
+        document.getElementById('prob-bar-2').style.width = '0';
+        document.getElementById('prob-bar-3').style.width = '0';
+        document.getElementById('prob-bar-4').style.width = '0';
+
+        if(currentSlide === 7) { // Slide 8 é index 7 (0-based)
+             setTimeout(() => {
+                 document.getElementById('prob-bar-1').style.width = '75%';
+                 document.getElementById('prob-bar-2').style.width = '20%';
+                 document.getElementById('prob-bar-3').style.width = '4%';
+                 document.getElementById('prob-bar-4').style.width = '1%';
+             }, 500);
+        }
+    }
+
+    function nextSlide() { if(currentSlide < slides.length - 1) { currentSlide++; updateSlide(); } }
+    function prevSlide() { if(currentSlide > 0) { currentSlide--; updateSlide(); } }
+
+    function toggleTimer() {
+        const timerEl = document.getElementById('timer');
+        const timeDisplay = document.getElementById('time-left');
+        
+        if (timerEl.classList.contains('active')) {
+            clearInterval(timerInterval);
+            timerEl.classList.remove('active');
+            timeDisplay.textContent = '60';
+        } else {
+            timerEl.classList.add('active');
+            let time = 60;
+            timerInterval = setInterval(() => {
+                time--;
+                timeDisplay.textContent = time;
+                if (time <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Tempo Esgotado! 🙌");
+                    timerEl.classList.remove('active');
+                }
+            }, 1000);
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'ArrowRight') nextSlide();
+        if(e.key === 'ArrowLeft') prevSlide();
+    });
+    
+    // Init
+    updateSlide();
+</script>
+
+</body>
+</html>
