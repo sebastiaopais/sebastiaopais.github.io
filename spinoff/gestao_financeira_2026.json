@@ -1,0 +1,56 @@
+[
+  {
+    "titulo": "Gastro",
+    "descricao": "Acompanhamento de Doentes",
+    "tarefas": [
+      {
+        "nome": "Mockups",
+        "responsavel": "Fernando e Edgar",
+        "data": "2026-03-20",
+        "done": true
+      },
+      {
+        "nome": "Desenvolvimento",
+        "responsavel": "João",
+        "data": "2026-05-30",
+        "done": false
+      }
+    ],
+    "pagamentos": [
+      {
+        "desc": "Aceitação dos Mockups/Adjudicação 50%",
+        "valor": "50000",
+        "pago": false
+      },
+      {
+        "desc": "Inicio dos Testes 25%",
+        "valor": "25000",
+        "pago": false
+      },
+      {
+        "desc": "Final dos Testes Aceitação 25%",
+        "valor": "25000",
+        "pago": false
+      }
+    ]
+  },
+  {
+    "titulo": "ALS",
+    "descricao": "Rotas",
+    "tarefas": [
+      {
+        "nome": "Desenvolvimento",
+        "responsavel": "Joao e Leonardo",
+        "data": "2026-03-18",
+        "done": true
+      }
+    ],
+    "pagamentos": [
+      {
+        "desc": "Inicio de testes",
+        "valor": "35000",
+        "pago": false
+      }
+    ]
+  }
+]
