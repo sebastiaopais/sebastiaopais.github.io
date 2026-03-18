@@ -2,58 +2,58 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Enterprise Project Suite 2026 - Financeiro</title>
+    <title>Enterprise Hub 2026 - Recuperação Total</title>
     <style>
         :root { --primary: #2563eb; --success: #22c55e; --danger: #ef4444; --warning: #f59e0b; --bg: #f1f5f9; --text: #1e293b; }
         body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 85vh; }
+        .container { max-width: 1300px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 85vh; }
         
-        .nav-bar { display: flex; gap: 10px; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; align-items: center; flex-wrap: wrap; }
-        .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); margin-right: auto; }
+        /* Navegação Superior */
+        .nav-bar { display: flex; gap: 10px; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; align-items: center; overflow-x: auto; }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); margin-right: 20px; white-space: nowrap; }
         
-        button { padding: 8px 14px; cursor: pointer; border-radius: 8px; border: 1px solid #cbd5e1; background: white; font-weight: 600; transition: 0.2s; font-size: 0.85rem; }
+        button { padding: 8px 14px; cursor: pointer; border-radius: 8px; border: 1px solid #cbd5e1; background: white; font-weight: 600; transition: 0.2s; white-space: nowrap; }
         button:hover { background: #f8fafc; }
-        .btn-main { background: var(--primary); color: white; border: none; }
-        .btn-nav { background: #f8fafc; color: var(--text); }
         .btn-active { border-color: var(--primary); color: var(--primary); background: #eff6ff; }
+        .btn-main { background: var(--primary); color: white; border: none; }
 
-        .filter-bar { display: flex; gap: 10px; margin-bottom: 20px; background: #f8fafc; padding: 10px; border-radius: 8px; align-items: center; }
-        .filter-btn { border: none; background: none; color: #64748b; padding: 5px 12px; border-radius: 20px; }
-        .filter-btn.active { background: var(--primary); color: white; }
-
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 25px; }
-        .stat-card { background: white; padding: 1.2rem; border-radius: 10px; border: 1px solid #e2e8f0; }
+        /* Dashboard Stats */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
+        .stat-card { background: #f8fafc; padding: 1.2rem; border-radius: 10px; border: 1px solid #e2e8f0; }
         .stat-card h3 { margin: 0; color: #64748b; font-size: 0.75rem; text-transform: uppercase; }
         .stat-card p { margin: 5px 0 0; font-size: 1.4rem; font-weight: bold; }
 
+        /* Tabelas Gerais */
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         th { text-align: left; padding: 12px; background: #f8fafc; color: #64748b; font-size: 0.75rem; border-bottom: 2px solid #e2e8f0; }
-        td { padding: 10px; border-bottom: 1px solid #f1f5f9; }
+        td { padding: 10px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
         
-        .progress-mini { width: 80px; height: 6px; background: #e2e8f0; border-radius: 3px; display: inline-block; vertical-align: middle; overflow: hidden; margin-right: 8px; }
+        .progress-mini { width: 60px; height: 6px; background: #e2e8f0; border-radius: 3px; display: inline-block; overflow: hidden; }
         .progress-fill { height: 100%; background: var(--success); }
 
-        .badge { padding: 4px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
-        .badge-atraso { background: #fee2e2; color: var(--danger); }
-        .badge-ok { background: #dcfce7; color: #166534; }
-
-        .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 25px; margin-top: 20px; }
-        input, textarea { width: 100%; border: 1px solid #cbd5e1; padding: 8px; border-radius: 6px; font-size: 0.9rem; }
+        /* Layout de Edição de Projeto */
+        .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; margin-top: 20px; }
+        input, textarea, select { width: 100%; border: 1px solid #cbd5e1; padding: 8px; border-radius: 6px; font-size: 0.9rem; font-family: inherit; box-sizing: border-box; }
         .row-atrasada { background-color: #fff7ed; }
         .row-concluida { opacity: 0.6; background-color: #f0fdf4; }
         
-        .total-financeiro { font-size: 0.85rem; font-weight: bold; border-top: 2px solid #e2e8f0; background: #f8fafc !important; }
-        .check-cell { width: 30px; text-align: center; }
+        .header-input { font-size: 1.8rem; font-weight: 800; border: none !important; border-bottom: 2px solid transparent !important; background: transparent; }
+        .header-input:focus { outline: none; border-bottom-color: var(--primary) !important; }
+
+        .finance-summary { background: #f8fafc; padding: 10px; border-radius: 8px; margin-top: 10px; border: 1px solid #e2e8f0; }
+        .finance-summary div { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="nav-bar">
-        <div class="logo">PROJECT HUB 2026</div>
-        <button class="btn-nav" id="btn-dash" onclick="currentView = 'dash'; render();">📊 Dashboard</button>
-        <div id="project-nav-btns" style="display: flex; gap: 5px; overflow-x: auto; max-width: 500px;"></div>
-        <button onclick="addProject()">+ Novo</button>
+        <div class="logo">ENTERPRISE HUB</div>
+        <button id="nav-dash" onclick="switchView('dash')">📊 Dashboard</button>
+        <button id="nav-equipa" onclick="switchView('equipa')">👥 Equipa</button>
+        <div id="project-nav-btns" style="display: flex; gap: 5px;"></div>
+        <button onclick="addProject()" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">+ Projeto</button>
+        <div style="flex-grow: 1;"></div>
         <button class="btn-main" onclick="downloadJSON()">💾 Exportar</button>
         <button onclick="document.getElementById('importFile').click()">📂 Importar</button>
         <input type="file" id="importFile" style="display:none" onchange="importJSON(event)">
@@ -65,176 +65,178 @@
 <script>
     const HOJE = new Date("2026-03-18");
     let currentView = 'dash';
-    let currentFilter = 'all'; 
+    
+    // Base de dados persistente
+    let db = JSON.parse(localStorage.getItem('ent_db_v7')) || {
+        funcionarios: [{ id: Date.now(), nome: "Colaborador Padrão", cargo: "Gestor" }],
+        projetos: []
+    };
 
-    let projects = JSON.parse(localStorage.getItem('corp_v5')) || [
-        {
-            titulo: "Exemplo de Projeto",
-            descricao: "Gestão completa de tarefas e pagamentos.",
-            tarefas: [{ nome: "Tarefa Exemplo", responsavel: "João", data: "2026-03-20", done: false }],
-            pagamentos: [{ desc: "Sinal inicial", valor: 1000, pago: true }]
-        }
-    ];
+    function save() {
+        localStorage.setItem('ent_db_v7', JSON.stringify(db));
+        render();
+    }
 
-    function getProjectMeta(p) {
-        const total = p.tarefas.length;
-        const done = p.tarefas.filter(t => t.done).length;
-        const perc = total === 0 ? 0 : Math.round((done / total) * 100);
+    function switchView(view) {
+        currentView = view;
+        render();
+    }
+
+    function getMeta(p) {
+        const tTotal = p.tarefas?.length || 0;
+        const tDone = p.tarefas?.filter(t => t.done).length || 0;
+        const perc = tTotal === 0 ? 0 : Math.round((tDone / tTotal) * 100);
         
-        const totalCash = p.pagamentos.reduce((sum, pag) => sum + (parseFloat(pag.valor) || 0), 0);
-        const paidCash = p.pagamentos.filter(pag => pag.pago).reduce((sum, pag) => sum + (parseFloat(pag.valor) || 0), 0);
-        const pendingCash = totalCash - paidCash;
+        const vTotal = p.pagamentos?.reduce((s, pag) => s + (parseFloat(pag.valor) || 0), 0) || 0;
+        const vPago = p.pagamentos?.filter(pag => pag.pago).reduce((s, pag) => s + (parseFloat(pag.valor) || 0), 0) || 0;
+        const atraso = p.tarefas?.some(t => t.data && new Date(t.data) < HOJE && !t.done);
         
-        const hasAtraso = p.tarefas.some(t => t.data && new Date(t.data) < HOJE && !t.done);
-        return { perc, totalCash, paidCash, pendingCash, hasAtraso };
+        return { perc, vTotal, vPago, atraso };
     }
 
     function render() {
-        localStorage.setItem('corp_v5', JSON.stringify(projects));
         const content = document.getElementById('main-content');
         const navBtns = document.getElementById('project-nav-btns');
         
-        navBtns.innerHTML = projects.map((p, idx) => `
-            <button class="btn-nav ${currentView === idx ? 'btn-active' : ''}" onclick="currentView = ${idx}; render();">
-                ${p.titulo || 'Projeto'}
+        document.getElementById('nav-dash').className = currentView === 'dash' ? 'btn-active' : '';
+        document.getElementById('nav-equipa').className = currentView === 'equipa' ? 'btn-active' : '';
+
+        navBtns.innerHTML = db.projetos.map((p, idx) => `
+            <button class="${currentView === idx ? 'btn-active' : ''}" onclick="switchView(${idx})">
+                ${p.titulo || 'Projeto ' + (idx+1)}
             </button>
         `).join('');
 
-        if (currentView === 'dash') renderDashboard(content);
-        else renderProjectDetail(content, currentView);
+        if (currentView === 'dash') renderDash(content);
+        else if (currentView === 'equipa') renderEquipa(content);
+        else renderProject(content, currentView);
     }
 
-    function renderDashboard(target) {
-        const filtered = projects.filter(p => {
-            const meta = getProjectMeta(p);
-            if (currentFilter === 'curso') return meta.perc > 0 && meta.perc < 100;
-            if (currentFilter === 'done') return meta.perc === 100;
-            if (currentFilter === 'atraso') return meta.hasAtraso;
-            return true;
-        });
-
-        const totalGeral = projects.reduce((sum, p) => sum + getProjectMeta(p).totalCash, 0);
-        const pagoGeral = projects.reduce((sum, p) => sum + getProjectMeta(p).paidCash, 0);
+    function renderDash(target) {
+        const totalV = db.projetos.reduce((s, p) => s + getMeta(p).vTotal, 0);
+        const pagoV = db.projetos.reduce((s, p) => s + getMeta(p).vPago, 0);
 
         target.innerHTML = `
             <div class="stats-grid">
-                <div class="stat-card"><h3>Projetos</h3><p>${projects.length}</p></div>
-                <div class="stat-card"><h3>Valor Total</h3><p>${totalGeral.toLocaleString('pt-PT')}€</p></div>
-                <div class="stat-card"><h3>Recebido</h3><p style="color:var(--success)">${pagoGeral.toLocaleString('pt-PT')}€</p></div>
-                <div class="stat-card"><h3>Em Aberto</h3><p style="color:var(--danger)">${(totalGeral - pagoGeral).toLocaleString('pt-PT')}€</p></div>
+                <div class="stat-card"><h3>Projetos Ativos</h3><p>${db.projetos.length}</p></div>
+                <div class="stat-card"><h3>Total Orçamentado</h3><p>${totalV.toLocaleString('pt-PT')}€</p></div>
+                <div class="stat-card"><h3>Total Recebido</h3><p style="color:var(--success)">${pagoV.toLocaleString('pt-PT')}€</p></div>
+                <div class="stat-card"><h3>Pendente</h3><p style="color:var(--danger)">${(totalV - pagoV).toLocaleString('pt-PT')}€</p></div>
             </div>
-
-            <div class="filter-bar">
-                <button class="filter-btn ${currentFilter === 'all' ? 'active' : ''}" onclick="currentFilter='all'; render()">Todos</button>
-                <button class="filter-btn ${currentFilter === 'curso' ? 'active' : ''}" onclick="currentFilter='curso'; render()">Em Curso</button>
-                <button class="filter-btn ${currentFilter === 'done' ? 'active' : ''}" onclick="currentFilter='done'; render()">Concluídos</button>
-                <button class="filter-btn ${currentFilter === 'atraso' ? 'active' : ''}" onclick="currentFilter='atraso'; render()">⚠️ Em Atraso</button>
-            </div>
-
             <table>
-                <thead>
-                    <tr><th>Projeto</th><th>Progresso</th><th>Estado</th><th>Faturado</th><th>Pago</th></tr>
-                </thead>
+                <thead><tr><th>Projeto</th><th>Progresso</th><th>Financeiro</th><th>Estado</th><th>Ação</th></tr></thead>
                 <tbody>
-                    ${filtered.map((p, idx) => {
-                        const meta = getProjectMeta(p);
-                        const actualIdx = projects.indexOf(p);
-                        return `
-                        <tr>
-                            <td><strong>${p.titulo}</strong></td>
-                            <td><div class="progress-mini"><div class="progress-fill" style="width:${meta.perc}%"></div></div> ${meta.perc}%</td>
-                            <td>${meta.hasAtraso ? '<span class="badge badge-atraso">Atrasado</span>' : (meta.perc === 100 ? '<span class="badge badge-ok">OK</span>' : 'Em curso')}</td>
-                            <td>${meta.totalCash.toLocaleString('pt-PT')}€</td>
-                            <td><span style="color:${meta.paidCash >= meta.totalCash ? 'var(--success)' : 'inherit'}">${meta.paidCash.toLocaleString('pt-PT')}€</span></td>
-                            <td><button onclick="currentView = ${actualIdx}; render();">Abrir</button></td>
+                    ${db.projetos.map((p, idx) => {
+                        const m = getMeta(p);
+                        return `<tr>
+                            <td><strong>${p.titulo || 'Sem título'}</strong></td>
+                            <td><div class="progress-mini"><div class="progress-fill" style="width:${m.perc}%"></div></div> ${m.perc}%</td>
+                            <td>${m.vPago.toLocaleString('pt-PT')}€ / ${m.vTotal.toLocaleString('pt-PT')}€</td>
+                            <td>${m.atraso ? '⚠️ Atrasado' : (m.perc === 100 ? '✅ Pronto' : '⚙️ Em curso')}</td>
+                            <td><button onclick="switchView(${idx})">Abrir</button></td>
                         </tr>`;
                     }).join('')}
                 </tbody>
-            </table>
-        `;
+            </table>`;
     }
 
-    function renderProjectDetail(target, idx) {
-        const p = projects[idx];
-        const meta = getProjectMeta(p);
-
+    function renderEquipa(target) {
         target.innerHTML = `
-            <div class="project-detail">
-                <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                    <input class="header-input" style="font-size: 1.8rem; font-weight:800; border:none; width:60%" value="${p.titulo}" onchange="update(${idx}, 'titulo', this.value)">
-                    <button style="color:var(--danger)" onclick="deleteProject(${idx})">Eliminar Projeto</button>
-                </div>
-                <textarea onchange="update(${idx}, 'descricao', this.value)">${p.descricao}</textarea>
-
-                <div class="grid">
-                    <div>
-                        <h4>📅 Tarefas <button onclick="addRow(${idx}, 'tarefas')">+</button></h4>
-                        <table>
-                            <thead><tr><th>Ok</th><th>Tarefa / Resp.</th><th>Prazo</th><th></th></tr></thead>
-                            <tbody>
-                                ${p.tarefas.map((t, tIdx) => {
-                                    const isLate = t.data && new Date(t.data) < HOJE && !t.done;
-                                    return `<tr class="${t.done ? 'row-concluida' : (isLate ? 'row-atrasada' : '')}">
-                                        <td class="check-cell"><input type="checkbox" ${t.done ? 'checked' : ''} onchange="toggleTask(${idx}, ${tIdx})"></td>
-                                        <td>
-                                            <input type="text" value="${t.nome}" onchange="updateSub(${idx}, 'tarefas', ${tIdx}, 'nome', this.value)">
-                                            <input type="text" value="${t.responsavel || ''}" onchange="updateSub(${idx}, 'tarefas', ${tIdx}, 'responsavel', this.value)" style="font-size:0.7rem; color:var(--primary); margin-top:3px" placeholder="Responsável">
-                                        </td>
-                                        <td width="130"><input type="date" value="${t.data}" onchange="updateSub(${idx}, 'tarefas', ${tIdx}, 'data', this.value)"></td>
-                                        <td><button onclick="removeRow(${idx}, 'tarefas', ${tIdx})">✕</button></td>
-                                    </tr>`;
-                                }).join('')}
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                        <h4>💰 Orçamento / Pagamentos <button onclick="addRow(${idx}, 'pagamentos')">+</button></h4>
-                        <table>
-                            <thead><tr><th>Pago</th><th>Fase / Descrição</th><th>Valor (€)</th><th></th></tr></thead>
-                            <tbody>
-                                ${p.pagamentos.map((pag, pagIdx) => `
-                                <tr class="${pag.pago ? 'row-concluida' : ''}">
-                                    <td class="check-cell"><input type="checkbox" ${pag.pago ? 'checked' : ''} onchange="togglePayment(${idx}, ${pagIdx})"></td>
-                                    <td><input type="text" value="${pag.desc}" onchange="updateSub(${idx}, 'pagamentos', ${pagIdx}, 'desc', this.value)"></td>
-                                    <td><input type="number" value="${pag.valor}" onchange="updateSub(${idx}, 'pagamentos', ${pagIdx}, 'valor', this.value)"></td>
-                                    <td><button onclick="removeRow(${idx}, 'pagamentos', ${pagIdx})">✕</button></td>
-                                </tr>`).join('')}
-                                <tr class="total-financeiro"><td></td><td>TOTAL PROJETO</td><td>${meta.totalCash.toLocaleString('pt-PT')}€</td><td></td></tr>
-                                <tr class="total-financeiro" style="color:var(--success)"><td></td><td>TOTAL PAGO</td><td>${meta.paidCash.toLocaleString('pt-PT')}€</td><td></td></tr>
-                                <tr class="total-financeiro" style="color:var(--danger)"><td></td><td>PENDENTE</td><td>${meta.pendingCash.toLocaleString('pt-PT')}€</td><td></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom:20px">
+                <h2>Gestão de Equipa</h2>
+                <button class="btn-main" onclick="addFunc()">+ Adicionar Funcionário</button>
             </div>
-        `;
+            <table>
+                <thead><tr><th>Nome do Colaborador</th><th>Cargo / Função</th><th width="50"></th></tr></thead>
+                <tbody>
+                    ${db.funcionarios.map((f, i) => `
+                        <tr>
+                            <td><input value="${f.nome}" onchange="db.funcionarios[${i}].nome = this.value; save()"></td>
+                            <td><input value="${f.cargo}" onchange="db.funcionarios[${i}].cargo = this.value; save()"></td>
+                            <td><button onclick="db.funcionarios.splice(${i},1); save()" style="color:red; border:none; background:none;">✕</button></td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>`;
     }
 
-    function update(idx, field, val) { projects[idx][field] = val; render(); }
-    function updateSub(pIdx, table, rIdx, field, val) { projects[pIdx][table][rIdx][field] = val; render(); }
-    function toggleTask(pIdx, tIdx) { projects[pIdx].tarefas[tIdx].done = !projects[pIdx].tarefas[tIdx].done; render(); }
-    function togglePayment(pIdx, pagIdx) { projects[pIdx].pagamentos[pagIdx].pago = !projects[pIdx].pagamentos[pagIdx].pago; render(); }
-    function addProject() { projects.push({ titulo: "Novo Projeto", descricao: "", tarefas: [], pagamentos: [] }); currentView = projects.length - 1; render(); }
+    function renderProject(target, idx) {
+        const p = db.projetos[idx];
+        const m = getMeta(p);
+        target.innerHTML = `
+            <div style="display:flex; justify-content: space-between; align-items:center;">
+                <input class="header-input" value="${p.titulo || ''}" placeholder="Nome do Projeto" onchange="db.projetos[${idx}].titulo = this.value; save()">
+                <button style="color:var(--danger); border:none;" onclick="deleteProject(${idx})">🗑 Eliminar Projeto</button>
+            </div>
+            <textarea placeholder="Descrição e notas..." onchange="db.projetos[${idx}].descricao = this.value; save()">${p.descricao || ''}</textarea>
+            
+            <div class="grid">
+                <div>
+                    <h4>📅 Plano de Trabalho <button onclick="addRow(${idx}, 'tarefas')">+</button></h4>
+                    <table>
+                        <thead><tr><th>Ok</th><th>Tarefa / Resp.</th><th>Prazo</th><th></th></tr></thead>
+                        <tbody>
+                            ${p.tarefas.map((t, ti) => {
+                                const isLate = t.data && new Date(t.data) < HOJE && !t.done;
+                                return `<tr class="${t.done ? 'row-concluida' : (isLate ? 'row-atrasada' : '')}">
+                                    <td width="30"><input type="checkbox" ${t.done ? 'checked' : ''} onchange="db.projetos[${idx}].tarefas[${ti}].done = !db.projetos[${idx}].tarefas[${ti}].done; save()"></td>
+                                    <td>
+                                        <input type="text" value="${t.nome}" onchange="db.projetos[${idx}].tarefas[${ti}].nome = this.value; save()" placeholder="O que fazer?">
+                                        <select onchange="db.projetos[${idx}].tarefas[${ti}].responsavelId = this.value; save()" style="margin-top:5px">
+                                            <option value="">Selecione Resp...</option>
+                                            ${db.funcionarios.map(f => `<option value="${f.id}" ${t.responsavelId == f.id ? 'selected' : ''}>${f.nome}</option>`).join('')}
+                                        </select>
+                                    </td>
+                                    <td width="130"><input type="date" value="${t.data}" onchange="db.projetos[${idx}].tarefas[${ti}].data = this.value; save()"></td>
+                                    <td><button onclick="db.projetos[${idx}].tarefas.splice(${ti},1); save()">✕</button></td>
+                                </tr>`;
+                            }).join('')}
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h4>💰 Orçamento e Recebimentos <button onclick="addRow(${idx}, 'pagamentos')">+</button></h4>
+                    <table>
+                        <thead><tr><th>Pago</th><th>Fase</th><th>Valor</th><th></th></tr></thead>
+                        <tbody>
+                            ${p.pagamentos.map((pag, pi) => `
+                                <tr class="${pag.pago ? 'row-concluida' : ''}">
+                                    <td width="30"><input type="checkbox" ${pag.pago ? 'checked' : ''} onchange="db.projetos[${idx}].pagamentos[${pi}].pago = !db.projetos[${idx}].pagamentos[${pi}].pago; save()"></td>
+                                    <td><input type="text" value="${pag.desc}" onchange="db.projetos[${idx}].pagamentos[${pi}].desc = this.value; save()"></td>
+                                    <td><input type="number" value="${pag.valor}" onchange="db.projetos[${idx}].pagamentos[${pi}].valor = this.value; save()"></td>
+                                    <td><button onclick="db.projetos[${idx}].pagamentos.splice(${pi},1); save()">✕</button></td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                    <div class="finance-summary">
+                        <div><span>Total Orçamentado:</span> <strong>${m.vTotal.toLocaleString('pt-PT')}€</strong></div>
+                        <div style="color:var(--success)"><span>Total Recebido:</span> <strong>${m.vPago.toLocaleString('pt-PT')}€</strong></div>
+                        <div style="color:var(--danger)"><span>Ainda Pendente:</span> <strong>${(m.vTotal - m.vPago).toLocaleString('pt-PT')}€</strong></div>
+                    </div>
+                </div>
+            </div>`;
+    }
+
+    // Funções de Ação
+    function addFunc() { db.funcionarios.push({ id: Date.now(), nome: "Novo Colaborador", cargo: "" }); save(); }
+    function addProject() { db.projetos.push({ titulo: "", descricao: "", tarefas: [], pagamentos: [] }); currentView = db.projetos.length - 1; save(); }
     function addRow(pIdx, table) {
-        if(table === 'tarefas') projects[pIdx].tarefas.push({ nome: "", responsavel: "", data: "", done: false });
-        else projects[pIdx].pagamentos.push({ desc: "", valor: 0, pago: false });
-        render();
+        if(table === 'tarefas') db.projetos[pIdx].tarefas.push({ nome: "", responsavelId: null, data: "", done: false });
+        else db.projetos[pIdx].pagamentos.push({ desc: "", valor: 0, pago: false });
+        save();
     }
-    function removeRow(pIdx, table, rIdx) { projects[pIdx][table].splice(rIdx, 1); render(); }
-    function deleteProject(idx) { if(confirm('Apagar?')) { projects.splice(idx, 1); currentView = 'dash'; render(); } }
-    
+    function deleteProject(idx) { if(confirm('Eliminar projeto?')) { db.projetos.splice(idx, 1); currentView = 'dash'; save(); } }
+
     function downloadJSON() {
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(projects, null, 2));
-        const link = document.createElement('a');
-        link.setAttribute("href", dataStr);
-        link.setAttribute("download", "gestao_financeira_2026.json");
-        link.click();
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(db, null, 2));
+        const a = document.createElement('a'); a.setAttribute("href", dataStr); a.setAttribute("download", "gestao_hub_final.json"); a.click();
     }
 
-    function importJSON(event) {
+    function importJSON(e) {
         const reader = new FileReader();
-        reader.onload = (e) => { projects = JSON.parse(e.target.result); currentView = 'dash'; render(); };
-        reader.readAsText(event.target.files[0]);
+        reader.onload = (ev) => { db = JSON.parse(ev.target.result); currentView = 'dash'; save(); };
+        reader.readAsText(e.target.files[0]);
     }
 
     render();
