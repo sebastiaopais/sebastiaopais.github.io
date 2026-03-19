@@ -2,58 +2,63 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Enterprise Hub 2026 - Recuperação Total</title>
+    <title>Enterprise Hub 2026 - Versão Final</title>
     <style>
-        :root { --primary: #2563eb; --success: #22c55e; --danger: #ef4444; --warning: #f59e0b; --bg: #f1f5f9; --text: #1e293b; }
+        :root { --primary: #2563eb; --success: #16a34a; --danger: #dc2626; --warning: #f59e0b; --bg: #f8fafc; --text: #1e293b; }
         body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        .container { max-width: 1300px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 85vh; }
+        .container { max-width: 1400px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 85vh; }
         
-        /* Navegação Superior */
+        /* Navegação */
         .nav-bar { display: flex; gap: 10px; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; align-items: center; overflow-x: auto; }
-        .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); margin-right: 20px; white-space: nowrap; }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); margin-right: 20px; }
         
-        button { padding: 8px 14px; cursor: pointer; border-radius: 8px; border: 1px solid #cbd5e1; background: white; font-weight: 600; transition: 0.2s; white-space: nowrap; }
-        button:hover { background: #f8fafc; }
+        button { padding: 8px 14px; cursor: pointer; border-radius: 6px; border: 1px solid #cbd5e1; background: white; font-weight: 600; transition: 0.2s; white-space: nowrap; }
+        button:hover { background: #f1f5f9; }
         .btn-active { border-color: var(--primary); color: var(--primary); background: #eff6ff; }
         .btn-main { background: var(--primary); color: white; border: none; }
+        .btn-add-func { width: 220px !important; display: block; }
 
-        /* Dashboard Stats */
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
-        .stat-card { background: #f8fafc; padding: 1.2rem; border-radius: 10px; border: 1px solid #e2e8f0; }
-        .stat-card h3 { margin: 0; color: #64748b; font-size: 0.75rem; text-transform: uppercase; }
-        .stat-card p { margin: 5px 0 0; font-size: 1.4rem; font-weight: bold; }
-
-        /* Tabelas Gerais */
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th { text-align: left; padding: 12px; background: #f8fafc; color: #64748b; font-size: 0.75rem; border-bottom: 2px solid #e2e8f0; }
-        td { padding: 10px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+        h2 { font-size: 1.25rem; margin-top: 2rem; color: #334155; border-left: 4px solid var(--primary); padding-left: 10px; }
+        .grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 30px; margin-top: 20px; align-items: start; }
         
-        .progress-mini { width: 60px; height: 6px; background: #e2e8f0; border-radius: 3px; display: inline-block; overflow: hidden; }
-        .progress-fill { height: 100%; background: var(--success); }
-
-        /* Layout de Edição de Projeto */
-        .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; margin-top: 20px; }
-        input, textarea, select { width: 100%; border: 1px solid #cbd5e1; padding: 8px; border-radius: 6px; font-size: 0.9rem; font-family: inherit; box-sizing: border-box; }
-        .row-atrasada { background-color: #fff7ed; }
-        .row-concluida { opacity: 0.6; background-color: #f0fdf4; }
+        table { width: 100%; border-collapse: collapse; background: white; margin-bottom: 20px; }
+        th { text-align: left; padding: 12px; background: #f1f5f9; color: #475569; font-size: 0.75rem; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; }
+        td { padding: 10px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
         
-        .header-input { font-size: 1.8rem; font-weight: 800; border: none !important; border-bottom: 2px solid transparent !important; background: transparent; }
-        .header-input:focus { outline: none; border-bottom-color: var(--primary) !important; }
+        .badge-project { display: inline-block; background: #f1f5f9; color: #475569; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; margin-right: 4px; border: 1px solid #e2e8f0; margin-bottom: 4px; }
+        
+        .staff-selector { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+        .staff-label { font-size: 0.65rem; display: flex; align-items: center; gap: 3px; background: #f8fafc; padding: 2px 6px; border-radius: 4px; border: 1px solid #e2e8f0; cursor: pointer; }
+        
+        input, textarea, select { width: 100%; border: 1px solid #cbd5e1; padding: 8px; border-radius: 6px; font-size: 0.9rem; box-sizing: border-box; }
+        .header-input { font-size: 1.8rem; font-weight: 800; border: none !important; background: transparent; margin-bottom: 10px; width: 70%; }
+        
+        .finance-footer { margin-top: 15px; padding: 15px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+        .fin-row { display: flex; justify-content: space-between; padding: 5px 0; font-size: 0.95rem; }
+        .fin-total-bold { border-top: 2px solid #cbd5e1; margin-top: 10px; padding-top: 10px; font-weight: 900; font-size: 1.1rem; }
+        
+        .row-concluida { opacity: 0.5; background-color: #f0fdf4; }
 
-        .finance-summary { background: #f8fafc; padding: 10px; border-radius: 8px; margin-top: 10px; border: 1px solid #e2e8f0; }
-        .finance-summary div { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; }
+        @media print {
+            .nav-bar, button, .staff-selector, .logo, input[type="file"], select, th:last-child, td:last-child { display: none !important; }
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; border: none; max-width: 100%; width: 100%; }
+            .grid { grid-template-columns: 1fr; }
+            input, textarea { border: none !important; padding: 0 !important; font-size: 1.1rem !important; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="nav-bar">
-        <div class="logo">ENTERPRISE HUB</div>
+        <div class="logo">PROJECT HUB 2026</div>
         <button id="nav-dash" onclick="switchView('dash')">📊 Dashboard</button>
         <button id="nav-equipa" onclick="switchView('equipa')">👥 Equipa</button>
         <div id="project-nav-btns" style="display: flex; gap: 5px;"></div>
-        <button onclick="addProject()" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">+ Projeto</button>
+        <button onclick="addProject()" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">+ Novo Projeto</button>
         <div style="flex-grow: 1;"></div>
+        <button onclick="window.print()">🖨️ Imprimir</button>
         <button class="btn-main" onclick="downloadJSON()">💾 Exportar</button>
         <button onclick="document.getElementById('importFile').click()">📂 Importar</button>
         <input type="file" id="importFile" style="display:none" onchange="importJSON(event)">
@@ -63,48 +68,34 @@
 </div>
 
 <script>
-    const HOJE = new Date("2026-03-18");
+    const HOJE = new Date("2026-03-19");
     let currentView = 'dash';
     
-    // Base de dados persistente
-    let db = JSON.parse(localStorage.getItem('ent_db_v7')) || {
-        funcionarios: [{ id: Date.now(), nome: "Colaborador Padrão", cargo: "Gestor" }],
+    let db = JSON.parse(localStorage.getItem('ent_db_final_v12')) || {
+        funcionarios: [{ id: "1", nome: "Colaborador Exemplo", cargo: "Gestor" }],
         projetos: []
     };
 
-    function save() {
-        localStorage.setItem('ent_db_v7', JSON.stringify(db));
-        render();
-    }
-
-    function switchView(view) {
-        currentView = view;
-        render();
-    }
+    function save() { localStorage.setItem('ent_db_final_v12', JSON.stringify(db)); render(); }
+    function switchView(view) { currentView = view; render(); }
 
     function getMeta(p) {
         const tTotal = p.tarefas?.length || 0;
         const tDone = p.tarefas?.filter(t => t.done).length || 0;
         const perc = tTotal === 0 ? 0 : Math.round((tDone / tTotal) * 100);
-        
         const vTotal = p.pagamentos?.reduce((s, pag) => s + (parseFloat(pag.valor) || 0), 0) || 0;
         const vPago = p.pagamentos?.filter(pag => pag.pago).reduce((s, pag) => s + (parseFloat(pag.valor) || 0), 0) || 0;
-        const atraso = p.tarefas?.some(t => t.data && new Date(t.data) < HOJE && !t.done);
-        
-        return { perc, vTotal, vPago, atraso };
+        return { perc, vTotal, vPago, vPendente: vTotal - vPago };
     }
 
     function render() {
         const content = document.getElementById('main-content');
         const navBtns = document.getElementById('project-nav-btns');
-        
         document.getElementById('nav-dash').className = currentView === 'dash' ? 'btn-active' : '';
         document.getElementById('nav-equipa').className = currentView === 'equipa' ? 'btn-active' : '';
 
         navBtns.innerHTML = db.projetos.map((p, idx) => `
-            <button class="${currentView === idx ? 'btn-active' : ''}" onclick="switchView(${idx})">
-                ${p.titulo || 'Projeto ' + (idx+1)}
-            </button>
+            <button class="${currentView === idx ? 'btn-active' : ''}" onclick="switchView(${idx})">${p.titulo || 'P'+(idx+1)}</button>
         `).join('');
 
         if (currentView === 'dash') renderDash(content);
@@ -113,29 +104,49 @@
     }
 
     function renderDash(target) {
-        const totalV = db.projetos.reduce((s, p) => s + getMeta(p).vTotal, 0);
-        const pagoV = db.projetos.reduce((s, p) => s + getMeta(p).vPago, 0);
+        const cargaTrabalho = db.funcionarios.map(f => {
+            let abertas = 0;
+            let projNames = new Set();
+            db.projetos.forEach(p => {
+                p.tarefas?.forEach(t => {
+                    if (t.responsavelIds?.includes(String(f.id))) {
+                        if (!t.done) abertas++;
+                        projNames.add(p.titulo || "S/ Título");
+                    }
+                });
+            });
+            return { nome: f.nome, abertas, projetos: Array.from(projNames) };
+        });
 
         target.innerHTML = `
-            <div class="stats-grid">
-                <div class="stat-card"><h3>Projetos Ativos</h3><p>${db.projetos.length}</p></div>
-                <div class="stat-card"><h3>Total Orçamentado</h3><p>${totalV.toLocaleString('pt-PT')}€</p></div>
-                <div class="stat-card"><h3>Total Recebido</h3><p style="color:var(--success)">${pagoV.toLocaleString('pt-PT')}€</p></div>
-                <div class="stat-card"><h3>Pendente</h3><p style="color:var(--danger)">${(totalV - pagoV).toLocaleString('pt-PT')}€</p></div>
-            </div>
+            <h2>Resumo de Projetos</h2>
             <table>
-                <thead><tr><th>Projeto</th><th>Progresso</th><th>Financeiro</th><th>Estado</th><th>Ação</th></tr></thead>
+                <thead><tr><th>Projeto</th><th>Progresso</th><th>Orçamento Total</th><th>Pago / Pendente</th><th>Ação</th></tr></thead>
                 <tbody>
                     ${db.projetos.map((p, idx) => {
                         const m = getMeta(p);
                         return `<tr>
-                            <td><strong>${p.titulo || 'Sem título'}</strong></td>
-                            <td><div class="progress-mini"><div class="progress-fill" style="width:${m.perc}%"></div></div> ${m.perc}%</td>
-                            <td>${m.vPago.toLocaleString('pt-PT')}€ / ${m.vTotal.toLocaleString('pt-PT')}€</td>
-                            <td>${m.atraso ? '⚠️ Atrasado' : (m.perc === 100 ? '✅ Pronto' : '⚙️ Em curso')}</td>
+                            <td><strong>${p.titulo || 'Sem Título'}</strong></td>
+                            <td>${m.perc}%</td>
+                            <td><strong>${m.vTotal.toLocaleString('pt-PT')}€</strong></td>
+                            <td><span style="color:var(--success)">${m.vPago.toLocaleString('pt-PT')}€</span> / <span style="color:var(--danger)">${m.vPendente.toLocaleString('pt-PT')}€</span></td>
                             <td><button onclick="switchView(${idx})">Abrir</button></td>
                         </tr>`;
                     }).join('')}
+                </tbody>
+            </table>
+
+            <h2>Ocupação da Equipa</h2>
+            <table>
+                <thead><tr><th>Colaborador</th><th>Pendentes</th><th>Projetos Envolvidos</th></tr></thead>
+                <tbody>
+                    ${cargaTrabalho.map(f => `
+                        <tr>
+                            <td><strong>${f.nome}</strong></td>
+                            <td>${f.abertas}</td>
+                            <td>${f.projetos.map(name => `<span class="badge-project">${name}</span>`).join('')}</td>
+                        </tr>
+                    `).join('')}
                 </tbody>
             </table>`;
     }
@@ -143,19 +154,18 @@
     function renderEquipa(target) {
         target.innerHTML = `
             <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom:20px">
-                <h2>Gestão de Equipa</h2>
-                <button class="btn-main" onclick="addFunc()">+ Adicionar Funcionário</button>
+                <h2>Gestão de Funcionários</h2>
+                <button class="btn-main btn-add-func" onclick="addFunc()">+ Adicionar Funcionário</button>
             </div>
             <table>
-                <thead><tr><th>Nome do Colaborador</th><th>Cargo / Função</th><th width="50"></th></tr></thead>
+                <thead><tr><th>Nome</th><th>Cargo</th><th width="50"></th></tr></thead>
                 <tbody>
                     ${db.funcionarios.map((f, i) => `
                         <tr>
                             <td><input value="${f.nome}" onchange="db.funcionarios[${i}].nome = this.value; save()"></td>
                             <td><input value="${f.cargo}" onchange="db.funcionarios[${i}].cargo = this.value; save()"></td>
-                            <td><button onclick="db.funcionarios.splice(${i},1); save()" style="color:red; border:none; background:none;">✕</button></td>
-                        </tr>
-                    `).join('')}
+                            <td><button onclick="db.funcionarios.splice(${i},1); save()" style="color:var(--danger); border:none">✕</button></td>
+                        </tr>`).join('')}
                 </tbody>
             </table>`;
     }
@@ -166,26 +176,29 @@
         target.innerHTML = `
             <div style="display:flex; justify-content: space-between; align-items:center;">
                 <input class="header-input" value="${p.titulo || ''}" placeholder="Nome do Projeto" onchange="db.projetos[${idx}].titulo = this.value; save()">
-                <button style="color:var(--danger); border:none;" onclick="deleteProject(${idx})">🗑 Eliminar Projeto</button>
+                <button onclick="deleteProject(${idx})" style="color:var(--danger); border-color:var(--danger)">🗑 Eliminar Projeto</button>
             </div>
-            <textarea placeholder="Descrição e notas..." onchange="db.projetos[${idx}].descricao = this.value; save()">${p.descricao || ''}</textarea>
+            <textarea placeholder="Descrição do projeto..." onchange="db.projetos[${idx}].descricao = this.value; save()">${p.descricao || ''}</textarea>
             
             <div class="grid">
                 <div>
                     <h4>📅 Plano de Trabalho <button onclick="addRow(${idx}, 'tarefas')">+</button></h4>
                     <table>
-                        <thead><tr><th>Ok</th><th>Tarefa / Resp.</th><th>Prazo</th><th></th></tr></thead>
+                        <thead><tr><th>OK</th><th>Tarefa / Equipa</th><th>Prazo</th><th></th></tr></thead>
                         <tbody>
                             ${p.tarefas.map((t, ti) => {
                                 const isLate = t.data && new Date(t.data) < HOJE && !t.done;
                                 return `<tr class="${t.done ? 'row-concluida' : (isLate ? 'row-atrasada' : '')}">
                                     <td width="30"><input type="checkbox" ${t.done ? 'checked' : ''} onchange="db.projetos[${idx}].tarefas[${ti}].done = !db.projetos[${idx}].tarefas[${ti}].done; save()"></td>
                                     <td>
-                                        <input type="text" value="${t.nome}" onchange="db.projetos[${idx}].tarefas[${ti}].nome = this.value; save()" placeholder="O que fazer?">
-                                        <select onchange="db.projetos[${idx}].tarefas[${ti}].responsavelId = this.value; save()" style="margin-top:5px">
-                                            <option value="">Selecione Resp...</option>
-                                            ${db.funcionarios.map(f => `<option value="${f.id}" ${t.responsavelId == f.id ? 'selected' : ''}>${f.nome}</option>`).join('')}
-                                        </select>
+                                        <input type="text" value="${t.nome}" onchange="db.projetos[${idx}].tarefas[${ti}].nome = this.value; save()">
+                                        <div class="staff-selector">
+                                            ${db.funcionarios.map(f => `
+                                                <label class="staff-label">
+                                                    <input type="checkbox" ${t.responsavelIds?.includes(String(f.id)) ? 'checked' : ''} 
+                                                           onchange="toggleResp(${idx}, ${ti}, '${f.id}')"> ${f.nome}
+                                                </label>`).join('')}
+                                        </div>
                                     </td>
                                     <td width="130"><input type="date" value="${t.data}" onchange="db.projetos[${idx}].tarefas[${ti}].data = this.value; save()"></td>
                                     <td><button onclick="db.projetos[${idx}].tarefas.splice(${ti},1); save()">✕</button></td>
@@ -195,50 +208,52 @@
                     </table>
                 </div>
                 <div>
-                    <h4>💰 Orçamento e Recebimentos <button onclick="addRow(${idx}, 'pagamentos')">+</button></h4>
+                    <h4>💰 Orçamento e Pagamentos <button onclick="addRow(${idx}, 'pagamentos')">+</button></h4>
                     <table>
-                        <thead><tr><th>Pago</th><th>Fase</th><th>Valor</th><th></th></tr></thead>
+                        <thead><tr><th>Pago</th><th>Fase</th><th>Valor (€)</th><th></th></tr></thead>
                         <tbody>
                             ${p.pagamentos.map((pag, pi) => `
                                 <tr class="${pag.pago ? 'row-concluida' : ''}">
-                                    <td width="30"><input type="checkbox" ${pag.pago ? 'checked' : ''} onchange="db.projetos[${idx}].pagamentos[${pi}].pago = !db.projetos[${idx}].pagamentos[${pi}].pago; save()"></td>
+                                    <td><input type="checkbox" ${pag.pago ? 'checked' : ''} onchange="db.projetos[${idx}].pagamentos[${pi}].pago = !db.projetos[${idx}].pagamentos[${pi}].pago; save()"></td>
                                     <td><input type="text" value="${pag.desc}" onchange="db.projetos[${idx}].pagamentos[${pi}].desc = this.value; save()"></td>
                                     <td><input type="number" value="${pag.valor}" onchange="db.projetos[${idx}].pagamentos[${pi}].valor = this.value; save()"></td>
                                     <td><button onclick="db.projetos[${idx}].pagamentos.splice(${pi},1); save()">✕</button></td>
-                                </tr>
-                            `).join('')}
+                                </tr>`).join('')}
                         </tbody>
                     </table>
-                    <div class="finance-summary">
-                        <div><span>Total Orçamentado:</span> <strong>${m.vTotal.toLocaleString('pt-PT')}€</strong></div>
-                        <div style="color:var(--success)"><span>Total Recebido:</span> <strong>${m.vPago.toLocaleString('pt-PT')}€</strong></div>
-                        <div style="color:var(--danger)"><span>Ainda Pendente:</span> <strong>${(m.vTotal - m.vPago).toLocaleString('pt-PT')}€</strong></div>
+                    <div class="finance-footer">
+                        <div class="fin-row fin-total-bold"><span>TOTAL DO PROJETO:</span> <span>${m.vTotal.toLocaleString('pt-PT')}€</span></div>
+                        <div class="fin-row" style="color:var(--success)"><span>Valor Recebido (OK):</span> <span>${m.vPago.toLocaleString('pt-PT')}€</span></div>
+                        <div class="fin-row" style="color:var(--danger)"><span>Valor em Falta:</span> <span>${m.vPendente.toLocaleString('pt-PT')}€</span></div>
                     </div>
                 </div>
             </div>`;
     }
 
-    // Funções de Ação
-    function addFunc() { db.funcionarios.push({ id: Date.now(), nome: "Novo Colaborador", cargo: "" }); save(); }
-    function addProject() { db.projetos.push({ titulo: "", descricao: "", tarefas: [], pagamentos: [] }); currentView = db.projetos.length - 1; save(); }
+    function toggleResp(pIdx, tIdx, fId) {
+        if (!db.projetos[pIdx].tarefas[tIdx].responsavelIds) db.projetos[pIdx].tarefas[tIdx].responsavelIds = [];
+        const pos = db.projetos[pIdx].tarefas[tIdx].responsavelIds.indexOf(fId);
+        if (pos > -1) db.projetos[pIdx].tarefas[tIdx].responsavelIds.splice(pos, 1);
+        else db.projetos[pIdx].tarefas[tIdx].responsavelIds.push(fId);
+        save();
+    }
+    function addFunc() { db.funcionarios.push({ id: String(Date.now()), nome: "Novo Colaborador", cargo: "" }); save(); }
+    function addProject() { db.projetos.push({ titulo: "Novo Projeto", tarefas: [], pagamentos: [] }); currentView = db.projetos.length - 1; save(); }
     function addRow(pIdx, table) {
-        if(table === 'tarefas') db.projetos[pIdx].tarefas.push({ nome: "", responsavelId: null, data: "", done: false });
+        if(table === 'tarefas') db.projetos[pIdx].tarefas.push({ nome: "", responsavelIds: [], data: "", done: false });
         else db.projetos[pIdx].pagamentos.push({ desc: "", valor: 0, pago: false });
         save();
     }
-    function deleteProject(idx) { if(confirm('Eliminar projeto?')) { db.projetos.splice(idx, 1); currentView = 'dash'; save(); } }
-
+    function deleteProject(idx) { if(confirm('Eliminar projeto permanentemente?')) { db.projetos.splice(idx, 1); currentView = 'dash'; save(); } }
     function downloadJSON() {
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(db, null, 2));
-        const a = document.createElement('a'); a.setAttribute("href", dataStr); a.setAttribute("download", "gestao_hub_final.json"); a.click();
+        const a = document.createElement('a'); a.href = dataStr; a.download = 'gestao_enterprise_2026.json'; a.click();
     }
-
     function importJSON(e) {
-        const reader = new FileReader();
-        reader.onload = (ev) => { db = JSON.parse(ev.target.result); currentView = 'dash'; save(); };
-        reader.readAsText(e.target.files[0]);
+        const r = new FileReader();
+        r.onload = (ev) => { db = JSON.parse(ev.target.result); save(); };
+        r.readAsText(e.target.files[0]);
     }
-
     render();
 </script>
 </body>
