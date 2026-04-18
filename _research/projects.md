@@ -10,6 +10,11 @@ permalink: /research/projects
 
 Topics: Statistical Natural Language Processing, LLM, Social Network Analysis, Data Science, Sentiment Analysis and Big Data.
 
+## [CapabiliTIC]()
+>This work was supported by European Union | Reference: 0522_CAPABILITIC_4_E | Ongoing (24 months) - Started: 2026 Ends: 2028
+
+The general objective of the CapabiliTIC project is to improve digital skills and increase the use of ICT among SMEs and micro-enterprises in the EUROACE region through research, training, consultancy, and the dissemination of results. This boost in digital capabilities—based on raising awareness about the benefits and uses of smart tools in key ICT niches (cloud services, artificial intelligence, and big data) — will result in increased digitalization within the business sector and, consequently, across the three regions that make up the Cooperation Area.
+
 ## [Horus 360 IOMS NextGen](https://prisonsystems.eu/wp-content/uploads/2025/08/Anexo-VIII-COMPETE2030_Ficha_de_Operacao.pdf)
 >This work was supported by Portugal 2030 – Compete 2030 | Reference: COMPETE2030-FEDER-01316200 | Ongoing (36 months) - Started: 2025 Ends: 2028
 
