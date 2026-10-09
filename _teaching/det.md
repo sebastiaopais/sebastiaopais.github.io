@@ -8,6 +8,12 @@ paperurl: 'https://sebastiaopais.github.io/teaching/det'
 date: 2024-09-01
 ---
 
-Upon successful completion of the course, students should be able to: -Know and apply methods of extracting data from various sources; - Know how to apply data processing methodologies to improve data quality and establish consistency; - Know how to identify and use relational or non-relational databases data loading technologies.
+This course covers the extraction, transformation and loading of data from heterogeneous sources into relational and non-relational databases.
 
-> [Access here](https://moodle.ubi.pt)
+Upon successful completion of the course, students should be able to:
+
+* apply methods for extracting data from a variety of sources;
+* apply data processing methods to improve data quality and ensure consistency;
+* choose and use data loading technologies for relational and non-relational databases.
+
+> [Course materials (Moodle UBI)](https://moodle.ubi.pt)

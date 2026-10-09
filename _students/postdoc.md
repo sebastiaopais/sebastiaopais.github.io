@@ -7,7 +7,7 @@ permalink: /student/postdoc
 #date: 2014-01-01
 #location: "City, Country"
 ---
-Research Areas: Natural Language Processing, Social Network Analysis, Sentiment Analysis, Big Data, Web Mining.
+Research areas: Natural Language Processing, Social Network Analysis, Sentiment Analysis, Big Data, Web Mining.
 
 * Mehran Pourvahab. Research in the PHArA-ON project. Started: 2022 - Concluded: 2024. University of Beira Interior.
 

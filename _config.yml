@@ -6,11 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "pt-PT"
+locale                   : "en-US"
 title                    : "Sebastião Pais"
 title_separator          : "-"
 name                     : &name "Sebastião Pais"
-description              : &description "personal description"
+description              : &description "Sebastião Pais is an Assistant Professor of Computer Science at the University of Beira Interior (Portugal), working on Natural Language Processing, affective computing and computational mental health."
 url                      : https://sebastiaopais.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : #"academicpages/academicpages.github.io"
@@ -62,7 +62,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "sebastiao-pais.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -73,7 +73,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -86,7 +86,7 @@ author:
   location         : "Covilhã, Portugal"
   employer         : 
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "https://scholar.google.pt/citations?user=Otp4K5gAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=Otp4K5gAAAAJ"
   email            : "sebastiaopais@gmail.com"
   researchgate     : "https://www.researchgate.net/profile/Sebastiao-Pais"
   uri              :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/sebasti%C3%A3o-pais-41538035/"
+  linkedin         : "sebasti%C3%A3o-pais-41538035"
   orcid            : "https://orcid.org/0000-0003-2337-0779"
   pinterest        :
   soundcloud       :
@@ -146,6 +146,36 @@ exclude:
   - package.json
   - tmp
   - vendor
+  # Template example content and helpers (AcademicPages) - not part of the site
+  - _posts
+  - _drafts
+  - _publications
+  - _talks
+  - _portfolio
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/publications.md
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/terms.md
+  - _pages/year-archive.html
+  - _pages/about_OLD.md
+  - markdown_generator
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - old
+  - "*.DS_Store"
+  - README.md
+  - CONTRIBUTING.md
+  - CHANGELOG.md
 keep_files:
   - .git
   - .svn
@@ -179,10 +209,10 @@ collections:
     output: true
     permalink: /:collection/:path/
   publications:
-    output: true
+    output: false # template example content, not used
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false # template example content, not used
     permalink: /:collection/:path/
   research:
     output: true
@@ -194,7 +224,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false # template example content, not used
     permalink: /:collection/:path/
 
 

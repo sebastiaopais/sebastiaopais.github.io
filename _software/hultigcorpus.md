@@ -8,8 +8,9 @@ permalink: /software/hultigcorpus
 paperurl: 'https://sebastiaopais.github.io/web/hultigcorpus/index_eng.html'
 #citation: 'Yur Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
-This Software was supported by project C4 - Cloud Computing Competences Centre, financed by the P2020
-HULTIG-C is a multilingual corpus, created to support research on information retrieval and related technologies of human language. HULTIG-C is characterized by various languages that include unique annotations such as keywords set, sentences set, named entity recognition set, and multiword set.
+HULTIG-C is a cloud platform that provides computational linguistics services built around a large multilingual corpus, created to support research in information retrieval and human language technologies. The corpus covers several languages and includes annotations for keywords, sentences, named entities and multiword expressions, which can be explored through an online demo and accessed programmatically through an API.
+
+*Supported by project C4 - Cloud Computing Competences Centre, financed by Portugal 2020.*
 
 > [HULTIG-C Online Services](https://hultigcorpus-api.di.ubi.pt/)
 

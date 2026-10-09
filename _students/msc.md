@@ -7,12 +7,13 @@ permalink: /student/msc
 #date: 2015-01-01
 #location: "City, Country"
 ---
-Research Areas: Statistical Natural Language Processing, Statistical Learning, Machine Learning, Social Network Analysis, Sentiment Analysis, Data Science and Data Mining.
-The second cycle of studies leading to the Masters degree in Computer Engineering intends to form future engineers with a solid knowledge and the appropriate skills for the current labor market, as well as providing them with a basis for the frequency of the third cycle of studies (PhD) in Computer Engineering.
+Research areas: Natural Language Processing, Machine Learning, Affective Computing, Computational Mental Health, Social Network Analysis, Data Science and Data Mining.
+
+The MSc in Computer Science and Engineering at UBI prepares engineers with solid scientific and technical skills for industry, and provides the foundation for doctoral studies.
 
 * David Gomes. Decision Support System for OMS. Started: 2025 - Concluded. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
-* Mishell Mendonza. Social Network Analisys in OMS Context. Started: 2025 - Concluded. M.Sc. in Computer Science and Engineering - University of Beira Interior.
+* Mishell Mendonza. Social Network Analysis in OMS Context. Started: 2025 - Concluded. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 
 * Anilson Monteiro. Dynamic Multimodal Fusion Learning in Mental Health Context. Started: 2024 - Concluded. M.Sc. in Computer Science and Engineering - University of Beira Interior.
 

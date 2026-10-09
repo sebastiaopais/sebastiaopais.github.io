@@ -3,24 +3,38 @@ layout: archive
 title: "Contact"
 permalink: /contact/
 author_profile: true
-redirect_from: 
-  - /contact
 ---
 
 {% include base_path %}
 
-Contact information is below, including email and various web services.  This is to make it easy for people to find me when they search for things like “sebastião pais email” and get wrong pages on my site.  Here are some other places on the Internet where I reside.
+The best way to reach me is by email. For prospective MSc and PhD students, please include a CV and a short description of your research interests.
 
-* E-mail: sebastiao [at] di.ubi.pt; sebastiaopais [at] acm.org; sebastiaopais [at] gmail.com
-* CIÊNCIAVITAE: [0A16-6735-D5E4](https://goo.gl/BMcZKd)
-* DBLP: [Sebastião_Pais](https://dblp.org/pid/56/7181)
-* Google Scholar: [Otp4K5gAAAAJ](https://goo.gl/Dht3k2)
-* LinkedIn: [sebastião-pais](https://www.linkedin.com/in/sebasti%C3%A3o-pais-41538035)
-* ORCID: [0000-0003-2337-0779](https://goo.gl/XrP6XJ)
-* Publons: [sebastiao-pais](https://publons.com/researcher/2096243/sebastiao-pais/)
-* ResearcherID Web of Science: [J-4766-2017](https://www.webofscience.com/wos/author/record/J-4766-2017)
-* ResearchGate: [Sebastiao_Pais](https://goo.gl/mkio6G)
-* SCOPUS: [35103248500](https://www.scopus.com/authid/detail.uri?authorId=35103248500)
+## Email
+
+* sebastiao [at] di.ubi.pt (institutional)
+* sebastiaopais [at] acm.org
+* sebastiaopais [at] gmail.com
+
+## Address
+
+Department of Computer Science, University of Beira Interior<br>
+Caminho do Biribau, 6200-060 Covilhã, Portugal
+
+## Academic profiles
+
+* ORCID: [0000-0003-2337-0779](https://orcid.org/0000-0003-2337-0779)
+* Google Scholar: [Otp4K5gAAAAJ](https://scholar.google.com/citations?user=Otp4K5gAAAAJ)
+* DBLP: [56/7181](https://dblp.org/pid/56/7181)
+* Scopus Author ID: [35103248500](https://www.scopus.com/authid/detail.uri?authorId=35103248500)
+* Web of Science ResearcherID: [J-4766-2017](https://www.webofscience.com/wos/author/record/J-4766-2017)
 * Semantic Scholar: [34443965](https://www.semanticscholar.org/author/34443965)
+* CIÊNCIAVITAE: [0A16-6735-D5E4](https://www.cienciavitae.pt/0A16-6735-D5E4)
 * AuthID: [R-00H-DG4](https://www.authenticus.pt/R-00H-DG4)
-* UBI @ DI: [University of Beira Interior](https://www.ubi.pt/) @ [Departament of Computer Science](http://www.di.ubi.pt/)
+* ResearchGate: [Sebastiao-Pais](https://www.researchgate.net/profile/Sebastiao-Pais)
+* LinkedIn: [sebastião-pais](https://www.linkedin.com/in/sebasti%C3%A3o-pais-41538035/)
+
+## Affiliations
+
+* [Department of Computer Science](https://www.di.ubi.pt/), [University of Beira Interior](https://www.ubi.pt/), Portugal
+* [NOVA LINCS](https://nova-lincs.di.fct.unl.pt/), Portugal
+* [CNRS GREYC UMR 6072](https://www.greyc.fr/), France

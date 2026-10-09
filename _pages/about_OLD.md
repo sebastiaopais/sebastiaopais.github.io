@@ -1,5 +1,6 @@
 ---
-permalink: /
+permalink: /about-old/
+published: false
 title: "About me"
 excerpt: "About me"
 author_profile: true

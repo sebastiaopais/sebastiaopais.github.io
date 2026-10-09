@@ -8,7 +8,7 @@ permalink: /software/socialdictionary
 paperurl: 'https://pypi.org/project/SocialDictionary/'
 #citation: 'Yur Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
-This package aims to account for emojis in sentiment analysis, making sentiment analysis better when emojis are included in the text. First, we take the emojis from the 'https://getemoji.com/' website. We create a CSV with information about each emoji taken, such as the Unicode and description. We calculate the score of the emoji description and assign a sentiment, which can be positive, neutral, or negative. After this information, we use the EmoRoBERTa model, which uses GoEmotions to recognize emotions, so we then assign an emotion to each of the emojis on the list. Next, we place an input containing emojis, and then the text is returned with the emoji replaced by the emotion, the sentiment of the text, and information about the emoji/s used in the input.
+SocialDictionary is a Python package that improves sentiment analysis of texts containing emojis. Emojis collected from [GetEmoji](https://getemoji.com/) are stored with their Unicode code and description; each description is scored and labelled as positive, neutral or negative, and assigned an emotion using EmoRoBERTa (trained on GoEmotions). Given an input text, the package returns the text with each emoji replaced by its emotion, the overall sentiment of the text, and details about the emojis it contains.
 
-> [Access here](https://pypi.org/project/SocialDictionary/)
+> [SocialDictionary on PyPI](https://pypi.org/project/SocialDictionary/)
 

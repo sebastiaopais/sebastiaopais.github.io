@@ -8,8 +8,9 @@ permalink: /student/phd
 #location: "City, Country"
 ---
 
-Research Areas: Multimodal Mental Health Retrieval, Temporal Mental Health Retrieval.
-This PhD program allows the students that finish an MSc in Computer Science or similar, to proceed with their studies towards a PhD degree. The program has a PhD course with 60 ECTS credit units in the first year, and the research towards a PhD thesis in the following two years.
+Research areas: Computational Mental Health, Multimodal and Temporal Mental Health Retrieval, Affective Computing, Explainable and Trustworthy Large Language Models.
+
+The PhD in Computer Science and Engineering at UBI is open to students holding an MSc in Computer Science or a related field. It includes 60 ECTS of advanced coursework in the first year, followed by research towards the doctoral thesis.
 
 * Mishell Mendonza. Started: 2026 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
 
@@ -17,7 +18,7 @@ This PhD program allows the students that finish an MSc in Computer Science or s
 
 * Alexandra Ferreira. Started: 2026 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
 
-* Luis Silva. Started: 2025 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
+* Luís Silva. Started: 2025 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
 
 * António Caldeira. Started: 2025 - Ongoing. Ph.D. in Computer Science and Engineering - University of Beira Interior.
 
