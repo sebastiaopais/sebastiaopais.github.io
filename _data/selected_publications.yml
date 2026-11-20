@@ -1,0 +1,41 @@
+# Five most recent publications in Q1 journals (SJR) or CORE/ICORE A*/A conferences.
+# Most recent first. Last checked: November 2026.
+- authors: "Luís Silva, Sebastião Pais, Muhammad Luqman Jamil"
+  title: "Affect-conditioned prompt orchestration for mental-health support chatbots: Architecture, ablation analysis, and safety considerations"
+  venue: "Knowledge-Based Systems"
+  details: "vol. 352, art. 117102"
+  year: 2026
+  doi: "10.1016/j.knosys.2026.117102"
+  rank: "Q1"
+
+- authors: "Hiro Andrade, Nuno Pombo, Sebastião Pais"
+  title: "Improving Software Defect Detection With LSTM-Based Semantic Modeling and Class Imbalance Handling"
+  venue: "IEEE Open Journal of the Computer Society"
+  details: "vol. 6, pp. 1501–1511"
+  year: 2025
+  doi: "10.1109/OJCS.2025.3613134"
+  rank: "Q1"
+
+- authors: "Mehran Pourvahab, Anilson Monteiro, Sebastião Pais, Nuno Pombo"
+  title: "A Unified Semantic Framework for IoT-Healthcare Data Interoperability: A Graph-Based Machine Learning Approach Using RDF and R2RML"
+  venue: "29th International Conference on Evaluation and Assessment in Software Engineering (EASE 2025)"
+  details: ""
+  year: 2025
+  doi: "10.1145/3756681.3757054"
+  rank: "CORE A"
+
+- authors: "Mehran Pourvahab, Seyed Jalaleddin Mousavirad, Virginie Felizardo, Nuno Pombo, Henriques Zacarias, Hamzeh Mohammadigheymasi, Sebastião Pais, Seyed Nooreddin Jafari, Nuno M. Garcia"
+  title: "A Cluster-Based Opposition Differential Evolution Algorithm Boosted by a Local Search for ECG Signal Classification"
+  venue: "Journal of Computational Science"
+  details: "vol. 86, art. 102541"
+  year: 2025
+  doi: "10.1016/j.jocs.2025.102541"
+  rank: "Q1"
+
+- authors: "Faustino Muetunda, Soumaya Sabry, M. Luqman Jamil, Sebastião Pais, Gaël Dias, João Cordeiro"
+  title: "AI-Assisted Diagnosing, Monitoring and Treatment of Mental Disorders: A Survey"
+  venue: "ACM Transactions on Computing for Healthcare"
+  details: "vol. 5, no. 4, pp. 1–24"
+  year: 2024
+  doi: "10.1145/3681794"
+  rank: "Q1"

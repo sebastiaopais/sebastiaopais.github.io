@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Sebastião Pais"
   avatar           : "sebastiao-pais.png"
-  bio              : "Assistant Professor at Department of Computer Science, University of Beira Interior"
+  bio              : "Assistant Professor at the Department of Computer Science, University of Beira Interior"
   location         : "Covilhã, Portugal"
   employer         : 
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=Otp4K5gAAAAJ"
-  email            : "sebastiaopais@gmail.com"
+  email            : "sebastiao@di.ubi.pt"
   researchgate     : "https://www.researchgate.net/profile/Sebastiao-Pais"
   uri              :
   bitbucket        :
@@ -302,6 +302,15 @@ defaults:
       author_profile: true
       #share: true
       #comments: true
+  # Legacy course pages and old teaching files: kept online, but left out of the sitemap
+  - scope:
+      path: "classes"
+    values:
+      sitemap: false
+  - scope:
+      path: "files/teaching"
+    values:
+      sitemap: false
   # _talks
   - scope:
       path: ""
