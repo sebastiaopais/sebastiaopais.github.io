@@ -5,7 +5,7 @@ permalink: /software/
 author_profile: true
 ---
 
-Software, datasets and online services developed by my research group, most of them as outputs of funded research projects. Source code and further details are available from each tool's page.
+Software, datasets and online services developed by the research group, most of them as outcomes of funded projects. Each tool has its own page with details and links.
 
 {% include base_path %}
 

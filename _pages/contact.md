@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-The best way to reach me is by email. For prospective MSc and PhD students, please include a CV and a short description of your research interests.
+Email is the best way to get in touch. Prospective MSc and PhD students are welcome to write, ideally with a CV and a few lines about the research they would like to do.
 
 ## Email
 

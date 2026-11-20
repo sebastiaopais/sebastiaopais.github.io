@@ -26,7 +26,7 @@ Continuing the development of the previous HORUS 360iOMS project which researche
 The Hidropon.IA project aims to increase the productivity and food safety of hydroponic crops. A platform will be developed with a digital twin of the system, which will use AI modules and algorithms to optimize resource management and traceability. The analysis of historical and real-time data collected by sensors at various levels will improve efficiency and profitability.
 
 ## [Attract](https://attract.inesctec.pt/)
-> Co-financed by the Digital Europe Programme and Plano de Recuperação e Resiliência (PRR) | Reference: 101083770 | Ongoing (36 months) - Started: 2023 Ends: 2026
+> Co-financed by the Digital Europe Programme and Plano de Recuperação e Resiliência (PRR) | Reference: 101083770 | Concluded (36 months) - Started: 2023 Ends: 2026
 
 Aligned with and contributing to European and national policies, ATTRACT DIH defines an ambitious plan to support SMEs and public entities in their digital transformation and consolidation through the full exploitation of the synergetic potential between Artificial Intelligence and High-Performance Computing. ATTRACT DIH acts on both the supply and the use of technology.
 

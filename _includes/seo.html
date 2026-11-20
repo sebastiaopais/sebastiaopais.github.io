@@ -87,6 +87,8 @@
   <meta property="og:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
 {% elsif page.header.overlay_image %}
   <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+{% elsif site.og_image %}
+  <meta property="og:image" content="{{ site.og_image | prepend: "/images/" | prepend: seo_url }}">
 {% endif %}
 
 {% if page.date %}
@@ -101,25 +103,35 @@
   <link rel="next" href="{{ paginator.next_page_path | prepend: seo_url }}">
 {% endif %}
 
-{% if site.og_image %}
+{% if page.url == "/" %}
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
-      "@type": "Organization",
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": {{ site.author.name | jsonify }},
       "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
-    }
-  </script>
-{% endif %}
-
-{% if site.social %}
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
+      "image": {{ site.author.avatar | prepend: "/images/" | prepend: seo_url | jsonify }},
+      "jobTitle": "Assistant Professor",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Beira Interior",
+        "url": "https://www.ubi.pt/"
+      },
+      "affiliation": [
+        { "@type": "Organization", "name": "NOVA LINCS", "url": "https://nova-lincs.di.fct.unl.pt/" },
+        { "@type": "Organization", "name": "CNRS GREYC UMR 6072", "url": "https://www.greyc.fr/" }
+      ],
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "MINES ParisTech" },
+      "knowsAbout": ["Natural Language Processing", "Affective Computing", "Computational Mental Health", "Large Language Models", "Information Retrieval"],
+      "sameAs": [
+        "https://orcid.org/0000-0003-2337-0779",
+        "https://scholar.google.com/citations?user=Otp4K5gAAAAJ",
+        "https://dblp.org/pid/56/7181",
+        "https://www.semanticscholar.org/author/34443965",
+        "https://www.researchgate.net/profile/Sebastiao-Pais",
+        "https://www.linkedin.com/in/sebasti%C3%A3o-pais-41538035/",
+        "https://www.cienciavitae.pt/0A16-6735-D5E4"
+      ]
     }
   </script>
 {% endif %}

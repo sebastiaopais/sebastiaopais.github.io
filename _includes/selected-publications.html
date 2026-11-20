@@ -1,0 +1,5 @@
+<ol class="selected-publications">
+{%- for pub in site.data.selected_publications %}
+<li>{{ pub.authors | replace: "Sebastião Pais", "<strong>Sebastião Pais</strong>" }}. <a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>. <em>{{ pub.venue }}</em>{% if pub.details != "" %}, {{ pub.details }}{% endif %}, {{ pub.year }}.{% if pub.rank %} <small>[{{ pub.rank }}]</small>{% endif %}</li>
+{%- endfor %}
+</ol>

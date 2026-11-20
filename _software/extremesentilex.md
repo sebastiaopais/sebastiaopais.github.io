@@ -2,20 +2,12 @@
 title: "ExtremeSentiLex"
 collection: software
 permalink: /software/extremesentilex
-#excerpt: 'This Software was supported by National Funding from the FCT - Fundação para a Ciência e a Tecnologia.'
-#date: 2009-10-01
-#venue: 'Journal 1'
-paperurl: 'https://sebastiaopais.github.io/web/moves/extremesentilex.html'
-#citation: 'Yur Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+paperurl: 'https://datarepository.ubi.pt/extremesentilex/'
 ---
-ExtremeSentiLex is a lexicon of extreme sentiments built from SentiWordNet and SenticNet. Three resources are available for download: the lexicon, the datasets classified to validate it, and a bundle with both. The lexicon can also be queried through an online platform and an API.
+ExtremeSentiLex began as a lexicon of extreme sentiments, built from SentiWordNet and SenticNet in the MOVES project. It is now an online platform for searching a corpus of public social media posts collected from seven networks, in 30 languages and 20 topic categories. Each post is labelled automatically on a five-level polarity scale, from extreme negative to extreme positive. Searches can be narrowed by topic, date, language, polarity, category and network, and the results exported as CSV, JSON or PDF. The polarity, category and language annotations are released under CC BY 4.0.
+
+If you use it in your work, please cite: S. Pais, I. Tanoli, M. Albardeiro and J. Cordeiro, "Unsupervised Approach to Detect Extreme Sentiments on Social Networks", *ASONAM 2020*, pp. 651–658. [doi:10.1109/ASONAM49781.2020.9381420](https://doi.org/10.1109/ASONAM49781.2020.9381420)
 
 *Supported by national funding from FCT - Fundação para a Ciência e a Tecnologia.*
 
-> [ExtremeSentiLex Platform](https://extremesentilex.di.ubi.pt/)
-
-> [ExtremeSentiLex API](https://extremesentilex-api.di.ubi.pt/)
-
-
-
-
+> [ExtremeSentiLex platform (UBI Data Repository)](https://datarepository.ubi.pt/extremesentilex/)
